@@ -321,11 +321,28 @@ def build_html_page(cfg, is_root=False):
   <title>{cfg["title"]}</title>
   <meta name="description" content="Wedding celebration invitation for {cfg["name1"]} & {cfg["name2"]} - {cfg["hero_date_header"]}" />
 {duckdns_router_script}
-  <!-- OpenGraph Metadata -->
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <!-- OpenGraph Metadata (WhatsApp, iMessage, Facebook) -->
+  <meta property="og:site_name" content="Ritik &amp; Vaibhavi Wedding" />
   <meta property="og:title" content="{cfg["title"]}" />
   <meta property="og:description" content="We invite you to celebrate our wedding. {cfg["hero_date_header"]}" />
-  <meta property="og:image" content="assets/envelope-poster-dG0TpNIf.jpg" />
+  <meta property="og:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta property="og:image:secure_url" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Ritik &amp; Vaibhavi Wedding Invitation" />
   <meta property="og:type" content="website" />
+
+  <!-- Twitter / X Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{cfg["title"]}" />
+  <meta name="twitter:description" content="We invite you to celebrate our wedding. {cfg["hero_date_header"]}" />
+  <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
 
   <!-- Fonts & Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
