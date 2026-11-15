@@ -53,6 +53,13 @@ body {
   position: relative;
 }
 
+body.envelope-active {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  touch-action: none;
+}
+
 /* ============================================================
    ENVELOPE OPENING OVERLAY
    ============================================================ */
@@ -636,7 +643,18 @@ body {
   font-size: clamp(2.2rem, 7vw, 3.2rem);
   line-height: 1.1;
   color: var(--text-olive);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.our-story-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(1.12rem, 4vw, 1.32rem);
+  font-style: italic;
+  color: var(--gold-accent);
+  margin-top: -6px;
+  margin-bottom: 26px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 @media (min-width: 768px) {
@@ -647,17 +665,33 @@ body {
 
 .our-story-text {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 3.8vw, 1.15rem);
+  font-size: clamp(0.98rem, 3.5vw, 1.1rem);
   line-height: 1.75;
   color: var(--text-olive);
-  font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   word-wrap: break-word;
+}
+
+.our-story-highlight {
+  font-family: var(--font-display);
+  font-size: clamp(1.04rem, 3.8vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--olive-dark);
+  margin: 26px auto 20px;
+  padding: 16px 20px;
+  background: rgba(254, 252, 247, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 4px 16px rgba(60, 40, 20, 0.05);
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .our-story-text {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -743,13 +777,31 @@ body {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 350px;
-  margin: 15px auto 0;
+  max-width: 360px;
+  margin: 10px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-sizing: border-box;
+}
+
+/* Translucent Event Cards - Both Sangeet and Haldi visible at once */
+.event-card-translucent {
+  width: 100%;
+  background: rgba(254, 252, 247, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 160, 89, 0.38);
+  border-radius: 18px;
+  padding: 18px 16px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 24px rgba(50, 35, 15, 0.08);
+  box-sizing: border-box;
+}
+
+.event-card-translucent:last-child {
+  margin-bottom: 0;
 }
 
 /* Subtle Translucent Toggle Bar */
@@ -1163,6 +1215,27 @@ body {
   padding: 24px 18px;
   box-shadow: 0 8px 28px rgba(60, 40, 20, 0.08);
   box-sizing: border-box;
+}
+
+.footer-invitation-lead {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #855b1a;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.footer-parents-names {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 5.8vw, 2.45rem);
+  font-weight: 400;
+  color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  line-height: 1.18;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .footer-names {

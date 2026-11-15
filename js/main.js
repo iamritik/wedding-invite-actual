@@ -3,7 +3,17 @@
  * Tailored for Ritik & Vaibhavi
  */
 
+// Force browser to not remember scroll position on refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Always scroll to top immediately on page load
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+
   // Check preview mode query param
   if (new URLSearchParams(window.location.search).has('preview')) {
     document.body.classList.add('show-preview');
@@ -14,6 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initPetals();
   initScrollNav();
+});
+
+// Also reset scroll on pageshow (e.g. back/forward or reload from cache)
+window.addEventListener('pageshow', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.has('opened') && !window.location.hash) {
+    window.scrollTo(0, 0);
+  }
 });
 
 // ============================================================
@@ -33,6 +51,9 @@ function initEnvelope() {
   const revealHero = () => {
     if (hasRevealed) return;
     hasRevealed = true;
+    document.body.classList.remove('envelope-active');
+    // Ensure viewport is pinned to absolute top as invitation reveals
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     if (heroContent) {
       heroContent.classList.add('revealed');
     }
@@ -59,6 +80,10 @@ function initEnvelope() {
     }
     return;
   }
+
+  // Lock body scroll and pin to top while envelope animation is active
+  document.body.classList.add('envelope-active');
+  window.scrollTo(0, 0);
 
   const prompt = overlay.querySelector('.envelope-prompt');
 

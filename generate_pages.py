@@ -9,6 +9,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Vaibhavi",
         "story_sign": "Ritik and Vaibhavi",
+        "parents_names": "Naresh & Kavita Arora",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -16,10 +17,9 @@ VERSIONS = [
         "hero_date_header": "27 January 2027",
         "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
-        "welcome_family": "Together with the Chittu Family",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Ritik & Vaibhavi.",
         "events_type": "shaadi_only",
-        "hashtag": "#RitikWedsVaibhavi",
+        "hashtag": "#VRinLove",
         "preview_name": "Version 1: Ritik's Side (Shaadi Only)"
     },
     {
@@ -30,6 +30,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "Vaibhavi and Ritik",
+        "parents_names": "Vivek & Manju Singh",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -37,10 +38,9 @@ VERSIONS = [
         "hero_date_header": "27 January 2027",
         "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
-        "welcome_family": "Together with their Families",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Vaibhavi & Ritik.",
         "events_type": "shaadi_only",
-        "hashtag": "#VaibhaviWedsRitik",
+        "hashtag": "#VRinLove",
         "preview_name": "Version 2: Vaibhavi's Side (Shaadi Only)"
     },
     {
@@ -51,6 +51,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Vaibhavi",
         "story_sign": "Ritik and Vaibhavi",
+        "parents_names": "Naresh & Kavita Arora",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
@@ -58,10 +59,9 @@ VERSIONS = [
         "hero_date_header": "26 – 27 January 2027",
         "target_date_iso": "2027-01-26T18:00:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
-        "welcome_family": "Together with the Chittu Family",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Ritik & Vaibhavi.",
         "events_type": "all_events",
-        "hashtag": "#RitikWedsVaibhavi",
+        "hashtag": "#VRinLove",
         "preview_name": "Version 3: Ritik's Side (All 3 Events)"
     },
     {
@@ -72,6 +72,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "Vaibhavi and Ritik",
+        "parents_names": "Vivek & Manju Singh",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
@@ -79,10 +80,9 @@ VERSIONS = [
         "hero_date_header": "26 – 27 January 2027",
         "target_date_iso": "2027-01-26T18:00:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
-        "welcome_family": "Together with their Families",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Vaibhavi & Ritik.",
         "events_type": "all_events",
-        "hashtag": "#VaibhaviWedsRitik",
+        "hashtag": "#VRinLove",
         "preview_name": "Version 4: Vaibhavi's Side (All 3 Events)"
     }
 ]
@@ -98,18 +98,8 @@ def build_sangeet_haldi_screen():
     <div class="sangeet-haldi-container">
       <p class="events-screen-label">Pre-Wedding Festivities</p>
 
-      <!-- Interactive Tab Toggle -->
-      <div class="events-toggle-bar" role="tablist" aria-label="Ceremony Selection">
-        <button id="tabSangeet" class="event-toggle-btn active" role="tab" aria-selected="true" onclick="switchEventTab('sangeet')">
-          <span>✦ Sangeet</span>
-        </button>
-        <button id="tabHaldi" class="event-toggle-btn" role="tab" aria-selected="false" onclick="switchEventTab('haldi')">
-          <span>☀️ Haldi</span>
-        </button>
-      </div>
-
-      <!-- Tab Content: Sangeet -->
-      <div id="contentSangeet" class="event-tab-pane active" role="tabpanel">
+      <!-- Event 1: Sangeet -->
+      <div class="event-card-translucent">
         <div class="event-icon-wrap">
           <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
         </div>
@@ -124,8 +114,8 @@ def build_sangeet_haldi_screen():
         </div>
       </div>
 
-      <!-- Tab Content: Haldi -->
-      <div id="contentHaldi" class="event-tab-pane" role="tabpanel">
+      <!-- Event 2: Haldi -->
+      <div class="event-card-translucent">
         <div class="event-icon-wrap">
           <img src="assets/flor-almendro-grande.png" alt="Haldi" class="event-icon" />
         </div>
@@ -348,18 +338,31 @@ def build_html_page(cfg, is_root=False):
 
     <div class="our-story-inner">
       <h2 class="our-story-title">Our Story</h2>
+      <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
+
       <p class="our-story-text">
-        Some of the best love stories begin unexpectedly, and ours was no different.
+        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched.
       </p>
       <p class="our-story-text">
-        What started as a chance encounter soon became endless conversations, spontaneous adventures, and countless cherished memories together.
+        What followed was a month of conversations that never seemed to run out. The timing, however, had other plans. While Vaibhavi was travelling for a friend's wedding, Ritik was back home in Karnal. Both based in Bangalore, yet somehow a whole month passed before they could meet.
       </p>
       <p class="our-story-text">
-        Somewhere along the way, we found our favorite place: by each other’s side.
+        But by then, they already knew there was something worth exploring.
       </p>
       <p class="our-story-text">
-        And now, we're ready for our greatest adventure yet — a lifetime together.
+        On 30th November, they finally went on their first date. The plan was dinner. The reality? Talking until 5 AM, with absolutely no shortage of things to say.
       </p>
+      <p class="our-story-text">
+        Since then, they've been each other's favourite gossip partners, sounding boards and biggest cheerleaders. From endless banter and intellectual debates to celebrating each other's wins and pushing one another to dream bigger, they've found a relationship where neither has to hold back or be anything but themselves.
+      </p>
+      <p class="our-story-text">
+        Vaibhavi found someone who loves her unfiltered, chatty self. Ritik found someone whose mind, spirit and personality keep him on his toes. And somewhere between the conversations, laughter and late nights, they found their favourite person.
+      </p>
+
+      <p class="our-story-highlight">
+        Still each other's favourite notification, favourite person and favourite conversation.
+      </p>
+
       <span class="our-story-signature">{cfg["story_sign"]}</span>
     </div>
   </section>
@@ -369,7 +372,6 @@ def build_html_page(cfg, is_root=False):
        ============================================================ -->
   <section id="welcomeSection" class="welcome-section">
     <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
-    <p class="welcome-lead">{cfg["welcome_family"]}</p>
     <p class="welcome-text">
       "{cfg["welcome_text"]}"
     </p>
@@ -407,12 +409,8 @@ def build_html_page(cfg, is_root=False):
     </div>
 
     <div class="footer-content">
-      <div class="footer-names">
-        <span>{cfg["name1"]}</span>
-        <span class="footer-weds">{cfg["connector"]}</span>
-        <span>{cfg["name2"]}</span>
-      </div>
-      <p class="footer-date">{cfg["hero_date_header"]}</p>
+      <p class="footer-invitation-lead">Warmly Invited By</p>
+      <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
       <p class="footer-tagline">Looking forward to celebrating with you!</p>
       <p class="footer-hashtag">{cfg["hashtag"]}</p>
     </div>
