@@ -247,7 +247,7 @@ def build_html_page(cfg, is_root=False):
     </svg>
   </button>
 
-  <audio id="weddingAudio" src="assets/semo-fireflies.mp3" preload="auto" loop></audio>
+  <audio id="weddingAudio" src="assets/mohabbatein-love-theme.mp3" preload="auto" loop></audio>
 
   <!-- ============================================================
        1. ENVELOPE OPENING OVERLAY
@@ -268,10 +268,9 @@ def build_html_page(cfg, is_root=False):
        2. HERO INVITATION SECTION (SLIDE 1 - LAKE PALACE & MOVING BLOSSOMS)
        ============================================================ -->
   <section id="heroSection" class="hero-section">
-    <!-- Lake Palace & Deckled Parchment Painting Backdrop -->
+    <!-- Lake Palace & Deckled Parchment Painting Backdrop with Swaying Leaves & Flowers -->
     <div class="hero-painting-container">
-      <img src="assets/screen_first_clean.jpg" alt="Wedding Invitation Backdrop" class="hero-painting-bg" />
-      <img src="assets/screen_first_flowers_branch.png" alt="" class="hero-moving-branch" />
+      <video class="hero-painting-bg" src="assets/hero_video_udaipur.mp4" poster="assets/screen_first_clean.jpg" autoplay loop muted playsinline></video>
     </div>
 
     <div id="heroContent" class="hero-content">
