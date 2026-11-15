@@ -1,0 +1,23 @@
+# HTTP only on :80 inside the container.
+# Nutmeg's host Caddy owns ports 80/443, handles automatic HTTPS,
+# and reverse-proxies to shaadi-web:80 over the shared "edge" network.
+:80 {
+    encode gzip
+    root * /srv
+
+    # Friendly human-readable URL redirects
+    redir /ritik-all* /version-3/ 302
+    redir /vaibhavi-all* /version-4/ 302
+    redir /ritik* /version-1/ 302
+    redir /vaibhavi* /version-2/ 302
+    redir /v1* /version-1/ 302
+    redir /v2* /version-2/ 302
+    redir /v3* /version-3/ 302
+    redir /v4* /version-4/ 302
+
+    # Cache headers for static assets
+    @assets path /assets/* /css/* /js/*
+    header @assets Cache-Control "public, max-age=86400"
+
+    file_server
+}

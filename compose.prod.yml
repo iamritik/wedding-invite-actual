@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    # Reached by nutmeg's front Caddy over the shared "edge" network
+    networks:
+      edge:
+        aliases:
+          - shaadi-web
+
+networks:
+  # Shared with the nutmeg stack.
+  edge:
+    external: true

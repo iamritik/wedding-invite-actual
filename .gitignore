@@ -1,1 +1,11 @@
 screenshots/
+assets/debug_*
+assets/envelope_composited*
+assets/envelope_video_udaipur*
+assets/envelope_poster_udaipur*
+assets/screen_first_base*
+assets/screen_first_bottom_flowers*
+assets/screen_first_top_branch*
+assets/envelope_bow*
+assets/envelope_flap_*
+.DS_Store
