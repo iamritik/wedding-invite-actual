@@ -189,7 +189,7 @@ body {
 }
 
 /* ============================================================
-   HERO SECTION (SLIDE 1 - PERFECT VERTICAL CALIBRATION)
+   HERO SECTION (SLIDE 1 - ROYAL HAVELI WITH MOVING BOUGAINVILLEA)
    ============================================================ */
 .hero-section {
   position: relative;
@@ -201,16 +201,50 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--bg-cream);
+  background-color: #faf5ed;
 }
 
-.hero-video-bg {
+.hero-painting-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-painting-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  object-position: center top;
+}
+
+.hero-moving-bougainvillea {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 2;
+  pointer-events: none;
+  transform-origin: 0% 0%;
+  animation: bougainvilleaSway 7s ease-in-out infinite alternate;
+}
+
+@keyframes bougainvilleaSway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(1.4deg) scale(1.015);
+  }
+  100% {
+    transform: rotate(-0.8deg) scale(0.995);
+  }
 }
 
 .hero-content {
@@ -223,9 +257,9 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* Precisely cleared of top olive leaves (leaves end at ~190px on 852h) */
-  padding-top: clamp(170px, 25.5vh, 250px);
-  padding-bottom: 70px;
+  /* Cleared below hanging bougainvillea and placed cleanly in sky above palace domes */
+  padding-top: clamp(35px, 4.5vh, 50px);
+  padding-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
   opacity: 0;
@@ -234,32 +268,32 @@ body {
 
 @media (max-height: 720px) {
   .hero-content {
-    padding-top: 155px;
-    padding-bottom: 50px;
+    padding-top: 28px;
+    padding-bottom: 30px;
   }
   .hero-names {
-    font-size: 2.3rem !important;
-    margin-bottom: 8px !important;
+    font-size: 2.1rem !important;
+    margin-bottom: 5px !important;
   }
   .hero-weds {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
     margin: 2px 0 !important;
   }
   .hero-subtitle {
-    font-size: 9px !important;
-    margin-bottom: 8px !important;
+    font-size: 8.5px !important;
+    margin-bottom: 5px !important;
   }
   .hero-date-box {
-    margin: 8px 0 !important;
+    margin: 5px 0 !important;
   }
   .hero-day {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
   }
   .hero-location-tag {
-    margin-top: 8px !important;
+    margin-top: 5px !important;
   }
   .hero-venue-name {
-    font-size: 1.45rem !important;
+    font-size: 1.35rem !important;
   }
 }
 
@@ -270,22 +304,23 @@ body {
 .hero-names {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.5rem, 7.6vw, 3.6rem);
+  font-size: clamp(2.4rem, 7.5vw, 3.4rem);
   line-height: 0.95;
   color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
 
 .hero-weds {
   font-family: var(--font-script);
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-style: italic;
   line-height: 1;
-  margin: 4px 0;
+  margin: 3px 0;
   color: var(--gold-accent);
 }
 
@@ -295,9 +330,10 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   max-width: 260px;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px;
   font-weight: 500;
 }
 
@@ -306,8 +342,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 12px 0 12px;
+  margin: 8px 0 10px;
   color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
 }
 
 .hero-date-sprig {
@@ -334,7 +371,7 @@ body {
   font-size: 10.5px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  opacity: 0.85;
+  opacity: 0.9;
   padding-left: 0.32em;
 }
 
@@ -348,37 +385,43 @@ body {
 
 .hero-day-name {
   font-family: var(--font-sans);
-  font-size: 9px;
-  letter-spacing: 0.3em;
+  font-size: 9.5px;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  opacity: 0.8;
-  padding-left: 0.3em;
+  opacity: 0.85;
+  margin-top: 3px;
+  padding-left: 0.26em;
 }
 
 .hero-year {
   font-family: var(--font-sans);
-  font-size: 10.5px;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  padding-left: 0.3em;
+  font-size: 11.5px;
+  letter-spacing: 0.38em;
+  opacity: 0.9;
+  margin-top: 3px;
+  padding-left: 0.38em;
+  font-weight: 500;
 }
 
 .hero-location-tag {
   font-family: var(--font-sans);
   font-size: 9.5px;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--text-olive-light);
+  color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  opacity: 0.85;
   margin-top: 14px;
+  margin-bottom: 2px;
 }
 
 .hero-venue-name {
   font-family: var(--font-display);
-  font-size: 1.65rem;
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  font-weight: 400;
   color: var(--text-olive);
-  margin-top: 3px;
-  letter-spacing: 0.04em;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  letter-spacing: -0.01em;
 }
 
 .hero-scroll-btn {
@@ -669,78 +712,79 @@ body {
 }
 
 /* ============================================================
-   EVENTS SECTION (INTEGRATED INTO OLIVE FRESCO CANVAS)
+   SANGEET & HALDI SCREEN (TRADITIONAL COURTYARD PAINTING)
    ============================================================ */
-.events-section {
+.sangeet-haldi-section {
   position: relative;
-  padding: 85px 20px 105px;
-  background-color: #3b4528;
-  color: #faf8f2;
-  overflow: hidden;
-  background-repeat: repeat;
-  background-size: cover;
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background-color: #f7f3ea;
+}
+
+.sangeet-haldi-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 1;
+}
+
+.sangeet-haldi-card {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  background: rgba(254, 252, 246, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 18px;
+  padding: 28px 20px;
+  box-shadow: 0 12px 35px rgba(50, 35, 15, 0.12);
+  text-align: center;
   box-sizing: border-box;
 }
 
-.events-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.09) 0%, transparent 75%);
-  pointer-events: none;
+.events-screen-label {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #946820;
+  margin-bottom: 4px;
+  font-weight: 600;
 }
 
-.events-fountain-decor {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  margin: -40px auto 16px;
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.95;
+.events-screen-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6.8vw, 2.7rem);
+  line-height: 1.15;
+  color: #243317;
+  margin-bottom: 20px;
 }
 
-.events-header {
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  margin-bottom: 38px;
-}
-
-.events-header .section-title {
-  color: #faf8f2;
-}
-
-.events-header .section-subtitle {
-  color: rgba(250, 248, 242, 0.75);
-}
-
-.events-canvas-wrap {
-  position: relative;
-  z-index: 5;
-  max-width: 580px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 46px;
-}
-
-/* Integrated event within the painting */
-.event-item-integrated {
-  position: relative;
+.event-item-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 16px;
 }
 
 .event-icon-wrap {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 14px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -750,61 +794,142 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2));
 }
 
-.event-label {
+.event-item-label {
   font-family: var(--font-sans);
-  font-size: 9.5px;
-  letter-spacing: 0.28em;
+  font-size: 9px;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 8px;
+  color: #946820;
+  margin-bottom: 4px;
   font-weight: 500;
 }
 
-.event-name {
+.event-item-name {
   font-family: var(--font-display);
-  font-size: 2.1rem;
+  font-size: clamp(1.5rem, 5.2vw, 1.9rem);
   line-height: 1.2;
-  color: #faf8f2;
-  margin-bottom: 10px;
+  color: #243317;
+  margin-bottom: 6px;
 }
 
-@media (min-width: 768px) {
-  .event-name {
-    font-size: 2.7rem;
-  }
-}
-
-.event-description {
+.event-item-desc {
   font-family: var(--font-body);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(250, 248, 242, 0.88);
-  max-width: 420px;
-  margin: 0 auto 14px;
+  font-size: clamp(0.98rem, 3.4vw, 1.08rem);
+  line-height: 1.6;
+  color: #384628;
   font-style: italic;
+  max-width: 330px;
+  margin: 0 auto 10px;
 }
 
 .event-timing-tag {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 10.5px;
-  letter-spacing: 0.24em;
+  font-size: 10px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-light);
-  margin-top: 4px;
-  border-bottom: 1px solid rgba(232, 215, 165, 0.35);
-  padding-bottom: 4px;
+  color: #855b1a;
+  border-bottom: 1px solid rgba(133, 91, 26, 0.4);
+  padding-bottom: 3px;
+  font-weight: 500;
 }
 
-.event-separator-cenefa {
-  width: 85px;
-  max-width: 38%;
-  margin: 28px auto 0;
-  opacity: 0.6;
-  pointer-events: none;
+.event-separator-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  margin: 16px auto;
+  gap: 10px;
+}
+
+.event-separator-divider::before,
+.event-separator-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(133, 91, 26, 0.45));
+}
+
+.event-separator-divider::after {
+  background: linear-gradient(90deg, rgba(133, 91, 26, 0.45), transparent);
+}
+
+.event-separator-dot {
+  font-size: 8px;
+  color: #a3722e;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+/* ============================================================
+   SHAADI & RECEPTION SCREEN (ROYAL MANDAP PAINTING)
+   ============================================================ */
+.shaadi-reception-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(70px, 11vh, 100px) 20px 40px;
+  box-sizing: border-box;
+  background-color: #faf5ee;
+}
+
+.shaadi-reception-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 1;
+}
+
+.shaadi-reception-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  background: rgba(255, 253, 250, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(215, 180, 125, 0.45);
+  border-radius: 18px;
+  padding: 24px 18px 22px;
+  box-shadow: 0 10px 30px rgba(60, 20, 30, 0.09);
+  box-sizing: border-box;
+}
+
+.shaadi-screen-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 7.2vw, 2.9rem);
+  line-height: 1.15;
+  color: #381622;
+  margin-bottom: 8px;
+}
+
+.shaadi-screen-desc {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 3.6vw, 1.12rem);
+  line-height: 1.65;
+  color: #4a2734;
+  font-style: italic;
+  max-width: 340px;
+  margin: 0 auto 12px;
+}
+
+.shaadi-tag {
+  color: #8a571c;
+  border-color: rgba(138, 87, 28, 0.45);
 }
 
 /* ============================================================
@@ -866,86 +991,156 @@ body {
 }
 
 /* ============================================================
-   FOOTER (MEDITERRANEAN ARCH)
+   FOOTER (SACRED PHERAS & ROYAL ARCH PAINTING WITH MOVING LOTUS & FLAME)
    ============================================================ */
 .footer-section {
   position: relative;
-  padding: 70px 24px 60px;
-  text-align: center;
-  background-color: var(--bg-cream);
-  overflow: hidden;
-}
-
-.footer-arch-wrap {
-  position: relative;
-  max-width: 580px;
-  margin: 0 auto;
-}
-
-.footer-arch-img {
+  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
-}
-
-.footer-arch-content {
-  position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 48%;
-  transform: translateY(-50%);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  padding: 50px 20px 60px;
+  box-sizing: border-box;
+  background-color: #faf5ed;
 }
 
-.footer-arch-name {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--text-olive);
+.footer-painting-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 
-@media (min-width: 480px) {
-  .footer-arch-name {
-    font-size: 2.3rem;
+.footer-painting-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.footer-moving-lotus {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 2;
+  pointer-events: none;
+  transform-origin: 50% 0%;
+  animation: lotusBreathe 6s ease-in-out infinite alternate;
+}
+
+@keyframes lotusBreathe {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.02) translateY(3px);
+  }
+  100% {
+    transform: scale(0.99) translateY(-1px);
   }
 }
 
-.footer-arch-amp {
+.footer-moving-flame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 3;
+  pointer-events: none;
+  animation: flameFlicker 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 5px #ff6600) drop-shadow(0 0 12px #ffbb00);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ff4500) drop-shadow(0 0 22px #ffcc00);
+  }
+  100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px #ff7700) drop-shadow(0 0 16px #ffa500);
+  }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  margin-top: -110px;
+  background: rgba(254, 252, 247, 0.75);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(215, 180, 125, 0.35);
+  border-radius: 20px;
+  padding: 24px 18px;
+  box-shadow: 0 8px 28px rgba(60, 40, 20, 0.08);
+  box-sizing: border-box;
+}
+
+.footer-names {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 7.5vw, 3.2rem);
+  color: var(--text-olive);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  line-height: 0.95;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-weds {
   font-family: var(--font-script);
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-style: italic;
   color: var(--gold-accent);
   margin: 3px 0;
 }
 
-.footer-arch-date {
+.footer-date {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 10.5px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--text-olive-light);
-  margin-top: 14px;
+  color: #855b1a;
+  margin-bottom: 14px;
+  font-weight: 500;
 }
 
 .footer-tagline {
   font-family: var(--font-body);
-  font-size: 1.15rem;
-  color: var(--text-olive-light);
+  font-size: 1.12rem;
+  color: var(--text-olive);
   font-style: italic;
-  margin-top: 36px;
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 .footer-hashtag {
   font-family: var(--font-sans);
   font-size: 11px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold-accent);
-  margin-top: 8px;
+  font-weight: 600;
 }
 
 /* ============================================================

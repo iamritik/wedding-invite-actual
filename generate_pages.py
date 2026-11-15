@@ -87,70 +87,74 @@ VERSIONS = [
     }
 ]
 
-def build_events_html(events_type, name1, name2):
-    if events_type == "shaadi_only":
-        return f"""
-      <!-- EVENT: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
-        <div class="event-icon-wrap">
-          <img src="assets/boda-floral-arco.png" alt="Shaadi Ceremony Arch" class="event-icon" />
-        </div>
-        <p class="event-label">The Auspicious Union</p>
-        <h3 class="event-name">Shaadi & Reception</h3>
-        <p class="event-description">
-          The sacred wedding ceremony and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
-        </p>
-        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
-      </div>
-"""
-    else:
-        return f"""
-      <!-- EVENT 1: SANGEET & RING CEREMONY INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
+def build_sangeet_haldi_screen():
+    return """
+  <!-- ============================================================
+       6. SANGEET & HALDI SCREEN (TRADITIONAL COURTYARD PAINTING)
+       ============================================================ -->
+  <section id="sangeetHaldiSection" class="sangeet-haldi-section">
+    <img src="assets/screen_sangeet_haldi.jpg" alt="Sangeet & Haldi Courtyard" class="sangeet-haldi-bg" />
+
+    <div class="sangeet-haldi-card">
+      <p class="events-screen-label">Pre-Wedding Festivities</p>
+      <h2 class="events-screen-title">Sangeet &amp; Haldi</h2>
+      
+      <!-- Event 1: Sangeet & Ring Ceremony -->
+      <div class="event-item-block">
         <div class="event-icon-wrap">
           <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
         </div>
-        <p class="event-label">An Evening of Music & Dance</p>
-        <h3 class="event-name">Sangeet & Ring Ceremony</h3>
-        <p class="event-description">
+        <p class="event-item-label">An Evening of Music &amp; Dance</p>
+        <h3 class="event-item-name">Sangeet &amp; Ring Ceremony</h3>
+        <p class="event-item-desc">
           An enchanting evening of music, dance performances, ring exchange, and celebratory dinner.
         </p>
         <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
 
-      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
+      <div class="event-separator-divider"><span class="event-separator-dot">✦</span></div>
 
-      <!-- EVENT 2: HALDI CEREMONY INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
+      <!-- Event 2: Haldi Ceremony -->
+      <div class="event-item-block">
         <div class="event-icon-wrap">
-          <img src="assets/flor-almendro-grande.png" alt="Haldi Turmeric" class="event-icon" />
+          <img src="assets/flor-almendro-grande.png" alt="Haldi" class="event-icon" />
         </div>
-        <p class="event-label">Joyous Morning Blessings</p>
-        <h3 class="event-name">Haldi Ceremony</h3>
-        <p class="event-description">
+        <p class="event-item-label">Joyous Morning Blessings</p>
+        <h3 class="event-item-name">Haldi Ceremony</h3>
+        <p class="event-item-desc">
           Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished blessings.
         </p>
         <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
       </div>
+    </div>
+  </section>
+"""
 
-      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
+def build_shaadi_reception_screen():
+    return """
+  <!-- ============================================================
+       7. SHAADI & RECEPTION SCREEN (ROYAL MANDAP PAINTING)
+       ============================================================ -->
+  <section id="shaadiReceptionSection" class="shaadi-reception-section">
+    <img src="assets/screen_shaadi_reception.jpg" alt="Royal Wedding Mandap" class="shaadi-reception-bg" />
 
-      <!-- EVENT 3: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
-        <div class="event-icon-wrap">
-          <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
-        </div>
-        <p class="event-label">The Auspicious Wedding</p>
-        <h3 class="event-name">Shaadi & Reception</h3>
-        <p class="event-description">
-          The sacred wedding rituals and seven pheras followed by a grand dinner and celebrations under the stars.
-        </p>
-        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
+    <div class="shaadi-reception-content">
+      <div class="event-icon-wrap">
+        <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
       </div>
+      <p class="event-item-label">The Auspicious Wedding Union</p>
+      <h2 class="shaadi-screen-title">Shaadi &amp; Reception</h2>
+      <p class="shaadi-screen-desc">
+        The sacred wedding rituals and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
+      </p>
+      <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
+    </div>
+  </section>
 """
 
 def build_html_page(cfg, is_root=False):
-    events_html = build_events_html(cfg["events_type"], cfg["name1"], cfg["name2"])
+    sangeet_haldi_html = build_sangeet_haldi_screen() if cfg["events_type"] == "all_events" else ""
+    shaadi_reception_html = build_shaadi_reception_screen()
     
     switcher_links = ""
     for v in VERSIONS:
@@ -245,11 +249,14 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION (SLIDE 1)
+       2. HERO INVITATION SECTION (SLIDE 1 - ROYAL HAVELI & BOUGAINVILLEA)
        ============================================================ -->
   <section id="heroSection" class="hero-section">
-    <!-- Looped background video with poster fallback -->
-    <video class="hero-video-bg" src="assets/hero-video.mp4" poster="assets/fresco-hero-original.jpg" autoplay loop muted playsinline></video>
+    <!-- Royal Haveli Painting Backdrop -->
+    <div class="hero-painting-container">
+      <img src="assets/screen_first.jpg" alt="Royal Haveli Painting" class="hero-painting-bg" />
+      <img src="assets/screen_first_bougainvillea.png" alt="" class="hero-moving-bougainvillea" />
+    </div>
 
     <div id="heroContent" class="hero-content">
       <div class="hero-names">
@@ -353,24 +360,11 @@ def build_html_page(cfg, is_root=False):
     </p>
   </section>
 
-  <!-- ============================================================
-       6. CELEBRATION EVENTS (INTEGRATED INTO OLIVE FRESCO CANVAS)
-       ============================================================ -->
-  <section id="eventsSection" class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
-    <img src="assets/fuente-jardin-mediterraneo.png" alt="Garden Fountain" class="events-fountain-decor" />
-
-    <div class="events-header">
-      <h2 class="section-title">The Celebration</h2>
-      <p class="section-subtitle">{cfg["hero_date_header"]}</p>
-    </div>
-
-    <div class="events-canvas-wrap">
-      {events_html}
-    </div>
-  </section>
+{sangeet_haldi_html}
+{shaadi_reception_html}
 
   <!-- ============================================================
-       7. VENUE & LOCATION
+       8. VENUE & LOCATION
        ============================================================ -->
   <section id="venueSection" class="venue-section">
     <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
@@ -385,21 +379,28 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       8. FOOTER ARCH SECTION
+       9. LAST SCREEN (SACRED PHERAS & ROYAL ARCH PAINTING)
        ============================================================ -->
   <footer id="footerSection" class="footer-section">
-    <div class="footer-arch-wrap">
-      <img src="assets/arco-mediterraneo.png" alt="Decorative Arch" class="footer-arch-img" />
-      <div class="footer-arch-content">
-        <span class="footer-arch-name">{cfg["name1"]}</span>
-        <span class="footer-arch-amp">{cfg["connector"]}</span>
-        <span class="footer-arch-name">{cfg["name2"]}</span>
-        <span class="footer-arch-date">{cfg["hero_date_header"]}</span>
-      </div>
+    <!-- Royal Arch & Mandap Painting Backdrop -->
+    <div class="footer-painting-container">
+      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="footer-painting-bg" />
+      <!-- Moving lotus garland layer at top -->
+      <img src="assets/screen_last_lotus.png" alt="" class="footer-moving-lotus" />
+      <!-- Flickering sacred flame at bottom -->
+      <img src="assets/screen_last_flame.png" alt="" class="footer-moving-flame" />
     </div>
 
-    <p class="footer-tagline">Looking forward to celebrating with you!</p>
-    <p class="footer-hashtag">{cfg["hashtag"]}</p>
+    <div class="footer-content">
+      <div class="footer-names">
+        <span>{cfg["name1"]}</span>
+        <span class="footer-weds">{cfg["connector"]}</span>
+        <span>{cfg["name2"]}</span>
+      </div>
+      <p class="footer-date">{cfg["hero_date_header"]}</p>
+      <p class="footer-tagline">Looking forward to celebrating with you!</p>
+      <p class="footer-hashtag">{cfg["hashtag"]}</p>
+    </div>
   </footer>
 
   <!-- Scripts -->
@@ -417,8 +418,10 @@ for cfg in VERSIONS:
         f.write(content)
     print(f"Generated {path}")
 
-# Generate root index.html using Version 1 as default with host routing enabled
-root_content = build_html_page(VERSIONS[0], is_root=True)
+# Generate root index.html
+root_cfg = VERSIONS[0].copy()
+root_cfg["dir"] = "."
+root_html = build_html_page(root_cfg, is_root=True)
 with open("index.html", "w", encoding="utf-8") as f:
-    f.write(root_content)
+    f.write(root_html)
 print("Generated root index.html")

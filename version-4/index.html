@@ -62,11 +62,14 @@
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION (SLIDE 1)
+       2. HERO INVITATION SECTION (SLIDE 1 - ROYAL HAVELI & BOUGAINVILLEA)
        ============================================================ -->
   <section id="heroSection" class="hero-section">
-    <!-- Looped background video with poster fallback -->
-    <video class="hero-video-bg" src="assets/hero-video.mp4" poster="assets/fresco-hero-original.jpg" autoplay loop muted playsinline></video>
+    <!-- Royal Haveli Painting Backdrop -->
+    <div class="hero-painting-container">
+      <img src="assets/screen_first.jpg" alt="Royal Haveli Painting" class="hero-painting-bg" />
+      <img src="assets/screen_first_bougainvillea.png" alt="" class="hero-moving-bougainvillea" />
+    </div>
 
     <div id="heroContent" class="hero-content">
       <div class="hero-names">
@@ -170,67 +173,70 @@
     </p>
   </section>
 
+
   <!-- ============================================================
-       6. CELEBRATION EVENTS (INTEGRATED INTO OLIVE FRESCO CANVAS)
+       6. SANGEET & HALDI SCREEN (TRADITIONAL COURTYARD PAINTING)
        ============================================================ -->
-  <section id="eventsSection" class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
-    <img src="assets/fuente-jardin-mediterraneo.png" alt="Garden Fountain" class="events-fountain-decor" />
+  <section id="sangeetHaldiSection" class="sangeet-haldi-section">
+    <img src="assets/screen_sangeet_haldi.jpg" alt="Sangeet & Haldi Courtyard" class="sangeet-haldi-bg" />
 
-    <div class="events-header">
-      <h2 class="section-title">The Celebration</h2>
-      <p class="section-subtitle">26 – 27 January 2027</p>
-    </div>
-
-    <div class="events-canvas-wrap">
+    <div class="sangeet-haldi-card">
+      <p class="events-screen-label">Pre-Wedding Festivities</p>
+      <h2 class="events-screen-title">Sangeet &amp; Haldi</h2>
       
-      <!-- EVENT 1: SANGEET & RING CEREMONY INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
+      <!-- Event 1: Sangeet & Ring Ceremony -->
+      <div class="event-item-block">
         <div class="event-icon-wrap">
           <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
         </div>
-        <p class="event-label">An Evening of Music & Dance</p>
-        <h3 class="event-name">Sangeet & Ring Ceremony</h3>
-        <p class="event-description">
+        <p class="event-item-label">An Evening of Music &amp; Dance</p>
+        <h3 class="event-item-name">Sangeet &amp; Ring Ceremony</h3>
+        <p class="event-item-desc">
           An enchanting evening of music, dance performances, ring exchange, and celebratory dinner.
         </p>
         <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
 
-      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
+      <div class="event-separator-divider"><span class="event-separator-dot">✦</span></div>
 
-      <!-- EVENT 2: HALDI CEREMONY INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
+      <!-- Event 2: Haldi Ceremony -->
+      <div class="event-item-block">
         <div class="event-icon-wrap">
-          <img src="assets/flor-almendro-grande.png" alt="Haldi Turmeric" class="event-icon" />
+          <img src="assets/flor-almendro-grande.png" alt="Haldi" class="event-icon" />
         </div>
-        <p class="event-label">Joyous Morning Blessings</p>
-        <h3 class="event-name">Haldi Ceremony</h3>
-        <p class="event-description">
+        <p class="event-item-label">Joyous Morning Blessings</p>
+        <h3 class="event-item-name">Haldi Ceremony</h3>
+        <p class="event-item-desc">
           Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished blessings.
         </p>
         <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
       </div>
-
-      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
-
-      <!-- EVENT 3: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
-      <div class="event-item-integrated">
-        <div class="event-icon-wrap">
-          <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
-        </div>
-        <p class="event-label">The Auspicious Wedding</p>
-        <h3 class="event-name">Shaadi & Reception</h3>
-        <p class="event-description">
-          The sacred wedding rituals and seven pheras followed by a grand dinner and celebrations under the stars.
-        </p>
-        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
-      </div>
-
     </div>
   </section>
 
+
   <!-- ============================================================
-       7. VENUE & LOCATION
+       7. SHAADI & RECEPTION SCREEN (ROYAL MANDAP PAINTING)
+       ============================================================ -->
+  <section id="shaadiReceptionSection" class="shaadi-reception-section">
+    <img src="assets/screen_shaadi_reception.jpg" alt="Royal Wedding Mandap" class="shaadi-reception-bg" />
+
+    <div class="shaadi-reception-content">
+      <div class="event-icon-wrap">
+        <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+      </div>
+      <p class="event-item-label">The Auspicious Wedding Union</p>
+      <h2 class="shaadi-screen-title">Shaadi &amp; Reception</h2>
+      <p class="shaadi-screen-desc">
+        The sacred wedding rituals and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
+      </p>
+      <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       8. VENUE & LOCATION
        ============================================================ -->
   <section id="venueSection" class="venue-section">
     <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
@@ -245,21 +251,28 @@
   </section>
 
   <!-- ============================================================
-       8. FOOTER ARCH SECTION
+       9. LAST SCREEN (SACRED PHERAS & ROYAL ARCH PAINTING)
        ============================================================ -->
   <footer id="footerSection" class="footer-section">
-    <div class="footer-arch-wrap">
-      <img src="assets/arco-mediterraneo.png" alt="Decorative Arch" class="footer-arch-img" />
-      <div class="footer-arch-content">
-        <span class="footer-arch-name">Vaibhavi</span>
-        <span class="footer-arch-amp">weds</span>
-        <span class="footer-arch-name">Ritik</span>
-        <span class="footer-arch-date">26 – 27 January 2027</span>
-      </div>
+    <!-- Royal Arch & Mandap Painting Backdrop -->
+    <div class="footer-painting-container">
+      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="footer-painting-bg" />
+      <!-- Moving lotus garland layer at top -->
+      <img src="assets/screen_last_lotus.png" alt="" class="footer-moving-lotus" />
+      <!-- Flickering sacred flame at bottom -->
+      <img src="assets/screen_last_flame.png" alt="" class="footer-moving-flame" />
     </div>
 
-    <p class="footer-tagline">Looking forward to celebrating with you!</p>
-    <p class="footer-hashtag">#VaibhaviWedsRitik</p>
+    <div class="footer-content">
+      <div class="footer-names">
+        <span>Vaibhavi</span>
+        <span class="footer-weds">weds</span>
+        <span>Ritik</span>
+      </div>
+      <p class="footer-date">26 – 27 January 2027</p>
+      <p class="footer-tagline">Looking forward to celebrating with you!</p>
+      <p class="footer-hashtag">#VaibhaviWedsRitik</p>
+    </div>
   </footer>
 
   <!-- Scripts -->
