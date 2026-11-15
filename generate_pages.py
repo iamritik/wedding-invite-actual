@@ -265,12 +265,12 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION (SLIDE 1 - LAKE PALACE & MOVING BLOSSOMS)
+       2. HERO INVITATION SECTION (SLIDE 1 - FRESCO MEDITERRANEAN COAST & SWAYING BRANCH)
        ============================================================ -->
   <section id="heroSection" class="hero-section">
-    <!-- Lake Palace & Deckled Parchment Painting Backdrop with Swaying Leaves & Flowers -->
+    <!-- Authentic Fresco Mediterranean Painting Backdrop with Swaying Almond Branch -->
     <div class="hero-painting-container">
-      <video class="hero-painting-bg" src="assets/hero_video_udaipur.mp4" poster="assets/screen_first_clean.jpg" autoplay loop muted playsinline></video>
+      <video class="hero-painting-bg" src="assets/hero-video.mp4" poster="assets/fresco-hero-original.jpg" autoplay loop muted playsinline></video>
     </div>
 
     <div id="heroContent" class="hero-content">

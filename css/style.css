@@ -258,7 +258,7 @@ body {
   align-items: center;
   text-align: center;
   /* Centered cleanly on the torn parchment paper */
-  padding-top: clamp(170px, 25.5vh, 245px);
+  padding-top: clamp(235px, 29vh, 275px);
   padding-bottom: 70px;
   padding-left: 20px;
   padding-right: 20px;
@@ -268,8 +268,8 @@ body {
 
 @media (max-height: 720px) {
   .hero-content {
-    padding-top: 155px;
-    padding-bottom: 50px;
+    padding-top: 215px;
+    padding-bottom: 40px;
   }
   .hero-names {
     font-size: 2.3rem !important;
