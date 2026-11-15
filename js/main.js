@@ -255,3 +255,31 @@ function initScrollNav() {
     });
   }
 }
+
+// ============================================================
+// 6. EVENT CEREMONY TAB SWITCHER
+// ============================================================
+function switchEventTab(tab) {
+  const tabSangeet = document.getElementById('tabSangeet');
+  const tabHaldi = document.getElementById('tabHaldi');
+  const contentSangeet = document.getElementById('contentSangeet');
+  const contentHaldi = document.getElementById('contentHaldi');
+  if (!tabSangeet || !tabHaldi || !contentSangeet || !contentHaldi) return;
+
+  if (tab === 'sangeet') {
+    tabSangeet.classList.add('active');
+    tabSangeet.setAttribute('aria-selected', 'true');
+    tabHaldi.classList.remove('active');
+    tabHaldi.setAttribute('aria-selected', 'false');
+    contentSangeet.classList.add('active');
+    contentHaldi.classList.remove('active');
+  } else {
+    tabHaldi.classList.add('active');
+    tabHaldi.setAttribute('aria-selected', 'true');
+    tabSangeet.classList.remove('active');
+    tabSangeet.setAttribute('aria-selected', 'false');
+    contentHaldi.classList.add('active');
+    contentSangeet.classList.remove('active');
+  }
+}
+window.switchEventTab = switchEventTab;

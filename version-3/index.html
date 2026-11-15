@@ -62,13 +62,13 @@
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION (SLIDE 1 - ROYAL HAVELI & BOUGAINVILLEA)
+       2. HERO INVITATION SECTION (SLIDE 1 - LAKE PALACE & MOVING BLOSSOMS)
        ============================================================ -->
   <section id="heroSection" class="hero-section">
-    <!-- Royal Haveli Painting Backdrop -->
+    <!-- Lake Palace & Deckled Parchment Painting Backdrop -->
     <div class="hero-painting-container">
-      <img src="assets/screen_first.jpg" alt="Royal Haveli Painting" class="hero-painting-bg" />
-      <img src="assets/screen_first_bougainvillea.png" alt="" class="hero-moving-bougainvillea" />
+      <img src="assets/screen_first_clean.jpg" alt="Wedding Invitation Backdrop" class="hero-painting-bg" />
+      <img src="assets/screen_first_flowers_branch.png" alt="" class="hero-moving-branch" />
     </div>
 
     <div id="heroContent" class="hero-content">
@@ -180,12 +180,21 @@
   <section id="sangeetHaldiSection" class="sangeet-haldi-section">
     <img src="assets/screen_sangeet_haldi.jpg" alt="Sangeet & Haldi Courtyard" class="sangeet-haldi-bg" />
 
-    <div class="sangeet-haldi-card">
+    <div class="sangeet-haldi-container">
       <p class="events-screen-label">Pre-Wedding Festivities</p>
-      <h2 class="events-screen-title">Sangeet &amp; Haldi</h2>
-      
-      <!-- Event 1: Sangeet & Ring Ceremony -->
-      <div class="event-item-block">
+
+      <!-- Interactive Tab Toggle -->
+      <div class="events-toggle-bar" role="tablist" aria-label="Ceremony Selection">
+        <button id="tabSangeet" class="event-toggle-btn active" role="tab" aria-selected="true" onclick="switchEventTab('sangeet')">
+          <span>✦ Sangeet</span>
+        </button>
+        <button id="tabHaldi" class="event-toggle-btn" role="tab" aria-selected="false" onclick="switchEventTab('haldi')">
+          <span>☀️ Haldi</span>
+        </button>
+      </div>
+
+      <!-- Tab Content: Sangeet -->
+      <div id="contentSangeet" class="event-tab-pane active" role="tabpanel">
         <div class="event-icon-wrap">
           <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
         </div>
@@ -194,13 +203,14 @@
         <p class="event-item-desc">
           An enchanting evening of music, dance performances, ring exchange, and celebratory dinner.
         </p>
-        <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
+        <div class="event-meta-block">
+          <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
+          <span class="event-dress-code">✨ Dress Code: Indo-Western / Glamorous Festive</span>
+        </div>
       </div>
 
-      <div class="event-separator-divider"><span class="event-separator-dot">✦</span></div>
-
-      <!-- Event 2: Haldi Ceremony -->
-      <div class="event-item-block">
+      <!-- Tab Content: Haldi -->
+      <div id="contentHaldi" class="event-tab-pane" role="tabpanel">
         <div class="event-icon-wrap">
           <img src="assets/flor-almendro-grande.png" alt="Haldi" class="event-icon" />
         </div>
@@ -209,7 +219,10 @@
         <p class="event-item-desc">
           Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished blessings.
         </p>
-        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
+        <div class="event-meta-block">
+          <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
+          <span class="event-dress-code">💛 Dress Code: Shades of Yellow &amp; Sunshine Traditional</span>
+        </div>
       </div>
     </div>
   </section>
@@ -230,7 +243,10 @@
       <p class="shaadi-screen-desc">
         The sacred wedding rituals and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
       </p>
-      <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
+      <div class="event-meta-block">
+        <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
+        <span class="event-dress-code shaadi-dress-code">👑 Dress Code: Traditional Indian Formal / Royal Elegance</span>
+      </div>
     </div>
   </section>
 
