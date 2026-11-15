@@ -4,7 +4,7 @@
    ============================================================ */
 
 @import url('https://use.typekit.net/jzm0juw.css');
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Reenie+Beanie&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
   --bg-cream: #faf8f2;
@@ -182,7 +182,7 @@ body {
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTION (SLIDE 1)
    ============================================================ */
 .hero-section {
   position: relative;
@@ -351,7 +351,7 @@ body {
 
 .hero-venue-name {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   color: var(--text-olive);
   margin-top: 6px;
   max-width: 320px;
@@ -390,11 +390,11 @@ body {
 }
 
 /* ============================================================
-   COUNTDOWN SECTION
+   COUNTDOWN SECTION (INTEGRATED INTO IMPASTO OIL PAINTING)
    ============================================================ */
 .countdown-section {
   position: relative;
-  padding: 80px 24px 60px;
+  padding: 90px 20px 60px;
   text-align: center;
   overflow: hidden;
   background-color: var(--bg-cream);
@@ -402,7 +402,7 @@ body {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   line-height: 1.1;
   color: var(--text-olive);
   margin-bottom: 8px;
@@ -410,7 +410,7 @@ body {
 
 @media (min-width: 768px) {
   .section-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -420,65 +420,179 @@ body {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--text-olive-light);
-  margin-bottom: 34px;
+  margin-bottom: 20px;
 }
 
-.countdown-grid {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+/* Authentic Impasto Frame Container */
+.countdown-frame-wrap {
+  position: relative;
+  aspect-ratio: 1038 / 1515;
+  width: 90vw;
+  min-width: 310px;
   max-width: 460px;
-  margin: 0 auto;
-}
-
-@media (min-width: 480px) {
-  .countdown-grid {
-    gap: 18px;
-  }
-}
-
-.countdown-card {
-  flex: 1;
-  min-width: 65px;
-  max-width: 90px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(61, 73, 40, 0.18);
-  border-radius: 6px;
-  padding: 16px 8px 12px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 4px 16px rgba(61, 73, 40, 0.05);
+  margin: 10px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  justify-content: flex-start;
 }
 
-.countdown-card:hover {
-  transform: translateY(-2px);
+.countdown-frame-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
 }
 
-.countdown-num {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  line-height: 1;
+/* Calligraphic Days inside the frame */
+.countdown-days-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15.5%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown-days-num {
+  font-family: var(--font-script);
+  font-size: clamp(5rem, 18vw, 7.8rem);
+  line-height: 0.9;
   color: var(--text-olive);
-  font-weight: 500;
+  font-weight: 400;
 }
 
-@media (min-width: 480px) {
-  .countdown-num {
-    font-size: 2.2rem;
+.countdown-days-label {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--text-olive-light);
+  margin-top: -6px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* Calligraphic Subunits inside frame */
+.countdown-subunits-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.countdown-subunit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown-subunit-num {
+  font-family: var(--font-script);
+  font-size: clamp(2.4rem, 9vw, 3.5rem);
+  line-height: 0.95;
+  color: var(--text-olive);
+}
+
+.countdown-subunit-label {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-olive-light);
+  margin-top: -4px;
+  font-style: italic;
+}
+
+/* ============================================================
+   OUR STORY SECTION (SLIDE 2 - CLOUD IMPASTO PAINTING)
+   ============================================================ */
+.our-story-section {
+  position: relative;
+  padding: 100px 24px 120px;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--bg-cream);
+}
+
+.our-story-clouds {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 140vw;
+  max-width: 820px;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.85;
+  animation: floatClouds 24s infinite ease-in-out alternate;
+}
+
+@keyframes floatClouds {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-48%) translateY(-8px) scale(1.02);
+  }
+  100% {
+    transform: translateX(-52%) translateY(4px) scale(1);
   }
 }
 
-.countdown-label {
-  font-family: var(--font-sans);
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-olive-muted);
-  margin-top: 8px;
+.our-story-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.our-story-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: var(--text-olive);
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .our-story-title {
+    font-size: 3.8rem;
+  }
+}
+
+.our-story-text {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--text-olive);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .our-story-text {
+    font-size: 1.35rem;
+  }
+}
+
+.our-story-signature {
+  font-family: var(--font-script);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--gold-accent);
+  margin-top: 36px;
+  display: inline-block;
 }
 
 /* ============================================================
@@ -486,7 +600,7 @@ body {
    ============================================================ */
 .welcome-section {
   position: relative;
-  padding: 50px 24px 60px;
+  padding: 60px 24px 70px;
   text-align: center;
   max-width: 620px;
   margin: 0 auto;
@@ -521,31 +635,44 @@ body {
 }
 
 /* ============================================================
-   EVENTS / ITINERARY SECTION (FRESCO DECKLED FRAME)
+   EVENTS SECTION (INTEGRATED INTO OLIVE FRESCO CANVAS)
    ============================================================ */
 .events-section {
   position: relative;
-  padding: 80px 20px 100px;
+  padding: 90px 20px 110px;
   background-color: #3b4528;
   color: #faf8f2;
   overflow: hidden;
+  background-repeat: repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .events-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  background-image: radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.09) 0%, transparent 75%);
   pointer-events: none;
+}
+
+.events-fountain-decor {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120vw;
+  max-width: 700px;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.95;
 }
 
 .events-header {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .events-header .section-title {
@@ -553,41 +680,33 @@ body {
 }
 
 .events-header .section-subtitle {
-  color: rgba(250, 248, 242, 0.7);
+  color: rgba(250, 248, 242, 0.75);
 }
 
-.events-container {
+.events-canvas-wrap {
   position: relative;
-  z-index: 2;
-  max-width: 680px;
+  z-index: 5;
+  max-width: 620px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 50px;
 }
 
-.event-card {
+/* Integrated event within the painting */
+.event-item-integrated {
   position: relative;
-  background: rgba(250, 248, 242, 0.06);
-  border: 1px solid rgba(250, 248, 242, 0.22);
-  border-radius: 8px;
-  padding: 34px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(197, 160, 89, 0.5);
+  padding: 0 16px;
 }
 
 .event-icon-wrap {
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 18px;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -597,7 +716,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
 }
 
 .event-label {
@@ -612,7 +731,7 @@ body {
 
 .event-name {
   font-family: var(--font-display);
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   color: #faf8f2;
   margin-bottom: 12px;
@@ -620,77 +739,38 @@ body {
 
 @media (min-width: 768px) {
   .event-name {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 }
 
 .event-description {
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: rgba(250, 248, 242, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(250, 248, 242, 0.88);
   max-width: 440px;
-  margin: 0 auto 20px;
+  margin: 0 auto 16px;
   font-style: italic;
 }
 
-.event-divider-line {
-  width: 40px;
-  height: 1px;
-  background: rgba(250, 248, 242, 0.25);
-  margin: 18px auto;
-}
-
-.event-time-box {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 24px;
-}
-
-.event-date-text {
+.event-timing-tag {
+  display: inline-block;
   font-family: var(--font-sans);
   font-size: 11px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold-light);
+  margin-top: 6px;
+  border-bottom: 1px solid rgba(232, 215, 165, 0.35);
+  padding-bottom: 4px;
 }
 
-.event-time-text {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  color: #faf8f2;
-}
-
-.event-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.btn-event-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 22px;
-  border: 1px solid rgba(250, 248, 242, 0.55);
-  border-radius: 4px;
-  background: transparent;
-  color: #faf8f2;
-  font-family: var(--font-sans);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-event-action:hover {
-  background: #faf8f2;
-  color: var(--text-olive);
-  border-color: #faf8f2;
+.event-separator-cenefa {
+  width: 90px;
+  max-width: 40%;
+  margin: 32px auto 0;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 /* ============================================================
@@ -698,31 +778,31 @@ body {
    ============================================================ */
 .venue-section {
   position: relative;
-  padding: 90px 24px;
+  padding: 100px 24px;
   text-align: center;
   background-color: var(--bg-cream);
   overflow: hidden;
 }
 
 .venue-art {
-  max-width: 140px;
+  max-width: 160px;
   margin: 0 auto 24px;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .venue-title {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: var(--text-olive);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .venue-address {
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--text-olive-light);
   font-style: italic;
-  max-width: 380px;
+  max-width: 420px;
   margin: 0 auto 28px;
   line-height: 1.6;
 }
@@ -731,7 +811,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
+  padding: 14px 34px;
   background: var(--text-olive);
   color: #faf8f2;
   border: 1px solid var(--text-olive);
@@ -742,147 +822,13 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(61, 73, 40, 0.15);
+  box-shadow: 0 4px 16px rgba(61, 73, 40, 0.15);
 }
 
 .btn-maps:hover {
   background: #2b331c;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(61, 73, 40, 0.22);
-}
-
-/* ============================================================
-   RSVP SECTION
-   ============================================================ */
-.rsvp-section {
-  position: relative;
-  padding: 80px 24px 100px;
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.rsvp-card {
-  max-width: 540px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(61, 73, 40, 0.2);
-  border-radius: 8px;
-  padding: 40px 28px;
-  box-shadow: 0 10px 35px rgba(61, 73, 40, 0.08);
-}
-
-.rsvp-form-group {
-  margin-bottom: 22px;
-  text-align: left;
-}
-
-.rsvp-label {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-olive);
-  margin-bottom: 8px;
-}
-
-.rsvp-input,
-.rsvp-select,
-.rsvp-textarea {
-  width: 100%;
-  padding: 12px 16px;
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  color: var(--text-olive);
-  background: #ffffff;
-  border: 1px solid rgba(61, 73, 40, 0.25);
-  border-radius: 4px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  outline: none;
-}
-
-.rsvp-input:focus,
-.rsvp-select:focus,
-.rsvp-textarea:focus {
-  border-color: var(--text-olive);
-  box-shadow: 0 0 0 3px rgba(61, 73, 40, 0.1);
-}
-
-.rsvp-checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.rsvp-checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  color: var(--text-olive);
-  cursor: pointer;
-}
-
-.rsvp-checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--text-olive);
-  cursor: pointer;
-}
-
-.btn-rsvp-submit {
-  width: 100%;
-  padding: 16px 24px;
-  background: var(--text-olive);
-  color: #faf8f2;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-sans);
-  font-size: 11.5px;
-  font-weight: 500;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-  margin-top: 28px;
-}
-
-.btn-rsvp-submit:hover {
-  background: var(--olive-dark);
-}
-
-.btn-whatsapp-rsvp {
-  width: 100%;
-  padding: 14px 24px;
-  background: #25d366;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  margin-top: 12px;
-  transition: background 0.2s;
-}
-
-.btn-whatsapp-rsvp:hover {
-  background: #1ebc59;
+  box-shadow: 0 6px 20px rgba(61, 73, 40, 0.22);
 }
 
 /* ============================================================
@@ -1018,7 +964,7 @@ body {
 }
 
 /* ============================================================
-   DEV / PREVIEW SWITCHER BAR (ONLY VISIBLE ON LOCALHOST/TEST)
+   DEV / PREVIEW SWITCHER BAR
    ============================================================ */
 .preview-switcher-bar {
   position: fixed;

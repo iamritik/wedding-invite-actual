@@ -4,29 +4,30 @@ A digital wedding invitation static website suite matching the Mediterranean / I
 
 ---
 
-## ✨ Features Included
+## ✨ Features
 
 1. **Realistic Envelope Opening Experience**:
-   - Opens with the deckled handmade paper envelope wrapped with a silk chiffon ribbon bow.
-   - On tap/click, the bow unties and the envelope unfolds into the invitation with a smooth dissolve animation.
-2. **Looped Cinematic Hero**:
+   - Opens with the deckled handmade paper envelope tied with a silk chiffon ribbon bow.
+   - On tap/click, the background music begins, the bow unties on video, and the envelope dissolves into the wedding card.
+2. **Looped Cinematic Hero (Slide 1)**:
    - High-definition animated Mediterranean coastal oil painting with gentle coastal breezes and blooming jasmine.
-   - Elegant serif typography (`Antic Didone` + `Playfair Display`) with hand-illustrated rose botanical sprigs flanking the wedding dates.
-3. **Background Wedding Music with Controls**:
-   - Acoustic instrumental background music (`semo-fireflies.mp3`) starts on opening.
-   - Floating frosted-glass audio button in the bottom right corner with animated ripple effects and mute/unmute toggle.
-4. **Live Dynamic Countdown**:
-   - Real-time countdown timer ticking down to January 2027 (Days, Hours, Minutes, Seconds).
-5. **Interactive Event Cards**:
-   - Event cards with watercolor icons (`baile-nupcial.png`, `flor-almendro.png`, `boda-floral-arco.png`).
-   - "Add to Google Calendar" button (direct web calendar link).
-   - "Download .ICS" button (Apple Calendar, Outlook, Google Calendar import).
+   - Grand serif typography (`Antic Didone` + `Playfair Display`) with hand-illustrated rose botanical sprigs flanking the wedding dates.
+   - Venue: **Manka by Cherish**
+3. **Live Countdown (Integrated into Impasto Oil Frame)**:
+   - Ticking down inside the authentic Italian impasto blue and gold oil painted frame (`marco-azul-impasto.png`) with calligraphic script numbers.
+4. **"Our Story" Section (Slide 2)**:
+   - Soft floating oil-painted cloud backdrop (`nubes-impasto.png`).
+   - The couple's journey narrative with handwritten calligraphy signature.
+5. **Celebration Events (Integrated into Fresco Canvas)**:
+   - Seamlessly integrated directly into the olive fresco canvas with watercolor event icons, delicate botanical cenefas, and gold typography.
+   - Broad timings: **Evening** for Sangeet & Reception, **Morning** for Haldi.
 6. **Venue Section**:
    - Illustrated Mediterranean villa motif.
-   - "View on Google Maps" direct link.
-7. **Interactive RSVP Form**:
-   - Guest name, attendance status, party size, event selections.
-   - Direct "RSVP via WhatsApp" button that pre-formats a WhatsApp message to send straight to the couple.
+   - Venue Name: **Manka by Cherish**
+   - Direct Google Maps link: [https://maps.app.goo.gl/ituhycePZ4x9FFBP8](https://maps.app.goo.gl/ituhycePZ4x9FFBP8)
+7. **Background Wedding Music with Floating Audio Control**:
+   - Acoustic instrumental background music (`semo-fireflies.mp3`) starts on opening.
+   - Floating frosted-glass audio button in the bottom right corner with animated ripple effects and mute/unmute toggle.
 8. **Drifting Petals Animation**:
    - Lightweight floating flower petals drifting down with CSS keyframe sway and rotation.
 9. **Architectural Arch Footer**:
@@ -38,10 +39,10 @@ A digital wedding invitation static website suite matching the Mediterranean / I
 
 | Folder | Version | Couple Header | Events Included | Target Audience |
 |---|---|---|---|---|
-| `version-1/` | **Version 1** | Ritik weds Vaibhavi | **Shaadi Reception** (27th Jan 2027) | Ritik's guests invited to wedding only |
-| `version-2/` | **Version 2** | Vaibhavi weds Ritik | **Shaadi Reception** (27th Jan 2027) | Vaibhavi's guests invited to wedding only |
-| `version-3/` | **Version 3** | Ritik weds Vaibhavi | **Sangeet** (26th Jan night)<br>**Haldi** (27th Jan morning)<br>**Shaadi Reception** (27th Jan evening) | Ritik's guests invited to all 3 events |
-| `version-4/` | **Version 4** | Vaibhavi weds Ritik | **Sangeet** (26th Jan night)<br>**Haldi** (27th Jan morning)<br>**Shaadi Reception** (27th Jan evening) | Vaibhavi's guests invited to all 3 events |
+| `version-1/` | **Version 1** | Ritik weds Vaibhavi | **Shaadi & Reception** (27th Jan 2027 · Evening) | Ritik's guests invited to wedding only |
+| `version-2/` | **Version 2** | Vaibhavi weds Ritik | **Shaadi & Reception** (27th Jan 2027 · Evening) | Vaibhavi's guests invited to wedding only |
+| `version-3/` | **Version 3** | Ritik weds Vaibhavi | **Sangeet & Ring Ceremony** (26th Jan · Evening)<br>**Haldi Ceremony** (27th Jan · Morning)<br>**Shaadi & Reception** (27th Jan · Evening) | Ritik's guests invited to all 3 events |
+| `version-4/` | **Version 4** | Vaibhavi weds Ritik | **Sangeet & Ring Ceremony** (26th Jan · Evening)<br>**Haldi Ceremony** (27th Jan · Morning)<br>**Shaadi & Reception** (27th Jan · Evening) | Vaibhavi's guests invited to all 3 events |
 
 ---
 
@@ -60,8 +61,6 @@ Now open:
 - Version 2: [http://localhost:8080/version-2/](http://localhost:8080/version-2/)
 - Version 3: [http://localhost:8080/version-3/](http://localhost:8080/version-3/)
 - Version 4: [http://localhost:8080/version-4/](http://localhost:8080/version-4/)
-
-> **Note:** A top navigation bar is included for quick switching between versions during testing.
 
 ---
 
@@ -125,39 +124,3 @@ server {
     }
 }
 ```
-
-### Option 3: Caddyfile Configuration
-```caddy
-ritik-shaadi.duckdns.org {
-    root * /var/www/shaadi-invite/version-1
-    file_server
-}
-
-vaibhavi-shaadi.duckdns.org {
-    root * /var/www/shaadi-invite/version-2
-    file_server
-}
-
-ritik-all.duckdns.org {
-    root * /var/www/shaadi-invite/version-3
-    file_server
-}
-
-vaibhavi-all.duckdns.org {
-    root * /var/www/shaadi-invite/version-4
-    file_server
-}
-```
-
----
-
-## ✏️ Customizing Details Later
-
-All configurations can be customized at any time:
-
-1. **Venue Details**:
-   - In each `version-X/index.html`, search for `Grand Heritage Palace, Jaipur` and update the title, address, and Google Maps query link (`https://www.google.com/maps/search/?api=1&query=...`).
-2. **WhatsApp RSVP Phone Number**:
-   - In each `version-X/index.html`, find `id="rsvpForm" data-phone=""` and enter your phone number with country code (e.g. `data-phone="919876543210"`). When guests click "RSVP via WhatsApp", it will directly open a chat with this number!
-3. **Background Music**:
-   - Replace `assets/semo-fireflies.mp3` with any wedding music audio file (MP3 format) of your choice!

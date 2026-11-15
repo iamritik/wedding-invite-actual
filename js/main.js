@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initAudio();
   initCountdown();
   initPetals();
-  initRSVP();
   initScrollNav();
 });
 
@@ -71,7 +70,7 @@ function initEnvelope() {
   video.addEventListener('ended', revealHero);
   video.addEventListener('error', revealHero);
 
-  // If user scrolls or presses a key, fallback reveal
+  // Fallback keyboard/click handlers
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter') {
       overlay.click();
@@ -141,7 +140,7 @@ function pauseAudio() {
 }
 
 // ============================================================
-// 3. LIVE COUNTDOWN TIMER
+// 3. LIVE COUNTDOWN TIMER (INSIDE IMPASTO FRAME)
 // ============================================================
 function initCountdown() {
   const container = document.getElementById('countdownSection');
@@ -160,7 +159,7 @@ function initCountdown() {
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      if (daysElem) daysElem.textContent = '00';
+      if (daysElem) daysElem.textContent = '0';
       if (hoursElem) hoursElem.textContent = '00';
       if (minsElem) minsElem.textContent = '00';
       if (secsElem) secsElem.textContent = '00';
@@ -172,7 +171,7 @@ function initCountdown() {
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const s = Math.floor((diff % (1000 * 60)) / 1000);
 
-    if (daysElem) daysElem.textContent = String(d).padStart(2, '0');
+    if (daysElem) daysElem.textContent = String(d);
     if (hoursElem) hoursElem.textContent = String(h).padStart(2, '0');
     if (minsElem) minsElem.textContent = String(m).padStart(2, '0');
     if (secsElem) secsElem.textContent = String(s).padStart(2, '0');
@@ -196,7 +195,6 @@ function initPetals() {
     'assets/petalo-crema.png'
   ];
 
-  // Config matching original template
   const petalConfigs = [
     { left: '8%', size: 24, fall: 14, sway: 3.2, delay: 0, src: 0 },
     { left: '22%', size: 20, fall: 16, sway: 2.6, delay: 4, src: 1 },
@@ -221,58 +219,7 @@ function initPetals() {
 }
 
 // ============================================================
-// 5. RSVP & WHATSAPP INTEGRATION
-// ============================================================
-function initRSVP() {
-  const form = document.getElementById('rsvpForm');
-  const whatsappBtn = document.getElementById('whatsappRsvpBtn');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const guestName = document.getElementById('rsvpName')?.value.trim() || 'Guest';
-    const status = document.getElementById('rsvpStatus')?.value || 'accept';
-    const guestsCount = document.getElementById('rsvpGuests')?.value || '1';
-    const message = document.getElementById('rsvpMessage')?.value.trim() || '';
-
-    // Checked events
-    const checkedBoxes = form.querySelectorAll('input[name="rsvpEvents"]:checked');
-    const eventsAttending = Array.from(checkedBoxes).map(cb => cb.value);
-
-    // Build WhatsApp message
-    let waText = `*Wedding RSVP for Ritik & Vaibhavi*%0A`;
-    waText += `*Name:* ${encodeURIComponent(guestName)}%0A`;
-    waText += `*Status:* ${status === 'accept' ? 'Joyfully Accepts ✅' : 'Regretfully Declines ❌'}%0A`;
-    waText += `*Total Guests:* ${encodeURIComponent(guestsCount)}%0A`;
-    if (eventsAttending.length > 0) {
-      waText += `*Attending:* ${encodeURIComponent(eventsAttending.join(', '))}%0A`;
-    }
-    if (message) {
-      waText += `*Message:* ${encodeURIComponent(message)}%0A`;
-    }
-
-    // Default couple WhatsApp number or general share link
-    // Replace 919876543210 with the couple's contact number whenever provided
-    const couplePhone = form.dataset.phone || '';
-    const waUrl = couplePhone 
-      ? `https://wa.me/${couplePhone}?text=${waText}`
-      : `https://wa.me/?text=${waText}`;
-
-    // Show confirmation alert
-    alert(`Thank you, ${guestName}! Your RSVP has been recorded. Click OK to send your confirmation via WhatsApp.`);
-    window.open(waUrl, '_blank');
-  });
-
-  if (whatsappBtn) {
-    whatsappBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      form.dispatchEvent(new Event('submit'));
-    });
-  }
-}
-
-// ============================================================
-// 6. SMOOTH SCROLL NAV HELPER
+// 5. SMOOTH SCROLL NAV HELPER
 // ============================================================
 function initScrollNav() {
   const scrollBtn = document.getElementById('heroScrollBtn');
@@ -284,40 +231,4 @@ function initScrollNav() {
       }
     });
   }
-}
-
-// ============================================================
-// 7. CALENDAR ADD (.ICS DOWNLOAD & GOOGLE CALENDAR)
-// ============================================================
-function addToGoogleCalendar(title, startDate, endDate, location, details) {
-  // Dates in format YYYYMMDDTHHMMSSZ
-  const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}`;
-  window.open(url, '_blank');
-}
-
-function downloadIcs(title, startDate, endDate, location, details, filename = 'invite.ics') {
-  const icsContent = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//Ritik & Vaibhavi Wedding//EN',
-    'CALSCALE:GREGORIAN',
-    'METHOD:PUBLISH',
-    'BEGIN:VEVENT',
-    `SUMMARY:${title}`,
-    `DESCRIPTION:${details}`,
-    `LOCATION:${location}`,
-    `DTSTART:${startDate}`,
-    `DTEND:${endDate}`,
-    'STATUS:CONFIRMED',
-    'END:VEVENT',
-    'END:VCALENDAR'
-  ].join('\r\n');
-
-  const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-  const link = document.createElement('a');
-  link.href = window.URL.createObjectURL(blob);
-  link.setAttribute('download', filename);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
 }

@@ -62,7 +62,7 @@
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION
+       2. HERO INVITATION SECTION (SLIDE 1)
        ============================================================ -->
   <section class="hero-section">
     <!-- Looped background video with poster fallback -->
@@ -89,7 +89,7 @@
       </div>
 
       <p class="hero-location-tag">To be held at</p>
-      <h3 class="hero-venue-name">Grand Heritage Palace, Jaipur</h3>
+      <h3 class="hero-venue-name">Manka by Cherish</h3>
     </div>
 
     <!-- Scroll down indicator -->
@@ -101,34 +101,66 @@
   </section>
 
   <!-- ============================================================
-       3. COUNTDOWN SECTION
+       3. COUNTDOWN SECTION (INTEGRATED INTO IMPASTO FRAME)
        ============================================================ -->
-  <section id="countdownSection" class="countdown-section" data-target-date="2027-01-27T18:30:00+05:30">
+  <section id="countdownSection" class="countdown-section" data-target-date="2027-01-27T18:00:00+05:30">
     <h2 class="section-title">Countdown</h2>
     <p class="section-subtitle">Until 27 January 2027</p>
 
-    <div class="countdown-grid">
-      <div class="countdown-card">
-        <span id="cdDays" class="countdown-num">00</span>
-        <span class="countdown-label">Days</span>
+    <!-- Authentic Impasto Oil Frame -->
+    <div class="countdown-frame-wrap">
+      <img src="assets/marco-azul-impasto.png" alt="" class="countdown-frame-img" />
+
+      <!-- Large Calligraphic Days -->
+      <div class="countdown-days-wrap">
+        <span id="cdDays" class="countdown-days-num">0</span>
+        <span class="countdown-days-label">Days</span>
       </div>
-      <div class="countdown-card">
-        <span id="cdHours" class="countdown-num">00</span>
-        <span class="countdown-label">Hours</span>
-      </div>
-      <div class="countdown-card">
-        <span id="cdMins" class="countdown-num">00</span>
-        <span class="countdown-label">Minutes</span>
-      </div>
-      <div class="countdown-card">
-        <span id="cdSecs" class="countdown-num">00</span>
-        <span class="countdown-label">Seconds</span>
+
+      <!-- Calligraphic Hours, Minutes, Seconds -->
+      <div class="countdown-subunits-wrap">
+        <div class="countdown-subunit">
+          <span id="cdHours" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Hours</span>
+        </div>
+        <div class="countdown-subunit">
+          <span id="cdMins" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Minutes</span>
+        </div>
+        <div class="countdown-subunit">
+          <span id="cdSecs" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Seconds</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       4. WELCOME & BLESSINGS
+       4. OUR STORY SECTION (SLIDE 2 - INTEGRATED CLOUD OIL PAINTING)
+       ============================================================ -->
+  <section class="our-story-section">
+    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
+
+    <div class="our-story-inner">
+      <h2 class="our-story-title">Our Story</h2>
+      <p class="our-story-text">
+        Some of the best love stories begin unexpectedly, and ours was no different.
+      </p>
+      <p class="our-story-text">
+        What started as a chance encounter soon became endless conversations, spontaneous adventures, and countless cherished memories together.
+      </p>
+      <p class="our-story-text">
+        Somewhere along the way, we found our favorite place: by each other’s side.
+      </p>
+      <p class="our-story-text">
+        And now, we're ready for our greatest adventure yet — a lifetime together.
+      </p>
+      <span class="our-story-signature">Ritik and Vaibhavi</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. WELCOME & BLESSINGS
        ============================================================ -->
   <section class="welcome-section">
     <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
@@ -139,123 +171,47 @@
   </section>
 
   <!-- ============================================================
-       5. CELEBRATION EVENTS ITINERARY
+       6. CELEBRATION EVENTS (INTEGRATED INTO OLIVE FRESCO CANVAS)
        ============================================================ -->
-  <section class="events-section" style="background-image: url('assets/marco-azul-impasto.png');">
+  <section class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
+    <img src="assets/fuente-jardin-mediterraneo.png" alt="Garden Fountain" class="events-fountain-decor" />
+
     <div class="events-header">
       <h2 class="section-title">The Celebration</h2>
       <p class="section-subtitle">27 January 2027</p>
     </div>
 
-    <div class="events-container">
+    <div class="events-canvas-wrap">
       
-      <!-- EVENT 1: SHAADI & RECEPTION -->
-      <div class="event-card">
+      <!-- EVENT: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
+      <div class="event-item-integrated">
         <div class="event-icon-wrap">
-          <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+          <img src="assets/boda-floral-arco.png" alt="Shaadi Ceremony Arch" class="event-icon" />
         </div>
-        <p class="event-label">The Wedding Ceremony</p>
+        <p class="event-label">The Auspicious Union</p>
         <h3 class="event-name">Shaadi & Reception</h3>
         <p class="event-description">
-          The sacred wedding rituals and seven pheras followed by an evening of congratulations, dinner, and dancing under the stars.
+          The sacred wedding ceremony and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
         </p>
-        <div class="event-divider-line"></div>
-        <div class="event-time-box">
-          <span class="event-date-text">Wednesday, 27 January 2027</span>
-          <span class="event-time-text">6:30 PM Onwards</span>
-          <span style="font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; opacity: 0.8; margin-top: 4px;">
-            Baraat: 6:30 PM &nbsp;·&nbsp; Varmala & Pheras: 8:00 PM &nbsp;·&nbsp; Reception: 8:30 PM
-          </span>
-        </div>
-        <div class="event-actions">
-          <button class="btn-event-action" onclick="addToGoogleCalendar('Ritik weds Vaibhavi - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of Ritik & Vaibhavi')">
-            <span>📅 Add to Google Calendar</span>
-          </button>
-          <button class="btn-event-action" onclick="downloadIcs('Ritik weds Vaibhavi - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of Ritik & Vaibhavi', 'shaadi-invite.ics')">
-            <span>📥 Download .ICS</span>
-          </button>
-        </div>
+        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
 
     </div>
   </section>
 
   <!-- ============================================================
-       6. VENUE & LOCATION
+       7. VENUE & LOCATION
        ============================================================ -->
   <section class="venue-section">
     <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
     <h2 class="venue-title">The Wedding Venue</h2>
     <p class="venue-address">
-      Grand Heritage Palace<br />
-      Amer Road, Jaipur, Rajasthan 302002
+      Manka by Cherish<br />
+      A magnificent celebration destination
     </p>
-    <a href="https://www.google.com/maps/search/?api=1&query=Grand+Heritage+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="btn-maps">
+    <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps">
       <span>📍 View Location on Google Maps</span>
     </a>
-  </section>
-
-  <!-- ============================================================
-       7. RSVP SECTION
-       ============================================================ -->
-  <section id="rsvpSection" class="rsvp-section">
-    <div class="rsvp-card">
-      <div style="text-align: center; margin-bottom: 24px;">
-        <h2 class="section-title">RSVP</h2>
-        <p class="section-subtitle">Kindly confirm your presence</p>
-      </div>
-
-      <form id="rsvpForm" data-phone="">
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpName">Your Full Name *</label>
-          <input type="text" id="rsvpName" class="rsvp-input" placeholder="e.g. Rahul Sharma" required />
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpStatus">Will You Be Joining Us? *</label>
-          <select id="rsvpStatus" class="rsvp-select">
-            <option value="accept">Joyfully Accepts (Will Attend)</option>
-            <option value="decline">Regretfully Declines (Cannot Attend)</option>
-          </select>
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpGuests">Number of Guests</label>
-          <select id="rsvpGuests" class="rsvp-select">
-            <option value="1">1 Guest</option>
-            <option value="2">2 Guests</option>
-            <option value="3">3 Guests</option>
-            <option value="4">4 Guests</option>
-            <option value="5+">5+ Guests (Family)</option>
-          </select>
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label">Events You Will Attend</label>
-          
-        <div class="rsvp-checkbox-group">
-          <label class="rsvp-checkbox-label">
-            <input type="checkbox" name="rsvpEvents" value="Shaadi & Reception (27 Jan)" checked />
-            <span>Shaadi & Reception &nbsp;·&nbsp; 27th Jan 2027</span>
-          </label>
-        </div>
-
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpMessage">Wishes for the Couple</label>
-          <textarea id="rsvpMessage" class="rsvp-textarea" rows="3" placeholder="Write your heartfelt wishes or dietary notes..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-rsvp-submit">
-          <span>Submit RSVP</span>
-        </button>
-
-        <button type="button" id="whatsappRsvpBtn" class="btn-whatsapp-rsvp">
-          <span>💬 RSVP directly via WhatsApp</span>
-        </button>
-      </form>
-    </div>
   </section>
 
   <!-- ============================================================

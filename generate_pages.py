@@ -8,12 +8,13 @@ VERSIONS = [
         "name1": "Ritik",
         "connector": "weds",
         "name2": "Vaibhavi",
+        "story_sign": "Ritik and Vaibhavi",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
         "hero_date_year": "2027",
         "hero_date_header": "27 January 2027",
-        "target_date_iso": "2027-01-27T18:30:00+05:30",
+        "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
         "welcome_family": "Together with the Chittu Family",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Ritik & Vaibhavi.",
@@ -28,12 +29,13 @@ VERSIONS = [
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
+        "story_sign": "Vaibhavi and Ritik",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
         "hero_date_year": "2027",
         "hero_date_header": "27 January 2027",
-        "target_date_iso": "2027-01-27T18:30:00+05:30",
+        "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
         "welcome_family": "Together with their Families",
         "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Vaibhavi & Ritik.",
@@ -48,15 +50,16 @@ VERSIONS = [
         "name1": "Ritik",
         "connector": "weds",
         "name2": "Vaibhavi",
+        "story_sign": "Ritik and Vaibhavi",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
         "hero_date_year": "2027",
         "hero_date_header": "26 – 27 January 2027",
-        "target_date_iso": "2027-01-26T19:00:00+05:30",
+        "target_date_iso": "2027-01-26T18:00:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
         "welcome_family": "Together with the Chittu Family",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the auspicious wedding celebrations, Sangeet night, Haldi ceremony, and wedding reception of Ritik & Vaibhavi.",
+        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Ritik & Vaibhavi.",
         "events_type": "all_events",
         "hashtag": "#RitikWedsVaibhavi",
         "preview_name": "Version 3: Ritik's Side (All 3 Events)"
@@ -68,15 +71,16 @@ VERSIONS = [
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
+        "story_sign": "Vaibhavi and Ritik",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
         "hero_date_year": "2027",
         "hero_date_header": "26 – 27 January 2027",
-        "target_date_iso": "2027-01-26T19:00:00+05:30",
+        "target_date_iso": "2027-01-26T18:00:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
         "welcome_family": "Together with their Families",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the auspicious wedding celebrations, Sangeet night, Haldi ceremony, and wedding reception of Vaibhavi & Ritik.",
+        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Vaibhavi & Ritik.",
         "events_type": "all_events",
         "hashtag": "#VaibhaviWedsRitik",
         "preview_name": "Version 4: Vaibhavi's Side (All 3 Events)"
@@ -86,146 +90,67 @@ VERSIONS = [
 def build_events_html(events_type, name1, name2):
     if events_type == "shaadi_only":
         return f"""
-      <!-- EVENT 1: SHAADI & RECEPTION -->
-      <div class="event-card">
+      <!-- EVENT: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
+      <div class="event-item-integrated">
         <div class="event-icon-wrap">
-          <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+          <img src="assets/boda-floral-arco.png" alt="Shaadi Ceremony Arch" class="event-icon" />
         </div>
-        <p class="event-label">The Wedding Ceremony</p>
+        <p class="event-label">The Auspicious Union</p>
         <h3 class="event-name">Shaadi & Reception</h3>
         <p class="event-description">
-          The sacred wedding rituals and seven pheras followed by an evening of congratulations, dinner, and dancing under the stars.
+          The sacred wedding ceremony and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
         </p>
-        <div class="event-divider-line"></div>
-        <div class="event-time-box">
-          <span class="event-date-text">Wednesday, 27 January 2027</span>
-          <span class="event-time-text">6:30 PM Onwards</span>
-          <span style="font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; opacity: 0.8; margin-top: 4px;">
-            Baraat: 6:30 PM &nbsp;·&nbsp; Varmala & Pheras: 8:00 PM &nbsp;·&nbsp; Reception: 8:30 PM
-          </span>
-        </div>
-        <div class="event-actions">
-          <button class="btn-event-action" onclick="addToGoogleCalendar('{name1} weds {name2} - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of {name1} & {name2}')">
-            <span>📅 Add to Google Calendar</span>
-          </button>
-          <button class="btn-event-action" onclick="downloadIcs('{name1} weds {name2} - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of {name1} & {name2}', 'shaadi-invite.ics')">
-            <span>📥 Download .ICS</span>
-          </button>
-        </div>
+        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
 """
     else:
         return f"""
-      <!-- EVENT 1: SANGEET & RING CEREMONY -->
-      <div class="event-card">
+      <!-- EVENT 1: SANGEET & RING CEREMONY INTEGRATED INTO FRESCO -->
+      <div class="event-item-integrated">
         <div class="event-icon-wrap">
           <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
         </div>
-        <p class="event-label">Evening of Melodies & Dance</p>
+        <p class="event-label">An Evening of Music & Dance</p>
         <h3 class="event-name">Sangeet & Ring Ceremony</h3>
         <p class="event-description">
-          An enchanting evening filled with dance performances, ring exchange, signature cocktails, and musical celebrations.
+          An enchanting evening of music, dance performances, ring exchange, and celebratory dinner.
         </p>
-        <div class="event-divider-line"></div>
-        <div class="event-time-box">
-          <span class="event-date-text">Tuesday, 26 January 2027</span>
-          <span class="event-time-text">7:00 PM Onwards</span>
-        </div>
-        <div class="event-actions">
-          <button class="btn-event-action" onclick="addToGoogleCalendar('{name1} & {name2} - Sangeet & Ring Ceremony', '20270126T190000', '20270126T233000', 'Grand Heritage Palace, Jaipur', 'Sangeet & Ring Ceremony')">
-            <span>📅 Add to Google Calendar</span>
-          </button>
-          <button class="btn-event-action" onclick="downloadIcs('{name1} & {name2} - Sangeet & Ring Ceremony', '20270126T190000', '20270126T233000', 'Grand Heritage Palace, Jaipur', 'Sangeet & Ring Ceremony', 'sangeet-invite.ics')">
-            <span>📥 Download .ICS</span>
-          </button>
-        </div>
+        <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
 
-      <!-- EVENT 2: HALDI CEREMONY -->
-      <div class="event-card">
+      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
+
+      <!-- EVENT 2: HALDI CEREMONY INTEGRATED INTO FRESCO -->
+      <div class="event-item-integrated">
         <div class="event-icon-wrap">
           <img src="assets/flor-almendro-grande.png" alt="Haldi Turmeric" class="event-icon" />
         </div>
-        <p class="event-label">Joyful Morning Rituals</p>
+        <p class="event-label">Joyous Morning Blessings</p>
         <h3 class="event-name">Haldi Ceremony</h3>
         <p class="event-description">
-          A vibrant morning celebration smeared with fragrant turmeric, splashes of yellow, flower showers, and cherished laughter.
+          Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished blessings.
         </p>
-        <div class="event-divider-line"></div>
-        <div class="event-time-box">
-          <span class="event-date-text">Wednesday, 27 January 2027</span>
-          <span class="event-time-text">10:00 AM Onwards</span>
-        </div>
-        <div class="event-actions">
-          <button class="btn-event-action" onclick="addToGoogleCalendar('{name1} & {name2} - Haldi Ceremony', '20270127T100000', '20270127T130000', 'Grand Heritage Palace, Jaipur', 'Haldi Ceremony')">
-            <span>📅 Add to Google Calendar</span>
-          </button>
-          <button class="btn-event-action" onclick="downloadIcs('{name1} & {name2} - Haldi Ceremony', '20270127T100000', '20270127T130000', 'Grand Heritage Palace, Jaipur', 'Haldi Ceremony', 'haldi-invite.ics')">
-            <span>📥 Download .ICS</span>
-          </button>
-        </div>
+        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
       </div>
 
-      <!-- EVENT 3: SHAADI & RECEPTION -->
-      <div class="event-card">
+      <img src="assets/cenefa-hojas-5.webp" alt="" class="event-separator-cenefa" />
+
+      <!-- EVENT 3: SHAADI & RECEPTION INTEGRATED INTO FRESCO -->
+      <div class="event-item-integrated">
         <div class="event-icon-wrap">
           <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
         </div>
         <p class="event-label">The Auspicious Wedding</p>
         <h3 class="event-name">Shaadi & Reception</h3>
         <p class="event-description">
-          The sacred wedding rituals and seven pheras followed by dinner, laughter, and lifelong celebrations under the stars.
+          The sacred wedding rituals and seven pheras followed by a grand dinner and celebrations under the stars.
         </p>
-        <div class="event-divider-line"></div>
-        <div class="event-time-box">
-          <span class="event-date-text">Wednesday, 27 January 2027</span>
-          <span class="event-time-text">6:30 PM Onwards</span>
-          <span style="font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; opacity: 0.8; margin-top: 4px;">
-            Baraat: 6:30 PM &nbsp;·&nbsp; Varmala & Pheras: 8:00 PM &nbsp;·&nbsp; Reception: 8:30 PM
-          </span>
-        </div>
-        <div class="event-actions">
-          <button class="btn-event-action" onclick="addToGoogleCalendar('{name1} weds {name2} - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of {name1} & {name2}')">
-            <span>📅 Add to Google Calendar</span>
-          </button>
-          <button class="btn-event-action" onclick="downloadIcs('{name1} weds {name2} - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of {name1} & {name2}', 'shaadi-invite.ics')">
-            <span>📥 Download .ICS</span>
-          </button>
-        </div>
+        <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
       </div>
-"""
-
-def build_rsvp_events_checkboxes(events_type):
-    if events_type == "shaadi_only":
-        return """
-        <div class="rsvp-checkbox-group">
-          <label class="rsvp-checkbox-label">
-            <input type="checkbox" name="rsvpEvents" value="Shaadi & Reception (27 Jan)" checked />
-            <span>Shaadi & Reception &nbsp;·&nbsp; 27th Jan 2027</span>
-          </label>
-        </div>
-"""
-    else:
-        return """
-        <div class="rsvp-checkbox-group">
-          <label class="rsvp-checkbox-label">
-            <input type="checkbox" name="rsvpEvents" value="Sangeet & Ring Ceremony (26 Jan)" checked />
-            <span>Sangeet & Ring Ceremony &nbsp;·&nbsp; 26th Jan</span>
-          </label>
-          <label class="rsvp-checkbox-label">
-            <input type="checkbox" name="rsvpEvents" value="Haldi Ceremony (27 Jan Morning)" checked />
-            <span>Haldi Ceremony &nbsp;·&nbsp; 27th Jan Morning</span>
-          </label>
-          <label class="rsvp-checkbox-label">
-            <input type="checkbox" name="rsvpEvents" value="Shaadi & Reception (27 Jan Evening)" checked />
-            <span>Shaadi & Reception &nbsp;·&nbsp; 27th Jan Evening</span>
-          </label>
-        </div>
 """
 
 def build_html_page(cfg, is_root=False):
     events_html = build_events_html(cfg["events_type"], cfg["name1"], cfg["name2"])
-    rsvp_checkboxes = build_rsvp_events_checkboxes(cfg["events_type"])
     
     switcher_links = ""
     for v in VERSIONS:
@@ -247,11 +172,6 @@ def build_html_page(cfg, is_root=False):
       if (v === '4') { window.location.replace('version-4/'); return; }
 
       // Hostname-based routing for DuckDNS:
-      // Examples:
-      // ritik-shaadi.duckdns.org -> version-1
-      // vaibhavi-shaadi.duckdns.org -> version-2
-      // ritik-all.duckdns.org -> version-3
-      // vaibhavi-all.duckdns.org -> version-4
       if (host.indexOf('ritik') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1)) {
         window.location.replace('version-3/');
       } else if (host.indexOf('vaibhavi') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1)) {
@@ -325,7 +245,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- ============================================================
-       2. HERO INVITATION SECTION
+       2. HERO INVITATION SECTION (SLIDE 1)
        ============================================================ -->
   <section class="hero-section">
     <!-- Looped background video with poster fallback -->
@@ -352,7 +272,7 @@ def build_html_page(cfg, is_root=False):
       </div>
 
       <p class="hero-location-tag">To be held at</p>
-      <h3 class="hero-venue-name">Grand Heritage Palace, Jaipur</h3>
+      <h3 class="hero-venue-name">Manka by Cherish</h3>
     </div>
 
     <!-- Scroll down indicator -->
@@ -364,34 +284,66 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       3. COUNTDOWN SECTION
+       3. COUNTDOWN SECTION (INTEGRATED INTO IMPASTO FRAME)
        ============================================================ -->
   <section id="countdownSection" class="countdown-section" data-target-date="{cfg["target_date_iso"]}">
     <h2 class="section-title">Countdown</h2>
     <p class="section-subtitle">{cfg["target_date_label"]}</p>
 
-    <div class="countdown-grid">
-      <div class="countdown-card">
-        <span id="cdDays" class="countdown-num">00</span>
-        <span class="countdown-label">Days</span>
+    <!-- Authentic Impasto Oil Frame -->
+    <div class="countdown-frame-wrap">
+      <img src="assets/marco-azul-impasto.png" alt="" class="countdown-frame-img" />
+
+      <!-- Large Calligraphic Days -->
+      <div class="countdown-days-wrap">
+        <span id="cdDays" class="countdown-days-num">0</span>
+        <span class="countdown-days-label">Days</span>
       </div>
-      <div class="countdown-card">
-        <span id="cdHours" class="countdown-num">00</span>
-        <span class="countdown-label">Hours</span>
-      </div>
-      <div class="countdown-card">
-        <span id="cdMins" class="countdown-num">00</span>
-        <span class="countdown-label">Minutes</span>
-      </div>
-      <div class="countdown-card">
-        <span id="cdSecs" class="countdown-num">00</span>
-        <span class="countdown-label">Seconds</span>
+
+      <!-- Calligraphic Hours, Minutes, Seconds -->
+      <div class="countdown-subunits-wrap">
+        <div class="countdown-subunit">
+          <span id="cdHours" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Hours</span>
+        </div>
+        <div class="countdown-subunit">
+          <span id="cdMins" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Minutes</span>
+        </div>
+        <div class="countdown-subunit">
+          <span id="cdSecs" class="countdown-subunit-num">00</span>
+          <span class="countdown-subunit-label">Seconds</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       4. WELCOME & BLESSINGS
+       4. OUR STORY SECTION (SLIDE 2 - INTEGRATED CLOUD OIL PAINTING)
+       ============================================================ -->
+  <section class="our-story-section">
+    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
+
+    <div class="our-story-inner">
+      <h2 class="our-story-title">Our Story</h2>
+      <p class="our-story-text">
+        Some of the best love stories begin unexpectedly, and ours was no different.
+      </p>
+      <p class="our-story-text">
+        What started as a chance encounter soon became endless conversations, spontaneous adventures, and countless cherished memories together.
+      </p>
+      <p class="our-story-text">
+        Somewhere along the way, we found our favorite place: by each other’s side.
+      </p>
+      <p class="our-story-text">
+        And now, we're ready for our greatest adventure yet — a lifetime together.
+      </p>
+      <span class="our-story-signature">{cfg["story_sign"]}</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. WELCOME & BLESSINGS
        ============================================================ -->
   <section class="welcome-section">
     <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
@@ -402,88 +354,34 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       5. CELEBRATION EVENTS ITINERARY
+       6. CELEBRATION EVENTS (INTEGRATED INTO OLIVE FRESCO CANVAS)
        ============================================================ -->
-  <section class="events-section" style="background-image: url('assets/marco-azul-impasto.png');">
+  <section class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
+    <img src="assets/fuente-jardin-mediterraneo.png" alt="Garden Fountain" class="events-fountain-decor" />
+
     <div class="events-header">
       <h2 class="section-title">The Celebration</h2>
       <p class="section-subtitle">{cfg["hero_date_header"]}</p>
     </div>
 
-    <div class="events-container">
+    <div class="events-canvas-wrap">
       {events_html}
     </div>
   </section>
 
   <!-- ============================================================
-       6. VENUE & LOCATION
+       7. VENUE & LOCATION
        ============================================================ -->
   <section class="venue-section">
     <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
     <h2 class="venue-title">The Wedding Venue</h2>
     <p class="venue-address">
-      Grand Heritage Palace<br />
-      Amer Road, Jaipur, Rajasthan 302002
+      Manka by Cherish<br />
+      A magnificent celebration destination
     </p>
-    <a href="https://www.google.com/maps/search/?api=1&query=Grand+Heritage+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="btn-maps">
+    <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps">
       <span>📍 View Location on Google Maps</span>
     </a>
-  </section>
-
-  <!-- ============================================================
-       7. RSVP SECTION
-       ============================================================ -->
-  <section id="rsvpSection" class="rsvp-section">
-    <div class="rsvp-card">
-      <div style="text-align: center; margin-bottom: 24px;">
-        <h2 class="section-title">RSVP</h2>
-        <p class="section-subtitle">Kindly confirm your presence</p>
-      </div>
-
-      <form id="rsvpForm" data-phone="">
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpName">Your Full Name *</label>
-          <input type="text" id="rsvpName" class="rsvp-input" placeholder="e.g. Rahul Sharma" required />
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpStatus">Will You Be Joining Us? *</label>
-          <select id="rsvpStatus" class="rsvp-select">
-            <option value="accept">Joyfully Accepts (Will Attend)</option>
-            <option value="decline">Regretfully Declines (Cannot Attend)</option>
-          </select>
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpGuests">Number of Guests</label>
-          <select id="rsvpGuests" class="rsvp-select">
-            <option value="1">1 Guest</option>
-            <option value="2">2 Guests</option>
-            <option value="3">3 Guests</option>
-            <option value="4">4 Guests</option>
-            <option value="5+">5+ Guests (Family)</option>
-          </select>
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label">Events You Will Attend</label>
-          {rsvp_checkboxes}
-        </div>
-
-        <div class="rsvp-form-group">
-          <label class="rsvp-label" for="rsvpMessage">Wishes for the Couple</label>
-          <textarea id="rsvpMessage" class="rsvp-textarea" rows="3" placeholder="Write your heartfelt wishes or dietary notes..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-rsvp-submit">
-          <span>Submit RSVP</span>
-        </button>
-
-        <button type="button" id="whatsappRsvpBtn" class="btn-whatsapp-rsvp">
-          <span>💬 RSVP directly via WhatsApp</span>
-        </button>
-      </form>
-    </div>
   </section>
 
   <!-- ============================================================
