@@ -17,7 +17,6 @@ VERSIONS = [
         "hero_date_header": "27 January 2027",
         "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Ritik & Vaibhavi.",
         "events_type": "shaadi_only",
         "hashtag": "#VRinLove",
         "preview_name": "Version 1: Ritik's Side (Shaadi Only)"
@@ -38,7 +37,6 @@ VERSIONS = [
         "hero_date_header": "27 January 2027",
         "target_date_iso": "2027-01-27T18:00:00+05:30",
         "target_date_label": "Until 27 January 2027",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you and your family to celebrate the auspicious wedding ceremony and reception of Vaibhavi & Ritik.",
         "events_type": "shaadi_only",
         "hashtag": "#VRinLove",
         "preview_name": "Version 2: Vaibhavi's Side (Shaadi Only)"
@@ -53,16 +51,15 @@ VERSIONS = [
         "story_sign": "Ritik and Vaibhavi",
         "parents_names": "Naresh & Kavita Arora",
         "hero_date_month": "January",
-        "hero_date_day": "26 – 27",
-        "hero_date_dayname": "Tuesday & Wednesday",
+        "hero_date_day": "25 – 27",
+        "hero_date_dayname": "Monday to Wednesday",
         "hero_date_year": "2027",
-        "hero_date_header": "26 – 27 January 2027",
-        "target_date_iso": "2027-01-26T18:00:00+05:30",
+        "hero_date_header": "25 – 27 January 2027",
+        "target_date_iso": "2027-01-25T17:00:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Ritik & Vaibhavi.",
         "events_type": "all_events",
         "hashtag": "#VRinLove",
-        "preview_name": "Version 3: Ritik's Side (All 3 Events)"
+        "preview_name": "Version 3: Ritik's Side (All Events)"
     },
     {
         "id": "4",
@@ -78,56 +75,164 @@ VERSIONS = [
         "hero_date_dayname": "Tuesday & Wednesday",
         "hero_date_year": "2027",
         "hero_date_header": "26 – 27 January 2027",
-        "target_date_iso": "2027-01-26T18:00:00+05:30",
+        "target_date_iso": "2027-01-26T17:30:00+05:30",
         "target_date_label": "Until the Celebrations Begin",
-        "welcome_text": "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the wedding festivities, Sangeet night, Haldi ceremony, and wedding reception of Vaibhavi & Ritik.",
         "events_type": "all_events",
         "hashtag": "#VRinLove",
-        "preview_name": "Version 4: Vaibhavi's Side (All 3 Events)"
+        "preview_name": "Version 4: Vaibhavi's Side (All Events)"
     }
 ]
 
-def build_sangeet_haldi_screen():
-    return """
+RITIK_EVENTS = [
+    {
+        "id": "mehendi",
+        "title": "Mehendi",
+        "tagline": "Auspicious Henna & Folk Melodies",
+        "date_badge": "25 Jan · 5:00 PM",
+        "date_full": "Monday, 25 January 2027 · 5:00 PM",
+        "venue": "701 Sector 8",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
+        "dress_code": "Festive Green / Colourful Traditional",
+        "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
+        "icon_symbol": "🌿",
+    },
+    {
+        "id": "hawan",
+        "title": "Hawan",
+        "tagline": "Auspicious Vedic Prayers & Blessings",
+        "date_badge": "26 Jan · 11:00 AM",
+        "date_full": "Tuesday, 26 January 2027 · 11:00 AM (Morning)",
+        "venue": "701 Sector 8",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
+        "dress_code": "Traditional Indian Ethnic",
+        "desc": "Sacred Vedic prayers and yajna to invoke divine blessings of the deities and ancestors for peace, harmony, and prosperity.",
+        "icon_symbol": "🔥",
+    },
+    {
+        "id": "sangeet",
+        "title": "Sangeet & Ring Ceremony",
+        "tagline": "An Evening of Music & Dance",
+        "date_badge": "26 Jan · 5:30 PM",
+        "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Indo-Western / Glamorous Festive",
+        "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
+        "icon_symbol": "💃",
+    },
+    {
+        "id": "haldi",
+        "title": "Haldi Ceremony",
+        "tagline": "Joyous Morning Blessings",
+        "date_badge": "27 Jan · 10:30 AM",
+        "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Shades of Yellow & Sunshine Traditional",
+        "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
+        "icon_symbol": "💛",
+    },
+    {
+        "id": "gharoli",
+        "title": "Gharoli",
+        "tagline": "Sacred Water Fetching Ceremony",
+        "date_badge": "27 Jan · 2:00 PM",
+        "date_full": "Wednesday, 27 January 2027 · 2:00 PM",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Traditional Indian Ethnic",
+        "desc": "The beloved traditional ritual where family fetches sanctified holy water to bathe the groom before the wedding rituals.",
+        "icon_symbol": "🏺",
+    },
+    {
+        "id": "sehrabandi",
+        "title": "Sehrabandi",
+        "tagline": "Tying of the Royal Sehra & Baraat",
+        "date_badge": "27 Jan · 5:00 PM",
+        "date_full": "Wednesday, 27 January 2027 · 5:00 PM",
+        "venue": "701 Sector 8",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
+        "dress_code": "Royal Indian Formal / Sherwani & Turbans",
+        "desc": "The time-honored ceremony where sisters tie the auspicious floral sehra on the groom, followed by the grand Baraat procession.",
+        "icon_symbol": "👑",
+    },
+]
+
+VAIBHAVI_EVENTS = [
+    {
+        "id": "sangeet",
+        "title": "Sangeet & Ring Ceremony",
+        "tagline": "An Evening of Music & Dance",
+        "date_badge": "26 Jan · 5:30 PM",
+        "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Indo-Western / Glamorous Festive",
+        "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
+        "icon_symbol": "💃",
+    },
+    {
+        "id": "haldi",
+        "title": "Haldi Ceremony",
+        "tagline": "Joyous Morning Blessings",
+        "date_badge": "27 Jan · 10:30 AM",
+        "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Shades of Yellow & Sunshine Traditional",
+        "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
+        "icon_symbol": "💛",
+    },
+]
+
+def build_festivities_screen(cfg):
+    events = RITIK_EVENTS if cfg["id"] == "3" else VAIBHAVI_EVENTS
+    count_class = f"events-count-{len(events)}"
+
+    tiles_html = ""
+    for ev in events:
+        tiles_html += f"""
+        <button type="button" class="event-tile-box"
+          data-event-title="{ev['title']}"
+          data-event-tagline="{ev['tagline']}"
+          data-event-date="{ev['date_full']}"
+          data-event-venue="{ev['venue']}"
+          data-event-city="{ev['city']}"
+          data-event-map="{ev['map_url']}"
+          data-event-dress="{ev['dress_code']}"
+          data-event-desc="{ev['desc']}"
+          data-event-icon="{ev['icon_symbol']}"
+          aria-label="View details for {ev['title']}">
+          <div class="tile-icon-bubble">
+            <span class="tile-emoji">{ev['icon_symbol']}</span>
+          </div>
+          <h3 class="tile-title">{ev['title']}</h3>
+          <span class="tile-badge">{ev['date_badge']}</span>
+          <span class="tile-tap-hint">Details &rarr;</span>
+        </button>"""
+
+    return f"""
   <!-- ============================================================
-       6. SANGEET & HALDI SCREEN (TRADITIONAL COURTYARD PAINTING)
+       PRE-WEDDING FESTIVITIES (INTERACTIVE BOX TILES)
        ============================================================ -->
   <section id="sangeetHaldiSection" class="sangeet-haldi-section">
-    <img src="assets/screen_sangeet_haldi.jpg" alt="Sangeet & Haldi Courtyard" class="sangeet-haldi-bg" />
+    <img src="assets/screen_sangeet_haldi.jpg" alt="Courtyard Backdrop" class="sangeet-haldi-bg" />
 
     <div class="sangeet-haldi-container">
       <p class="events-screen-label">Pre-Wedding Festivities</p>
+      <h2 class="events-screen-title">Events &amp; Celebrations</h2>
+      <p class="events-screen-hint">Tap any celebration to view venue &amp; details</p>
 
-      <!-- Event 1: Sangeet -->
-      <div class="event-card-translucent">
-        <div class="event-icon-wrap">
-          <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
-        </div>
-        <p class="event-item-label">An Evening of Music &amp; Dance</p>
-        <h3 class="event-item-name">Sangeet &amp; Ring Ceremony</h3>
-        <p class="event-item-desc">
-          An enchanting evening of music, dance performances, ring exchange, and celebratory dinner.
-        </p>
-        <div class="event-meta-block">
-          <span class="event-timing-tag">Tuesday, 26 January 2027 &nbsp;·&nbsp; Evening</span>
-          <span class="event-dress-code">✨ Dress Code: Indo-Western / Glamorous Festive</span>
-        </div>
-      </div>
-
-      <!-- Event 2: Haldi -->
-      <div class="event-card-translucent">
-        <div class="event-icon-wrap">
-          <img src="assets/flor-almendro-grande.png" alt="Haldi" class="event-icon" />
-        </div>
-        <p class="event-item-label">Joyous Morning Blessings</p>
-        <h3 class="event-item-name">Haldi Ceremony</h3>
-        <p class="event-item-desc">
-          Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished blessings.
-        </p>
-        <div class="event-meta-block">
-          <span class="event-timing-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Morning</span>
-          <span class="event-dress-code">💛 Dress Code: Shades of Yellow &amp; Sunshine Traditional</span>
-        </div>
+      <div class="events-boxes-grid {count_class}">
+{tiles_html}
       </div>
     </div>
   </section>
@@ -136,7 +241,7 @@ def build_sangeet_haldi_screen():
 def build_shaadi_reception_screen():
     return """
   <!-- ============================================================
-       7. SHAADI & RECEPTION SCREEN (ROYAL MANDAP PAINTING)
+       SHAADI & RECEPTION SCREEN (WITH INTEGRATED VENUE & MAPS)
        ============================================================ -->
   <section id="shaadiReceptionSection" class="shaadi-reception-section">
     <img src="assets/screen_shaadi_reception.jpg" alt="Royal Wedding Mandap" class="shaadi-reception-bg" />
@@ -154,14 +259,25 @@ def build_shaadi_reception_screen():
         <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
         <span class="event-dress-code shaadi-dress-code">👑 Dress Code: Traditional Indian Formal / Royal Elegance</span>
       </div>
+
+      <!-- Integrated Venue & Maps Location -->
+      <div class="shaadi-venue-card">
+        <div class="shaadi-venue-divider"></div>
+        <p class="shaadi-venue-label">WEDDING VENUE</p>
+        <h4 class="shaadi-venue-name">Manka by Cherish</h4>
+        <p class="shaadi-venue-city">Karnal, Haryana</p>
+        <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps-shaadi">
+          <span>📍 View Location on Google Maps &rarr;</span>
+        </a>
+      </div>
     </div>
   </section>
 """
 
 def build_html_page(cfg, is_root=False):
-    sangeet_haldi_html = build_sangeet_haldi_screen() if cfg["events_type"] == "all_events" else ""
+    festivities_html = build_festivities_screen(cfg) if cfg["events_type"] == "all_events" else ""
     shaadi_reception_html = build_shaadi_reception_screen()
-    
+
     switcher_links = ""
     for v in VERSIONS:
         active_cls = "active" if v["id"] == cfg["id"] else ""
@@ -331,7 +447,7 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       4. OUR STORY SECTION (SLIDE 2 - INTEGRATED CLOUD OIL PAINTING)
+       4. OUR STORY SECTION (INTEGRATED CLOUD OIL PAINTING)
        ============================================================ -->
   <section id="ourStorySection" class="our-story-section">
     <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
@@ -341,22 +457,13 @@ def build_html_page(cfg, is_root=False):
       <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
 
       <p class="our-story-text">
-        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched.
+        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
       </p>
       <p class="our-story-text">
-        What followed was a month of conversations that never seemed to run out. The timing, however, had other plans. While Vaibhavi was travelling for a friend's wedding, Ritik was back home in Karnal. Both based in Bangalore, yet somehow a whole month passed before they could meet.
+        Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
       </p>
       <p class="our-story-text">
-        But by then, they already knew there was something worth exploring.
-      </p>
-      <p class="our-story-text">
-        On 30th November, they finally went on their first date. The plan was dinner. The reality? Talking until 5 AM, with absolutely no shortage of things to say.
-      </p>
-      <p class="our-story-text">
-        Since then, they've been each other's favourite gossip partners, sounding boards and biggest cheerleaders. From endless banter and intellectual debates to celebrating each other's wins and pushing one another to dream bigger, they've found a relationship where neither has to hold back or be anything but themselves.
-      </p>
-      <p class="our-story-text">
-        Vaibhavi found someone who loves her unfiltered, chatty self. Ritik found someone whose mind, spirit and personality keep him on his toes. And somewhere between the conversations, laughter and late nights, they found their favourite person.
+        Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
       </p>
 
       <p class="our-story-highlight">
@@ -367,33 +474,8 @@ def build_html_page(cfg, is_root=False):
     </div>
   </section>
 
-  <!-- ============================================================
-       5. WELCOME & BLESSINGS
-       ============================================================ -->
-  <section id="welcomeSection" class="welcome-section">
-    <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
-    <p class="welcome-text">
-      "{cfg["welcome_text"]}"
-    </p>
-  </section>
-
-{sangeet_haldi_html}
+{festivities_html}
 {shaadi_reception_html}
-
-  <!-- ============================================================
-       8. VENUE & LOCATION
-       ============================================================ -->
-  <section id="venueSection" class="venue-section">
-    <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
-    <h2 class="venue-title">The Wedding Venue</h2>
-    <h3 style="font-family: var(--font-display); font-size: 1.85rem; color: var(--text-olive); margin-bottom: 6px;">Manka by Cherish</h3>
-    <p class="venue-address">
-      Karnal, Haryana
-    </p>
-    <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps">
-      <span>📍 View Location on Google Maps</span>
-    </a>
-  </section>
 
   <!-- ============================================================
        9. LAST SCREEN (SACRED PHERAS & ROYAL ARCH PAINTING)
@@ -415,6 +497,46 @@ def build_html_page(cfg, is_root=False):
       <p class="footer-hashtag">{cfg["hashtag"]}</p>
     </div>
   </footer>
+
+  <!-- ============================================================
+       EVENT DETAILS MODAL
+       ============================================================ -->
+  <div id="eventDetailModal" class="event-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="event-modal-card">
+      <button type="button" class="event-modal-close" id="closeEventModalBtn" aria-label="Close details">&times;</button>
+      
+      <div class="event-modal-icon-wrap">
+        <span id="modalEventEmoji" class="event-modal-emoji">✨</span>
+      </div>
+
+      <p id="modalEventTagline" class="event-modal-tagline">Ceremony Details</p>
+      <h3 id="modalEventTitle" class="event-modal-title">Event Title</h3>
+      
+      <div class="event-modal-time-badge">
+        <span id="modalEventDate">Date &amp; Time</span>
+      </div>
+
+      <p id="modalEventDesc" class="event-modal-desc">Description</p>
+
+      <div class="event-modal-venue-box">
+        <div class="event-modal-venue-header">
+          <span class="venue-pin-icon">📍</span>
+          <div>
+            <p class="venue-header-label">VENUE</p>
+            <h4 id="modalEventVenue" class="modal-venue-name">Venue Name</h4>
+            <p id="modalEventCity" class="modal-venue-city">City</p>
+          </div>
+        </div>
+        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-maps">
+          <span>View on Google Maps &rarr;</span>
+        </a>
+      </div>
+
+      <div id="modalDressCodeWrap" class="event-modal-dress">
+        <span id="modalEventDress">Dress Code</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

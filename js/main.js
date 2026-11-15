@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initPetals();
   initScrollNav();
+  initEventModal();
 });
 
 // Also reset scroll on pageshow (e.g. back/forward or reload from cache)
@@ -297,29 +298,83 @@ function initScrollNav() {
 }
 
 // ============================================================
-// 6. EVENT CEREMONY TAB SWITCHER
+// 6. EVENT CEREMONY DETAILS MODAL
 // ============================================================
-function switchEventTab(tab) {
-  const tabSangeet = document.getElementById('tabSangeet');
-  const tabHaldi = document.getElementById('tabHaldi');
-  const contentSangeet = document.getElementById('contentSangeet');
-  const contentHaldi = document.getElementById('contentHaldi');
-  if (!tabSangeet || !tabHaldi || !contentSangeet || !contentHaldi) return;
+function initEventModal() {
+  const modal = document.getElementById('eventDetailModal');
+  const closeBtn = document.getElementById('closeEventModalBtn');
+  const tiles = document.querySelectorAll('.event-tile-box');
 
-  if (tab === 'sangeet') {
-    tabSangeet.classList.add('active');
-    tabSangeet.setAttribute('aria-selected', 'true');
-    tabHaldi.classList.remove('active');
-    tabHaldi.setAttribute('aria-selected', 'false');
-    contentSangeet.classList.add('active');
-    contentHaldi.classList.remove('active');
-  } else {
-    tabHaldi.classList.add('active');
-    tabHaldi.setAttribute('aria-selected', 'true');
-    tabSangeet.classList.remove('active');
-    tabSangeet.setAttribute('aria-selected', 'false');
-    contentHaldi.classList.add('active');
-    contentSangeet.classList.remove('active');
+  if (!modal || !tiles.length) return;
+
+  function openModal(tile) {
+    const title = tile.getAttribute('data-event-title') || '';
+    const tagline = tile.getAttribute('data-event-tagline') || '';
+    const date = tile.getAttribute('data-event-date') || '';
+    const venue = tile.getAttribute('data-event-venue') || '';
+    const city = tile.getAttribute('data-event-city') || '';
+    const map = tile.getAttribute('data-event-map') || '#';
+    const dress = tile.getAttribute('data-event-dress') || '';
+    const desc = tile.getAttribute('data-event-desc') || '';
+    const emoji = tile.getAttribute('data-event-icon') || '✨';
+
+    const modalTitle = document.getElementById('modalEventTitle');
+    const modalTagline = document.getElementById('modalEventTagline');
+    const modalDate = document.getElementById('modalEventDate');
+    const modalVenue = document.getElementById('modalEventVenue');
+    const modalCity = document.getElementById('modalEventCity');
+    const modalMap = document.getElementById('modalEventMapLink');
+    const modalDress = document.getElementById('modalEventDress');
+    const modalDressWrap = document.getElementById('modalDressCodeWrap');
+    const modalDesc = document.getElementById('modalEventDesc');
+    const modalEmoji = document.getElementById('modalEventEmoji');
+
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalTagline) modalTagline.textContent = tagline;
+    if (modalDate) modalDate.textContent = date;
+    if (modalVenue) modalVenue.textContent = venue;
+    if (modalCity) modalCity.textContent = city;
+    if (modalMap) modalMap.href = map;
+    if (modalDesc) modalDesc.textContent = desc;
+    if (modalEmoji) modalEmoji.textContent = emoji;
+
+    if (modalDress && modalDressWrap) {
+      if (dress) {
+        modalDress.textContent = '✨ Dress Code: ' + dress;
+        modalDressWrap.style.display = 'inline-block';
+      } else {
+        modalDressWrap.style.display = 'none';
+      }
+    }
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
   }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  tiles.forEach(tile => {
+    tile.addEventListener('click', () => openModal(tile));
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
-window.switchEventTab = switchEventTab;
