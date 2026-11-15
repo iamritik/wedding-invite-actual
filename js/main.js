@@ -289,9 +289,9 @@ function initScrollNav() {
   const scrollBtn = document.getElementById('heroScrollBtn');
   if (scrollBtn) {
     scrollBtn.addEventListener('click', () => {
-      const countdown = document.getElementById('countdownSection');
-      if (countdown) {
-        countdown.scrollIntoView({ behavior: 'smooth' });
+      const ourStory = document.getElementById('ourStorySection');
+      if (ourStory) {
+        ourStory.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }

@@ -227,9 +227,11 @@ def build_festivities_screen(cfg):
     <img src="assets/screen_sangeet_haldi.jpg" alt="Courtyard Backdrop" class="sangeet-haldi-bg" />
 
     <div class="sangeet-haldi-container">
-      <p class="events-screen-label">Pre-Wedding Festivities</p>
-      <h2 class="events-screen-title">Events &amp; Celebrations</h2>
-      <p class="events-screen-hint">Tap any celebration to view venue &amp; details</p>
+      <div class="events-header-card">
+        <p class="events-screen-label">Pre-Wedding Festivities</p>
+        <h2 class="events-screen-title">Events &amp; Celebrations</h2>
+        <p class="events-screen-hint">Tap any celebration to view venue &amp; details</p>
+      </div>
 
       <div class="events-boxes-grid {count_class}">
 {tiles_html}
@@ -404,7 +406,7 @@ def build_html_page(cfg, is_root=False):
     </div>
 
     <!-- Scroll down indicator -->
-    <button id="heroScrollBtn" class="hero-scroll-btn" aria-label="Scroll down to details">
+    <button id="heroScrollBtn" class="hero-scroll-btn" aria-label="Scroll down to Our Story">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
@@ -412,7 +414,38 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       3. COUNTDOWN SECTION (INTEGRATED INTO IMPASTO FRAME)
+       3. OUR STORY SECTION (SLIDE 2 - THE VERY NEXT AFTER HERO)
+       ============================================================ -->
+  <section id="ourStorySection" class="our-story-section">
+    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
+
+    <div class="our-story-inner">
+      <h2 class="our-story-title">Our Story</h2>
+      <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
+
+      <p class="our-story-text">
+        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
+      </p>
+      <p class="our-story-text">
+        Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
+      </p>
+      <p class="our-story-text">
+        Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
+      </p>
+
+      <p class="our-story-highlight">
+        Still each other's favourite notification, favourite person and favourite conversation.
+      </p>
+
+      <span class="our-story-signature">{cfg["story_sign"]}</span>
+    </div>
+  </section>
+
+{festivities_html}
+{shaadi_reception_html}
+
+  <!-- ============================================================
+       COUNTDOWN SECTION (SECOND LAST - JUST BEFORE PARENTS SCREEN)
        ============================================================ -->
   <section id="countdownSection" class="countdown-section" data-target-date="{cfg["target_date_iso"]}">
     <h2 class="section-title">Countdown</h2>
@@ -447,38 +480,7 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       4. OUR STORY SECTION (INTEGRATED CLOUD OIL PAINTING)
-       ============================================================ -->
-  <section id="ourStorySection" class="our-story-section">
-    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
-
-    <div class="our-story-inner">
-      <h2 class="our-story-title">Our Story</h2>
-      <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
-
-      <p class="our-story-text">
-        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
-      </p>
-      <p class="our-story-text">
-        Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
-      </p>
-      <p class="our-story-text">
-        Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
-      </p>
-
-      <p class="our-story-highlight">
-        Still each other's favourite notification, favourite person and favourite conversation.
-      </p>
-
-      <span class="our-story-signature">{cfg["story_sign"]}</span>
-    </div>
-  </section>
-
-{festivities_html}
-{shaadi_reception_html}
-
-  <!-- ============================================================
-       9. LAST SCREEN (SACRED PHERAS & ROYAL ARCH PAINTING)
+       LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
        ============================================================ -->
   <footer id="footerSection" class="footer-section">
     <!-- Royal Arch & Mandap Painting Backdrop -->

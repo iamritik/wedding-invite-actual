@@ -790,33 +790,48 @@ body.modal-open {
   box-sizing: border-box;
 }
 
+/* Frosted glass header card for optimal legibility over foliage */
+.events-header-card {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(254, 252, 247, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 160, 89, 0.48);
+  border-radius: 20px;
+  padding: 15px 18px 13px;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 20px rgba(50, 35, 15, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .events-screen-label {
   font-family: var(--font-sans);
   font-size: 10px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #8c601e;
+  color: #8c5d1a;
   margin-bottom: 4px;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  display: block;
 }
 
 .events-screen-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 6.5vw, 2.7rem);
+  font-size: clamp(1.85rem, 6.2vw, 2.45rem);
   line-height: 1.15;
-  color: #243527;
+  color: #1a2c1d;
+  font-weight: 500;
   margin: 0 0 4px;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
 }
 
 .events-screen-hint {
   font-family: var(--font-body);
   font-style: italic;
   font-size: 13.5px;
-  color: #554838;
-  margin: 0 0 18px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  color: #4a3c2c;
+  margin: 0;
 }
 
 /* Event Boxes Grid */
@@ -828,10 +843,11 @@ body.modal-open {
   box-sizing: border-box;
 }
 
+/* Vaibhavi's 2 events: smaller compact side-by-side tiles */
 .events-boxes-grid.events-count-2 {
-  grid-template-columns: 1fr;
-  max-width: 340px;
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 320px;
+  gap: 10px;
 }
 
 /* Small Box Type Tile */
@@ -1493,7 +1509,7 @@ body.modal-open {
   text-align: center;
   width: 100%;
   max-width: 360px;
-  margin-top: -110px;
+  margin-top: -165px;
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -1569,8 +1585,7 @@ body.modal-open {
 .footer-hashtag {
   font-family: var(--font-sans);
   font-size: 11.5px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+  letter-spacing: 0.22em;
   color: #8c601e;
   font-weight: 600;
   margin: 0;
