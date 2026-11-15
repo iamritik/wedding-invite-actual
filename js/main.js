@@ -71,8 +71,12 @@ function initEnvelope() {
 
     // Fade out tap prompt pill immediately on click
     if (prompt) {
+      prompt.style.animation = 'none';
       prompt.style.transition = 'opacity 0.25s ease';
       prompt.style.opacity = '0';
+      setTimeout(() => {
+        prompt.style.display = 'none';
+      }, 250);
     }
 
     // Start background music
@@ -93,9 +97,10 @@ function initEnvelope() {
     }
   });
 
-  // As soon as the envelope flap opens (at ~3.4s), seamlessly reveal the wedding invitation
+  // Allow the envelope opening animation to fully complete before revealing the invitation
   video.addEventListener('timeupdate', () => {
-    if (video.currentTime >= 3.4) {
+    const dur = video.duration || 0;
+    if ((dur > 0 && video.currentTime >= dur - 0.4) || video.currentTime >= 7.6) {
       revealHero();
     }
   });

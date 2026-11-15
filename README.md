@@ -26,7 +26,7 @@ A digital wedding invitation static website suite matching the Mediterranean / I
    - Venue Name: **Manka by Cherish**
    - Direct Google Maps link: [https://maps.app.goo.gl/ituhycePZ4x9FFBP8](https://maps.app.goo.gl/ituhycePZ4x9FFBP8)
 7. **Background Wedding Music with Floating Audio Control**:
-   - Acoustic instrumental background music (`semo-fireflies.mp3`) starts on opening.
+   - Romantic instrumental background music (`mohabbatein-love-theme.mp3`) starts on opening.
    - Floating frosted-glass audio button in the bottom right corner with animated ripple effects and mute/unmute toggle.
 8. **Drifting Petals Animation**:
    - Lightweight floating flower petals drifting down with CSS keyframe sway and rotation.
