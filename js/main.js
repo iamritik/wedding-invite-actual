@@ -4,6 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Check preview mode query param
+  if (new URLSearchParams(window.location.search).has('preview')) {
+    document.body.classList.add('show-preview');
+  }
+
   initEnvelope();
   initAudio();
   initCountdown();
@@ -36,6 +41,24 @@ function initEnvelope() {
       overlay.classList.add('hidden');
     }, 1500);
   };
+
+  // Immediate bypass if opened or anchored
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('opened') || window.location.hash) {
+    if (poster) poster.style.display = 'none';
+    overlay.style.display = 'none';
+    if (heroContent) heroContent.classList.add('revealed');
+    hasRevealed = true;
+    if (window.location.hash) {
+      setTimeout(() => {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+      }, 50);
+    }
+    return;
+  }
 
   overlay.addEventListener('click', () => {
     if (hasStarted) return;

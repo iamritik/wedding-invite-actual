@@ -247,7 +247,7 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        2. HERO INVITATION SECTION (SLIDE 1)
        ============================================================ -->
-  <section class="hero-section">
+  <section id="heroSection" class="hero-section">
     <!-- Looped background video with poster fallback -->
     <video class="hero-video-bg" src="assets/hero-video.mp4" poster="assets/fresco-hero-original.jpg" autoplay loop muted playsinline></video>
 
@@ -272,7 +272,7 @@ def build_html_page(cfg, is_root=False):
       </div>
 
       <p class="hero-location-tag">To be held at</p>
-      <h3 class="hero-venue-name">Manka by Cherish</h3>
+      <h3 class="hero-venue-name">Karnal</h3>
     </div>
 
     <!-- Scroll down indicator -->
@@ -321,7 +321,7 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        4. OUR STORY SECTION (SLIDE 2 - INTEGRATED CLOUD OIL PAINTING)
        ============================================================ -->
-  <section class="our-story-section">
+  <section id="ourStorySection" class="our-story-section">
     <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
 
     <div class="our-story-inner">
@@ -345,7 +345,7 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        5. WELCOME & BLESSINGS
        ============================================================ -->
-  <section class="welcome-section">
+  <section id="welcomeSection" class="welcome-section">
     <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
     <p class="welcome-lead">{cfg["welcome_family"]}</p>
     <p class="welcome-text">
@@ -356,7 +356,7 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        6. CELEBRATION EVENTS (INTEGRATED INTO OLIVE FRESCO CANVAS)
        ============================================================ -->
-  <section class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
+  <section id="eventsSection" class="events-section" style="background-image: url('assets/marco-oliva-nuevo.webp');">
     <img src="assets/fuente-jardin-mediterraneo.png" alt="Garden Fountain" class="events-fountain-decor" />
 
     <div class="events-header">
@@ -372,12 +372,12 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        7. VENUE & LOCATION
        ============================================================ -->
-  <section class="venue-section">
+  <section id="venueSection" class="venue-section">
     <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
     <h2 class="venue-title">The Wedding Venue</h2>
+    <h3 style="font-family: var(--font-display); font-size: 1.85rem; color: var(--text-olive); margin-bottom: 6px;">Manka by Cherish</h3>
     <p class="venue-address">
-      Manka by Cherish<br />
-      A magnificent celebration destination
+      Karnal, Haryana
     </p>
     <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps">
       <span>📍 View Location on Google Maps</span>
@@ -387,7 +387,7 @@ def build_html_page(cfg, is_root=False):
   <!-- ============================================================
        8. FOOTER ARCH SECTION
        ============================================================ -->
-  <footer class="footer-section">
+  <footer id="footerSection" class="footer-section">
     <div class="footer-arch-wrap">
       <img src="assets/arco-mediterraneo.png" alt="Decorative Arch" class="footer-arch-img" />
       <div class="footer-arch-content">
