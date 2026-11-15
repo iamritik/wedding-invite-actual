@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ritik weds Vaibhavi | Wedding Celebrations</title>
+  <meta name="description" content="Wedding celebration invitation for Ritik & Vaibhavi - 26 – 27 January 2027" />
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Ritik weds Vaibhavi | Wedding Celebrations" />
+  <meta property="og:description" content="We invite you to celebrate our wedding. 26 – 27 January 2027" />
+  <meta property="og:image" content="assets/envelope-poster-dG0TpNIf.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- DEV / PREVIEW VERSION SWITCHER -->
+  <div class="preview-switcher-bar">
+    <span style="font-family: var(--font-sans); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; padding-left: 6px; opacity: 0.7;">DuckDNS Preview:</span>
+    <a href="../version-1/" class="preview-switcher-item ">Version 1: R&V (Shaadi)</a>
+<a href="../version-2/" class="preview-switcher-item ">Version 2: V&R (Shaadi)</a>
+<a href="../version-3/" class="preview-switcher-item active">Version 3: R&V (All)</a>
+<a href="../version-4/" class="preview-switcher-item ">Version 4: V&R (All)</a>
+
+  </div>
+
+  <!-- FLOATING PETALS CONTAINER -->
+  <div id="petalsContainer" class="petals-container" aria-hidden="true"></div>
+
+  <!-- FLOATING AUDIO CONTROLLER -->
+  <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Play music" title="Toggle Music">
+    <svg id="iconSound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+    </svg>
+    <svg id="iconMute" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <audio id="weddingAudio" src="assets/semo-fireflies.mp3" preload="auto" loop></audio>
+
+  <!-- ============================================================
+       1. ENVELOPE OPENING OVERLAY
+       ============================================================ -->
+  <div id="envelopeOverlay" class="envelope-overlay" aria-label="Tap to open wedding invitation">
+    <img id="envelopePoster" src="assets/envelope-poster-dG0TpNIf.jpg" alt="Wedding Invitation Envelope" class="envelope-media envelope-poster" />
+    <video id="envelopeVideo" src="assets/envelope-video-f1CdBR2C.mp4" poster="assets/envelope-poster-dG0TpNIf.jpg" playsinline muted preload="auto" class="envelope-media envelope-video" style="opacity: 0;"></video>
+    
+    <div class="envelope-prompt">
+      <div class="envelope-prompt-btn">
+        <span>✉️</span>
+        <span>Tap to Open Invitation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       2. HERO INVITATION SECTION
+       ============================================================ -->
+  <section class="hero-section">
+    <!-- Looped background video with poster fallback -->
+    <video class="hero-video-bg" src="assets/hero-video.mp4" poster="assets/fresco-hero-original.jpg" autoplay loop muted playsinline></video>
+
+    <div id="heroContent" class="hero-content">
+      <div class="hero-names">
+        <span>Ritik</span>
+        <span class="hero-weds">weds</span>
+        <span>Vaibhavi</span>
+      </div>
+
+      <p class="hero-subtitle">
+        We invite you to<br />celebrate our wedding
+      </p>
+
+      <div class="hero-date-box">
+        <img src="assets/ramita-capullos.png" alt="" class="hero-date-sprig left" />
+        <img src="assets/ramita-capullos.png" alt="" class="hero-date-sprig right" />
+        <span class="hero-month">January</span>
+        <span class="hero-day">26 – 27</span>
+        <span class="hero-day-name">Tuesday & Wednesday</span>
+        <span class="hero-year">2027</span>
+      </div>
+
+      <p class="hero-location-tag">To be held at</p>
+      <h3 class="hero-venue-name">Grand Heritage Palace, Jaipur</h3>
+    </div>
+
+    <!-- Scroll down indicator -->
+    <button id="heroScrollBtn" class="hero-scroll-btn" aria-label="Scroll down to details">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </section>
+
+  <!-- ============================================================
+       3. COUNTDOWN SECTION
+       ============================================================ -->
+  <section id="countdownSection" class="countdown-section" data-target-date="2027-01-26T19:00:00+05:30">
+    <h2 class="section-title">Countdown</h2>
+    <p class="section-subtitle">Until the Celebrations Begin</p>
+
+    <div class="countdown-grid">
+      <div class="countdown-card">
+        <span id="cdDays" class="countdown-num">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-card">
+        <span id="cdHours" class="countdown-num">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-card">
+        <span id="cdMins" class="countdown-num">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-card">
+        <span id="cdSecs" class="countdown-num">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. WELCOME & BLESSINGS
+       ============================================================ -->
+  <section class="welcome-section">
+    <img src="assets/cenefa-hojas-1.webp" alt="Floral divider" class="floral-divider" />
+    <p class="welcome-lead">Together with the Chittu Family</p>
+    <p class="welcome-text">
+      "With the divine blessings of Lord Ganesha and our elders, we cordially invite you to join us for the auspicious wedding celebrations, Sangeet night, Haldi ceremony, and wedding reception of Ritik & Vaibhavi."
+    </p>
+  </section>
+
+  <!-- ============================================================
+       5. CELEBRATION EVENTS ITINERARY
+       ============================================================ -->
+  <section class="events-section" style="background-image: url('assets/marco-azul-impasto.png');">
+    <div class="events-header">
+      <h2 class="section-title">The Celebration</h2>
+      <p class="section-subtitle">26 – 27 January 2027</p>
+    </div>
+
+    <div class="events-container">
+      
+      <!-- EVENT 1: SANGEET & RING CEREMONY -->
+      <div class="event-card">
+        <div class="event-icon-wrap">
+          <img src="assets/baile-nupcial.png" alt="Sangeet Dance" class="event-icon" />
+        </div>
+        <p class="event-label">Evening of Melodies & Dance</p>
+        <h3 class="event-name">Sangeet & Ring Ceremony</h3>
+        <p class="event-description">
+          An enchanting evening filled with dance performances, ring exchange, signature cocktails, and musical celebrations.
+        </p>
+        <div class="event-divider-line"></div>
+        <div class="event-time-box">
+          <span class="event-date-text">Tuesday, 26 January 2027</span>
+          <span class="event-time-text">7:00 PM Onwards</span>
+        </div>
+        <div class="event-actions">
+          <button class="btn-event-action" onclick="addToGoogleCalendar('Ritik & Vaibhavi - Sangeet & Ring Ceremony', '20270126T190000', '20270126T233000', 'Grand Heritage Palace, Jaipur', 'Sangeet & Ring Ceremony')">
+            <span>📅 Add to Google Calendar</span>
+          </button>
+          <button class="btn-event-action" onclick="downloadIcs('Ritik & Vaibhavi - Sangeet & Ring Ceremony', '20270126T190000', '20270126T233000', 'Grand Heritage Palace, Jaipur', 'Sangeet & Ring Ceremony', 'sangeet-invite.ics')">
+            <span>📥 Download .ICS</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- EVENT 2: HALDI CEREMONY -->
+      <div class="event-card">
+        <div class="event-icon-wrap">
+          <img src="assets/flor-almendro-grande.png" alt="Haldi Turmeric" class="event-icon" />
+        </div>
+        <p class="event-label">Joyful Morning Rituals</p>
+        <h3 class="event-name">Haldi Ceremony</h3>
+        <p class="event-description">
+          A vibrant morning celebration smeared with fragrant turmeric, splashes of yellow, flower showers, and cherished laughter.
+        </p>
+        <div class="event-divider-line"></div>
+        <div class="event-time-box">
+          <span class="event-date-text">Wednesday, 27 January 2027</span>
+          <span class="event-time-text">10:00 AM Onwards</span>
+        </div>
+        <div class="event-actions">
+          <button class="btn-event-action" onclick="addToGoogleCalendar('Ritik & Vaibhavi - Haldi Ceremony', '20270127T100000', '20270127T130000', 'Grand Heritage Palace, Jaipur', 'Haldi Ceremony')">
+            <span>📅 Add to Google Calendar</span>
+          </button>
+          <button class="btn-event-action" onclick="downloadIcs('Ritik & Vaibhavi - Haldi Ceremony', '20270127T100000', '20270127T130000', 'Grand Heritage Palace, Jaipur', 'Haldi Ceremony', 'haldi-invite.ics')">
+            <span>📥 Download .ICS</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- EVENT 3: SHAADI & RECEPTION -->
+      <div class="event-card">
+        <div class="event-icon-wrap">
+          <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+        </div>
+        <p class="event-label">The Auspicious Wedding</p>
+        <h3 class="event-name">Shaadi & Reception</h3>
+        <p class="event-description">
+          The sacred wedding rituals and seven pheras followed by dinner, laughter, and lifelong celebrations under the stars.
+        </p>
+        <div class="event-divider-line"></div>
+        <div class="event-time-box">
+          <span class="event-date-text">Wednesday, 27 January 2027</span>
+          <span class="event-time-text">6:30 PM Onwards</span>
+          <span style="font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; opacity: 0.8; margin-top: 4px;">
+            Baraat: 6:30 PM &nbsp;·&nbsp; Varmala & Pheras: 8:00 PM &nbsp;·&nbsp; Reception: 8:30 PM
+          </span>
+        </div>
+        <div class="event-actions">
+          <button class="btn-event-action" onclick="addToGoogleCalendar('Ritik weds Vaibhavi - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of Ritik & Vaibhavi')">
+            <span>📅 Add to Google Calendar</span>
+          </button>
+          <button class="btn-event-action" onclick="downloadIcs('Ritik weds Vaibhavi - Shaadi Reception', '20270127T183000', '20270127T235900', 'Grand Heritage Palace, Jaipur', 'Wedding & Reception of Ritik & Vaibhavi', 'shaadi-invite.ics')">
+            <span>📥 Download .ICS</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. VENUE & LOCATION
+       ============================================================ -->
+  <section class="venue-section">
+    <img src="assets/villa-mediterranea.png" alt="Palace Venue Art" class="venue-art" />
+    <h2 class="venue-title">The Wedding Venue</h2>
+    <p class="venue-address">
+      Grand Heritage Palace<br />
+      Amer Road, Jaipur, Rajasthan 302002
+    </p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Grand+Heritage+Palace+Jaipur" target="_blank" rel="noopener noreferrer" class="btn-maps">
+      <span>📍 View Location on Google Maps</span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       7. RSVP SECTION
+       ============================================================ -->
+  <section id="rsvpSection" class="rsvp-section">
+    <div class="rsvp-card">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-subtitle">Kindly confirm your presence</p>
+      </div>
+
+      <form id="rsvpForm" data-phone="">
+        <div class="rsvp-form-group">
+          <label class="rsvp-label" for="rsvpName">Your Full Name *</label>
+          <input type="text" id="rsvpName" class="rsvp-input" placeholder="e.g. Rahul Sharma" required />
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-label" for="rsvpStatus">Will You Be Joining Us? *</label>
+          <select id="rsvpStatus" class="rsvp-select">
+            <option value="accept">Joyfully Accepts (Will Attend)</option>
+            <option value="decline">Regretfully Declines (Cannot Attend)</option>
+          </select>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-label" for="rsvpGuests">Number of Guests</label>
+          <select id="rsvpGuests" class="rsvp-select">
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5+">5+ Guests (Family)</option>
+          </select>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-label">Events You Will Attend</label>
+          
+        <div class="rsvp-checkbox-group">
+          <label class="rsvp-checkbox-label">
+            <input type="checkbox" name="rsvpEvents" value="Sangeet & Ring Ceremony (26 Jan)" checked />
+            <span>Sangeet & Ring Ceremony &nbsp;·&nbsp; 26th Jan</span>
+          </label>
+          <label class="rsvp-checkbox-label">
+            <input type="checkbox" name="rsvpEvents" value="Haldi Ceremony (27 Jan Morning)" checked />
+            <span>Haldi Ceremony &nbsp;·&nbsp; 27th Jan Morning</span>
+          </label>
+          <label class="rsvp-checkbox-label">
+            <input type="checkbox" name="rsvpEvents" value="Shaadi & Reception (27 Jan Evening)" checked />
+            <span>Shaadi & Reception &nbsp;·&nbsp; 27th Jan Evening</span>
+          </label>
+        </div>
+
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-label" for="rsvpMessage">Wishes for the Couple</label>
+          <textarea id="rsvpMessage" class="rsvp-textarea" rows="3" placeholder="Write your heartfelt wishes or dietary notes..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-rsvp-submit">
+          <span>Submit RSVP</span>
+        </button>
+
+        <button type="button" id="whatsappRsvpBtn" class="btn-whatsapp-rsvp">
+          <span>💬 RSVP directly via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. FOOTER ARCH SECTION
+       ============================================================ -->
+  <footer class="footer-section">
+    <div class="footer-arch-wrap">
+      <img src="assets/arco-mediterraneo.png" alt="Decorative Arch" class="footer-arch-img" />
+      <div class="footer-arch-content">
+        <span class="footer-arch-name">Ritik</span>
+        <span class="footer-arch-amp">weds</span>
+        <span class="footer-arch-name">Vaibhavi</span>
+        <span class="footer-arch-date">26 – 27 January 2027</span>
+      </div>
+    </div>
+
+    <p class="footer-tagline">Looking forward to celebrating with you!</p>
+    <p class="footer-hashtag">#RitikWedsVaibhavi</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
