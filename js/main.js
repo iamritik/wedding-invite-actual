@@ -316,7 +316,7 @@ function initEventModal() {
     const map = tile.getAttribute('data-event-map') || '#';
     const dress = tile.getAttribute('data-event-dress') || '';
     const desc = tile.getAttribute('data-event-desc') || '';
-    const emoji = tile.getAttribute('data-event-icon') || '✨';
+    const eventImg = tile.getAttribute('data-event-img') || '';
 
     const modalTitle = document.getElementById('modalEventTitle');
     const modalTagline = document.getElementById('modalEventTagline');
@@ -327,7 +327,7 @@ function initEventModal() {
     const modalDress = document.getElementById('modalEventDress');
     const modalDressWrap = document.getElementById('modalDressCodeWrap');
     const modalDesc = document.getElementById('modalEventDesc');
-    const modalEmoji = document.getElementById('modalEventEmoji');
+    const modalImg = document.getElementById('modalEventImg');
 
     if (modalTitle) modalTitle.textContent = title;
     if (modalTagline) modalTagline.textContent = tagline;
@@ -336,11 +336,14 @@ function initEventModal() {
     if (modalCity) modalCity.textContent = city;
     if (modalMap) modalMap.href = map;
     if (modalDesc) modalDesc.textContent = desc;
-    if (modalEmoji) modalEmoji.textContent = emoji;
+    if (modalImg && eventImg) {
+      modalImg.src = eventImg;
+      modalImg.alt = title;
+    }
 
     if (modalDress && modalDressWrap) {
       if (dress) {
-        modalDress.textContent = '✨ Dress Code: ' + dress;
+        modalDress.textContent = 'Dress Code: ' + dress;
         modalDressWrap.style.display = 'inline-block';
       } else {
         modalDressWrap.style.display = 'none';

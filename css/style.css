@@ -697,11 +697,12 @@ body.envelope-active {
 
 .our-story-signature {
   font-family: var(--font-script);
-  font-size: clamp(1.9rem, 6.2vw, 2.5rem);
-  line-height: 1.2;
-  color: var(--gold-accent);
-  margin-top: 26px;
+  font-size: clamp(2.8rem, 9.2vw, 3.8rem);
+  line-height: 1.25;
+  color: #a87932;
+  margin-top: 24px;
   display: inline-block;
+  text-shadow: 0 1px 2px rgba(255, 255, 250, 0.8);
 }
 
 /* ============================================================
@@ -881,15 +882,24 @@ body.modal-open {
 }
 
 .tile-icon-bubble {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(245, 237, 222, 0.85);
-  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(255, 252, 246, 0.95);
+  border: 1px solid rgba(197, 160, 89, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
+  box-shadow: 0 2px 8px rgba(60, 40, 20, 0.08);
+  overflow: hidden;
+}
+
+.tile-img-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(60, 30, 10, 0.15));
 }
 
 .tile-emoji {
@@ -1000,15 +1010,24 @@ body.modal-open {
 }
 
 .event-modal-icon-wrap {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background: #f7f1e3;
+  background: #fdfaf3;
   border: 1.5px solid rgba(197, 160, 89, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 10px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(60, 40, 20, 0.08);
+}
+
+.modal-img-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(60, 30, 10, 0.15));
 }
 
 .event-modal-emoji {
@@ -1076,6 +1095,20 @@ body.modal-open {
 .venue-pin-icon {
   font-size: 18px;
   line-height: 1.3;
+}
+
+.venue-pin-bubble {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(197, 160, 89, 0.18);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a692f;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .venue-header-label {
@@ -1260,101 +1293,212 @@ body.modal-open {
   z-index: 1;
 }
 
-.shaadi-reception-content {
+.shaadi-reception-content,
+.wedding-maroon-card {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   text-align: center;
-  background: rgba(255, 253, 250, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(215, 180, 125, 0.45);
-  border-radius: 18px;
-  padding: 24px 18px 22px;
-  box-shadow: 0 10px 30px rgba(60, 20, 30, 0.09);
+  background: rgba(255, 252, 248, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(114, 24, 50, 0.38);
+  border-radius: 20px;
+  padding: 26px 20px 24px;
+  box-shadow: 0 12px 36px rgba(80, 15, 30, 0.12);
   box-sizing: border-box;
 }
 
+.wedding-icon-wrap {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 8px;
+}
+
+.wedding-eyebrow,
+.event-item-label.wedding-label {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #721832;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.wedding-main-title,
 .shaadi-screen-title {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 7.2vw, 2.9rem);
-  line-height: 1.15;
-  color: #381622;
-  margin-bottom: 8px;
+  font-size: clamp(2.8rem, 9.2vw, 3.8rem);
+  line-height: 1.1;
+  color: #520e20;
+  font-weight: 600;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
 }
 
-.shaadi-screen-desc {
+.wedding-date-tag {
+  display: inline-block;
+  background: rgba(114, 24, 50, 0.08);
+  border: 1px solid rgba(114, 24, 50, 0.28);
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #520e20;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* Timeline Box */
+.wedding-timeline-card {
+  background: rgba(114, 24, 50, 0.05);
+  border: 1px solid rgba(114, 24, 50, 0.22);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+
+.wedding-timeline-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.wedding-time {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #520e20;
+  letter-spacing: 0.04em;
+}
+
+.wedding-dot {
+  color: #8c2542;
+  font-size: 14px;
+}
+
+.wedding-event-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #520e20;
+  letter-spacing: 0.01em;
+}
+
+.wedding-timeline-sep {
+  height: 1px;
+  background: rgba(114, 24, 50, 0.16);
+  margin: 8px 10px;
+}
+
+.pheras-row {
+  flex-direction: column;
+  padding-top: 2px;
+}
+
+.pheras-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pheras-title {
+  font-size: 1.4rem;
+}
+
+.wedding-pheras-sub {
   font-family: var(--font-body);
-  font-size: clamp(1rem, 3.6vw, 1.12rem);
-  line-height: 1.65;
-  color: #4a2734;
+  font-size: 14px;
   font-style: italic;
-  max-width: 340px;
-  margin: 0 auto 12px;
+  font-weight: 500;
+  color: #721832;
 }
 
-.shaadi-tag {
-  color: #8a571c;
-  border-color: rgba(138, 87, 28, 0.45);
+/* Dress Code */
+.wedding-dress-tag {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: #631429;
+  background: rgba(114, 24, 50, 0.07);
+  border: 1px solid rgba(114, 24, 50, 0.2);
+  border-radius: 14px;
+  padding: 7px 16px;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
 }
 
-/* Shaadi Venue Card inside Shaadi Content */
+/* Venue Section */
+.wedding-venue-section,
 .shaadi-venue-card {
-  margin-top: 18px;
   padding-top: 16px;
-  border-top: 1px dashed rgba(215, 180, 125, 0.55);
+  border-top: 1px dashed rgba(114, 24, 50, 0.35);
   text-align: center;
   width: 100%;
   box-sizing: border-box;
 }
 
+.wedding-venue-eyebrow,
 .shaadi-venue-label {
   font-family: var(--font-sans);
-  font-size: 9.5px;
-  letter-spacing: 0.22em;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #8c5d22;
-  font-weight: 600;
+  color: #721832;
+  font-weight: 700;
   margin: 0 0 4px;
 }
 
+.wedding-venue-title,
 .shaadi-venue-name {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.65rem;
   font-weight: 600;
-  color: #381622;
+  color: #520e20;
   margin: 0 0 2px;
 }
 
+.wedding-venue-location,
 .shaadi-venue-city {
   font-family: var(--font-sans);
-  font-size: 11.5px;
-  color: #5d3545;
-  margin: 0 0 12px;
+  font-size: 13px;
+  color: #721832;
+  font-weight: 600;
+  margin: 0 0 14px;
 }
 
+.btn-wedding-maps,
 .btn-maps-shaadi {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 9px 20px;
-  background: #381622;
+  padding: 10px 24px;
+  background: #520e20;
   color: #faf5ee !important;
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 25px;
   font-family: var(--font-sans);
-  font-size: 11.5px;
-  font-weight: 500;
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.06em;
-  box-shadow: 0 4px 14px rgba(56, 22, 34, 0.25);
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px rgba(82, 14, 32, 0.3);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
+.btn-wedding-maps:hover,
 .btn-maps-shaadi:hover {
-  background: #230d15;
-  transform: translateY(-2px);
+  background: #3b0916;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(82, 14, 32, 0.4);
 }
 
 /* ============================================================
@@ -1508,8 +1652,8 @@ body.modal-open {
   z-index: 5;
   text-align: center;
   width: 100%;
-  max-width: 360px;
-  margin-top: -165px;
+  max-width: 380px;
+  margin-top: clamp(-220px, -24vh, -180px);
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
@@ -1518,6 +1662,49 @@ body.modal-open {
   padding: 10px 18px !important;
   box-shadow: none !important;
   box-sizing: border-box;
+}
+
+/* Baby Raha Invitation Line (Ritik's Niece) */
+.baby-raha-card {
+  margin: 12px auto 14px;
+  padding: 8px 18px;
+  background: rgba(254, 252, 247, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(60, 35, 15, 0.06);
+  display: inline-block;
+  max-width: 92%;
+  box-sizing: border-box;
+}
+
+.baby-raha-quote {
+  font-family: var(--font-body);
+  font-size: clamp(1.02rem, 3.8vw, 1.2rem);
+  font-style: italic;
+  font-weight: 500;
+  color: #3e2617;
+  line-height: 1.35;
+  margin: 0 0 3px;
+}
+
+.baby-raha-author {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c5d22;
+  font-weight: 600;
+  margin: 0;
+}
+
+.baby-raha-role {
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  text-transform: none;
 }
 
 .footer-invitation-lead {

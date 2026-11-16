@@ -95,7 +95,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "Festive Green / Colourful Traditional",
         "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
-        "icon_symbol": "🌿",
+        "icon_img": "assets/ramita-capullos.png",
     },
     {
         "id": "hawan",
@@ -108,7 +108,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "Traditional Indian Ethnic",
         "desc": "Sacred Vedic prayers and yajna to invoke divine blessings of the deities and ancestors for peace, harmony, and prosperity.",
-        "icon_symbol": "🔥",
+        "icon_img": "assets/hawan-flame.png",
     },
     {
         "id": "sangeet",
@@ -121,7 +121,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Indo-Western / Glamorous Festive",
         "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
-        "icon_symbol": "💃",
+        "icon_img": "assets/baile-nupcial.png",
     },
     {
         "id": "haldi",
@@ -134,7 +134,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Shades of Yellow & Sunshine Traditional",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
-        "icon_symbol": "💛",
+        "icon_img": "assets/flor-almendro.png",
     },
     {
         "id": "gharoli",
@@ -147,7 +147,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Traditional Indian Ethnic",
         "desc": "The beloved traditional ritual where family fetches sanctified holy water to bathe the groom before the wedding rituals.",
-        "icon_symbol": "🏺",
+        "icon_img": "assets/fuente-jardin-mediterraneo.png",
     },
     {
         "id": "sehrabandi",
@@ -160,7 +160,7 @@ RITIK_EVENTS = [
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "Royal Indian Formal / Sherwani & Turbans",
         "desc": "The time-honored ceremony where sisters tie the auspicious floral sehra on the groom, followed by the grand Baraat procession.",
-        "icon_symbol": "👑",
+        "icon_img": "assets/icono-arco.png",
     },
 ]
 
@@ -176,7 +176,7 @@ VAIBHAVI_EVENTS = [
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Indo-Western / Glamorous Festive",
         "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
-        "icon_symbol": "💃",
+        "icon_img": "assets/baile-nupcial.png",
     },
     {
         "id": "haldi",
@@ -189,7 +189,7 @@ VAIBHAVI_EVENTS = [
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Shades of Yellow & Sunshine Traditional",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
-        "icon_symbol": "💛",
+        "icon_img": "assets/flor-almendro.png",
     },
 ]
 
@@ -209,10 +209,10 @@ def build_festivities_screen(cfg):
           data-event-map="{ev['map_url']}"
           data-event-dress="{ev['dress_code']}"
           data-event-desc="{ev['desc']}"
-          data-event-icon="{ev['icon_symbol']}"
+          data-event-img="{ev['icon_img']}"
           aria-label="View details for {ev['title']}">
           <div class="tile-icon-bubble">
-            <span class="tile-emoji">{ev['icon_symbol']}</span>
+            <img src="{ev['icon_img']}" alt="" class="tile-img-icon" />
           </div>
           <h3 class="tile-title">{ev['title']}</h3>
           <span class="tile-badge">{ev['date_badge']}</span>
@@ -243,33 +243,56 @@ def build_festivities_screen(cfg):
 def build_shaadi_reception_screen():
     return """
   <!-- ============================================================
-       SHAADI & RECEPTION SCREEN (WITH INTEGRATED VENUE & MAPS)
+       WEDDING CEREMONY & RECEPTION (WITH INTEGRATED VENUE & MAPS)
        ============================================================ -->
   <section id="shaadiReceptionSection" class="shaadi-reception-section">
     <img src="assets/screen_shaadi_reception.jpg" alt="Royal Wedding Mandap" class="shaadi-reception-bg" />
 
-    <div class="shaadi-reception-content">
-      <div class="event-icon-wrap">
-        <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+    <div class="shaadi-reception-content wedding-maroon-card">
+      <div class="event-icon-wrap wedding-icon-wrap">
+        <img src="assets/boda-floral-arco.png" alt="Wedding Floral Arch" class="event-icon" />
       </div>
-      <p class="event-item-label">The Auspicious Wedding Union</p>
-      <h2 class="shaadi-screen-title">Shaadi &amp; Reception</h2>
-      <p class="shaadi-screen-desc">
-        The sacred wedding rituals and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
-      </p>
-      <div class="event-meta-block">
-        <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
-        <span class="event-dress-code shaadi-dress-code">👑 Dress Code: Traditional Indian Formal / Royal Elegance</span>
+      
+      <p class="wedding-eyebrow">The Auspicious Wedding Union</p>
+      <h2 class="wedding-main-title">Wedding</h2>
+      
+      <div class="wedding-date-tag">
+        <span>Wednesday, 27 January 2027</span>
+      </div>
+
+      <!-- Wedding Timeline Highlights -->
+      <div class="wedding-timeline-card">
+        <div class="wedding-timeline-row">
+          <span class="wedding-time">8:00 PM</span>
+          <span class="wedding-dot">&bull;</span>
+          <span class="wedding-event-name">Gala Dinner</span>
+        </div>
+        <div class="wedding-timeline-sep"></div>
+        <div class="wedding-timeline-row">
+          <span class="wedding-time">10:30 PM</span>
+          <span class="wedding-dot">&bull;</span>
+          <span class="wedding-event-name">Jai Mala</span>
+        </div>
+        <div class="wedding-timeline-sep"></div>
+        <div class="wedding-timeline-row pheres-row">
+          <div class="pheras-text-wrap">
+            <span class="wedding-event-name pheras-title">Saath Phere and Doli</span>
+            <span class="wedding-pheras-sub">Under the stars</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wedding-dress-tag">
+        <span>Dress Code: Traditional Indian Formal / Royal Elegance</span>
       </div>
 
       <!-- Integrated Venue & Maps Location -->
-      <div class="shaadi-venue-card">
-        <div class="shaadi-venue-divider"></div>
-        <p class="shaadi-venue-label">WEDDING VENUE</p>
-        <h4 class="shaadi-venue-name">Manka by Cherish</h4>
-        <p class="shaadi-venue-city">Karnal, Haryana</p>
-        <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps-shaadi">
-          <span>📍 View Location on Google Maps &rarr;</span>
+      <div class="wedding-venue-section">
+        <p class="wedding-venue-eyebrow">WEDDING VENUE</p>
+        <h4 class="wedding-venue-title">Manka by Cherish</h4>
+        <p class="wedding-venue-location">Karnal, Haryana</p>
+        <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-wedding-maps">
+          <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
     </div>
@@ -279,6 +302,15 @@ def build_shaadi_reception_screen():
 def build_html_page(cfg, is_root=False):
     festivities_html = build_festivities_screen(cfg) if cfg["events_type"] == "all_events" else ""
     shaadi_reception_html = build_shaadi_reception_screen()
+
+    # Raha's sweet baby invite line (Ritik's niece - only on Ritik's versions)
+    raha_block = ""
+    if cfg["id"] in ["1", "3"]:
+        raha_block = """
+      <div class="baby-raha-card">
+        <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
+        <p class="baby-raha-author">&mdash; Raha <span class="baby-raha-role">(Niece)</span></p>
+      </div>"""
 
     switcher_links = ""
     for v in VERSIONS:
@@ -323,6 +355,7 @@ def build_html_page(cfg, is_root=False):
 {duckdns_router_script}
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
@@ -383,7 +416,10 @@ def build_html_page(cfg, is_root=False):
     
     <div class="envelope-prompt">
       <div class="envelope-prompt-btn">
-        <span>✉️</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="envelope-prompt-svg">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
         <span>Tap to Open Invitation</span>
       </div>
     </div>
@@ -513,6 +549,7 @@ def build_html_page(cfg, is_root=False):
       <p class="footer-invitation-lead">Warmly Invited By</p>
       <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
       <p class="footer-tagline">Looking forward to celebrating with you!</p>
+{raha_block}
       <p class="footer-hashtag">{cfg["hashtag"]}</p>
     </div>
   </footer>
@@ -525,7 +562,7 @@ def build_html_page(cfg, is_root=False):
       <button type="button" class="event-modal-close" id="closeEventModalBtn" aria-label="Close details">&times;</button>
       
       <div class="event-modal-icon-wrap">
-        <span id="modalEventEmoji" class="event-modal-emoji">✨</span>
+        <img id="modalEventImg" class="modal-img-icon" src="assets/baile-nupcial.png" alt="" />
       </div>
 
       <p id="modalEventTagline" class="event-modal-tagline">Ceremony Details</p>
@@ -539,7 +576,12 @@ def build_html_page(cfg, is_root=False):
 
       <div class="event-modal-venue-box">
         <div class="event-modal-venue-header">
-          <span class="venue-pin-icon">📍</span>
+          <div class="venue-pin-bubble">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
           <div>
             <p class="venue-header-label">VENUE</p>
             <h4 id="modalEventVenue" class="modal-venue-name">Venue Name</h4>
@@ -547,7 +589,7 @@ def build_html_page(cfg, is_root=False):
           </div>
         </div>
         <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-maps">
-          <span>View on Google Maps &rarr;</span>
+          <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
 

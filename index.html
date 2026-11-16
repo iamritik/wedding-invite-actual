@@ -33,6 +33,7 @@
 
   <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
@@ -97,7 +98,10 @@
     
     <div class="envelope-prompt">
       <div class="envelope-prompt-btn">
-        <span>✉️</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="envelope-prompt-svg">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
         <span>Tap to Open Invitation</span>
       </div>
     </div>
@@ -175,33 +179,56 @@
 
 
   <!-- ============================================================
-       SHAADI & RECEPTION SCREEN (WITH INTEGRATED VENUE & MAPS)
+       WEDDING CEREMONY & RECEPTION (WITH INTEGRATED VENUE & MAPS)
        ============================================================ -->
   <section id="shaadiReceptionSection" class="shaadi-reception-section">
     <img src="assets/screen_shaadi_reception.jpg" alt="Royal Wedding Mandap" class="shaadi-reception-bg" />
 
-    <div class="shaadi-reception-content">
-      <div class="event-icon-wrap">
-        <img src="assets/boda-floral-arco.png" alt="Shaadi Arch" class="event-icon" />
+    <div class="shaadi-reception-content wedding-maroon-card">
+      <div class="event-icon-wrap wedding-icon-wrap">
+        <img src="assets/boda-floral-arco.png" alt="Wedding Floral Arch" class="event-icon" />
       </div>
-      <p class="event-item-label">The Auspicious Wedding Union</p>
-      <h2 class="shaadi-screen-title">Shaadi &amp; Reception</h2>
-      <p class="shaadi-screen-desc">
-        The sacred wedding rituals and seven pheras followed by a grand royal dinner, music, and celebrations under the stars.
-      </p>
-      <div class="event-meta-block">
-        <span class="event-timing-tag shaadi-tag">Wednesday, 27 January 2027 &nbsp;·&nbsp; Evening</span>
-        <span class="event-dress-code shaadi-dress-code">👑 Dress Code: Traditional Indian Formal / Royal Elegance</span>
+      
+      <p class="wedding-eyebrow">The Auspicious Wedding Union</p>
+      <h2 class="wedding-main-title">Wedding</h2>
+      
+      <div class="wedding-date-tag">
+        <span>Wednesday, 27 January 2027</span>
+      </div>
+
+      <!-- Wedding Timeline Highlights -->
+      <div class="wedding-timeline-card">
+        <div class="wedding-timeline-row">
+          <span class="wedding-time">8:00 PM</span>
+          <span class="wedding-dot">&bull;</span>
+          <span class="wedding-event-name">Gala Dinner</span>
+        </div>
+        <div class="wedding-timeline-sep"></div>
+        <div class="wedding-timeline-row">
+          <span class="wedding-time">10:30 PM</span>
+          <span class="wedding-dot">&bull;</span>
+          <span class="wedding-event-name">Jai Mala</span>
+        </div>
+        <div class="wedding-timeline-sep"></div>
+        <div class="wedding-timeline-row pheres-row">
+          <div class="pheras-text-wrap">
+            <span class="wedding-event-name pheras-title">Saath Phere and Doli</span>
+            <span class="wedding-pheras-sub">Under the stars</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wedding-dress-tag">
+        <span>Dress Code: Traditional Indian Formal / Royal Elegance</span>
       </div>
 
       <!-- Integrated Venue & Maps Location -->
-      <div class="shaadi-venue-card">
-        <div class="shaadi-venue-divider"></div>
-        <p class="shaadi-venue-label">WEDDING VENUE</p>
-        <h4 class="shaadi-venue-name">Manka by Cherish</h4>
-        <p class="shaadi-venue-city">Karnal, Haryana</p>
-        <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-maps-shaadi">
-          <span>📍 View Location on Google Maps &rarr;</span>
+      <div class="wedding-venue-section">
+        <p class="wedding-venue-eyebrow">WEDDING VENUE</p>
+        <h4 class="wedding-venue-title">Manka by Cherish</h4>
+        <p class="wedding-venue-location">Karnal, Haryana</p>
+        <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-wedding-maps">
+          <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
     </div>
@@ -260,6 +287,11 @@
       <p class="footer-invitation-lead">Warmly Invited By</p>
       <h3 class="footer-parents-names">Naresh & Kavita Arora</h3>
       <p class="footer-tagline">Looking forward to celebrating with you!</p>
+
+      <div class="baby-raha-card">
+        <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
+        <p class="baby-raha-author">&mdash; Raha <span class="baby-raha-role">(Niece)</span></p>
+      </div>
       <p class="footer-hashtag">#VRinLove</p>
     </div>
   </footer>
@@ -272,7 +304,7 @@
       <button type="button" class="event-modal-close" id="closeEventModalBtn" aria-label="Close details">&times;</button>
       
       <div class="event-modal-icon-wrap">
-        <span id="modalEventEmoji" class="event-modal-emoji">✨</span>
+        <img id="modalEventImg" class="modal-img-icon" src="assets/baile-nupcial.png" alt="" />
       </div>
 
       <p id="modalEventTagline" class="event-modal-tagline">Ceremony Details</p>
@@ -286,7 +318,12 @@
 
       <div class="event-modal-venue-box">
         <div class="event-modal-venue-header">
-          <span class="venue-pin-icon">📍</span>
+          <div class="venue-pin-bubble">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
           <div>
             <p class="venue-header-label">VENUE</p>
             <h4 id="modalEventVenue" class="modal-venue-name">Venue Name</h4>
@@ -294,7 +331,7 @@
           </div>
         </div>
         <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-maps">
-          <span>View on Google Maps &rarr;</span>
+          <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
 
