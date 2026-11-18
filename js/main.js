@@ -150,9 +150,7 @@ let isAudioPlaying = false;
 
 function initAudio() {
   audioElem = document.getElementById('weddingAudio');
-  const toggleBtn = document.getElementById('audioToggleBtn');
-  const iconSound = document.getElementById('iconSound');
-  const iconMute = document.getElementById('iconMute');
+  const toggleBtn = document.getElementById('audioToggleBtn') || document.getElementById('musicToggleBtn');
 
   if (!audioElem || !toggleBtn) return;
 
@@ -170,9 +168,9 @@ function initAudio() {
 
 function playAudio() {
   if (!audioElem) return;
-  const toggleBtn = document.getElementById('audioToggleBtn');
-  const iconSound = document.getElementById('iconSound');
-  const iconMute = document.getElementById('iconMute');
+  const toggleBtn = document.getElementById('audioToggleBtn') || document.getElementById('musicToggleBtn');
+  const iconSound = document.getElementById('iconSound') || document.getElementById('musicIconPlaying');
+  const iconMute = document.getElementById('iconMute') || document.getElementById('musicIconMuted');
 
   audioElem.play().then(() => {
     isAudioPlaying = true;
@@ -189,9 +187,9 @@ function playAudio() {
 
 function pauseAudio() {
   if (!audioElem) return;
-  const toggleBtn = document.getElementById('audioToggleBtn');
-  const iconSound = document.getElementById('iconSound');
-  const iconMute = document.getElementById('iconMute');
+  const toggleBtn = document.getElementById('audioToggleBtn') || document.getElementById('musicToggleBtn');
+  const iconSound = document.getElementById('iconSound') || document.getElementById('musicIconPlaying');
+  const iconMute = document.getElementById('iconMute') || document.getElementById('musicIconMuted');
 
   audioElem.pause();
   isAudioPlaying = false;

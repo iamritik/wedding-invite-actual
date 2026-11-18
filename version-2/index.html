@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2027c" />
 </head>
 <body class="envelope-active">
 
@@ -46,16 +46,20 @@
     </div>
   </aside>
 
-  <!-- Audio Controls -->
-  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music" title="Play/Pause Music">
-    <svg id="musicIconMuted" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Floating Petals Container -->
+  <div id="petalsContainer" class="petals-container" aria-hidden="true"></div>
+
+  <!-- Floating Audio Controller -->
+  <button id="audioToggleBtn" class="audio-toggle-btn music-toggle-btn" aria-label="Play music" title="Toggle Music">
+    <svg id="iconSound" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+    </svg>
+    <svg id="iconMute" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
       <line x1="23" y1="9" x2="17" y2="15"></line>
       <line x1="17" y1="9" x2="23" y2="15"></line>
-    </svg>
-    <svg id="musicIconPlaying" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
     </svg>
   </button>
   <audio id="weddingAudio" src="assets/mohabbatein-love-theme.mp3" preload="auto" loop></audio>
@@ -270,34 +274,36 @@
        ============================================================ -->
   <div id="eventDetailModal" class="event-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="event-modal-card">
-      <button type="button" id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <button type="button" id="modalCloseBtn" class="modal-close-btn event-modal-close" aria-label="Close modal">&times;</button>
       
       <div class="event-modal-icon-wrap">
-        <img id="modalEventImg" src="" alt="" class="modal-event-icon" />
+        <img id="modalEventImg" src="assets/baile-nupcial.png" alt="" class="modal-event-icon modal-img-icon" />
       </div>
 
-      <p class="event-modal-eyebrow">CEREMONY DETAILS</p>
+      <p id="modalEventTagline" class="event-modal-eyebrow event-modal-tagline">CEREMONY DETAILS</p>
       <h3 id="modalEventTitle" class="event-modal-title">Event Title</h3>
       
-      <div class="event-modal-date-tag">
+      <div class="event-modal-date-tag event-modal-time-badge">
         <span id="modalEventDate">Date &amp; Time</span>
       </div>
 
       <p id="modalEventDesc" class="event-modal-desc">Description</p>
 
       <div class="event-modal-venue-box">
-        <div class="venue-box-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
+        <div class="event-modal-venue-header">
+          <div class="venue-pin-bubble venue-box-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="venue-box-details">
+            <p class="venue-box-label venue-header-label">VENUE</p>
+            <h4 id="modalEventVenue" class="venue-box-name modal-venue-name">Venue Name</h4>
+            <p id="modalEventCity" class="venue-box-city modal-venue-city">City</p>
+          </div>
         </div>
-        <div class="venue-box-details">
-          <span class="venue-box-label">VENUE</span>
-          <h4 id="modalEventVenue" class="venue-box-name">Venue Name</h4>
-          <p id="modalEventCity" class="venue-box-city">City</p>
-        </div>
-        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-map">
+        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-map btn-modal-maps">
           <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
@@ -311,6 +317,6 @@
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2027c"></script>
 </body>
 </html>
