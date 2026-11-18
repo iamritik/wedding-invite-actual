@@ -9,8 +9,8 @@ VERSIONS = [
         "name1": "Ritik",
         "connector": "weds",
         "name2": "Vaibhavi",
-        "story_sign": "Ritik and Vaibhavi",
-        "parents_names": "Naresh & Kavita Arora",
+        "story_sign": "-Ritik &amp; Vaibhavi",
+        "parents_names": "Kavita &amp; Naresh Arora",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -30,8 +30,8 @@ VERSIONS = [
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
-        "story_sign": "Vaibhavi and Ritik",
-        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
+        "story_sign": "-Vaibhavi &amp; Ritik",
+        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -51,8 +51,8 @@ VERSIONS = [
         "name1": "Ritik",
         "connector": "weds",
         "name2": "Vaibhavi",
-        "story_sign": "Ritik and Vaibhavi",
-        "parents_names": "Naresh & Kavita Arora",
+        "story_sign": "-Ritik &amp; Vaibhavi",
+        "parents_names": "Kavita &amp; Naresh Arora",
         "hero_date_month": "January",
         "hero_date_day": "25 – 27",
         "hero_date_dayname": "Monday to Wednesday",
@@ -72,8 +72,8 @@ VERSIONS = [
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
-        "story_sign": "Vaibhavi and Ritik",
-        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
+        "story_sign": "-Vaibhavi &amp; Ritik",
+        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
@@ -93,8 +93,8 @@ VERSIONS = [
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
-        "story_sign": "Vaibhavi and Ritik",
-        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
+        "story_sign": "-Vaibhavi &amp; Ritik",
+        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "25 – 27",
         "hero_date_dayname": "Monday to Wednesday",
@@ -401,7 +401,7 @@ def build_countdown_screen(cfg):
 
 def build_last_screen(cfg):
     if cfg["side"] == "ritik":
-        # Ritik's Parents screen with Raha's cute note and Reet & Sanyam compliments
+        # Ritik's Parents screen with family members and Raha note
         return f"""
   <!-- ============================================================
        LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
@@ -416,12 +416,10 @@ def build_last_screen(cfg):
 
     <div class="footer-content">
       <p class="footer-invitation-lead">Warmly Invited By</p>
-      <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
+      <h3 class="footer-family-member">Kavita &amp; Naresh Arora</h3>
+      <h3 class="footer-family-member">Reet &amp; Sanyam Ahuja</h3>
 
-      <div class="footer-compliments-card">
-        <p class="footer-compliments-lead">With best compliments :</p>
-        <p class="footer-compliments-names">Reet &amp; Sanyam Ahuja</p>
-      </div>
+      <p class="footer-grandparents-lead">With best compliments from Grandparents</p>
 
       <div class="baby-raha-card">
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
@@ -545,7 +543,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027g" />
+  <link rel="stylesheet" href="css/style.css?v=2027h" />
 </head>
 <body class="envelope-active">
 
@@ -715,7 +713,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027g"></script>
+  <script src="js/main.js?v=2027h"></script>
 </body>
 </html>
 """
