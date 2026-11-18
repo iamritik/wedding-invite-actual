@@ -1956,7 +1956,7 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start !important;
-  padding-top: clamp(65px, 8.5vh, 75px) !important;
+  padding-top: clamp(140px, 21.1vh, 180px) !important;
   padding-bottom: 20px !important;
 }
 
@@ -1997,7 +1997,7 @@ body.modal-open {
 
 @media (max-height: 720px) {
   .ritik-footer {
-    padding-top: 38px !important;
+    padding-top: 135px !important;
   }
   .ritik-footer-content .footer-invitation-lead {
     font-size: 1.3rem !important;
