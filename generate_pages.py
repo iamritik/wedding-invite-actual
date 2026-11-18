@@ -317,8 +317,9 @@ def build_festivities_screen(cfg):
   </section>
 """
 
-def build_shaadi_reception_screen():
-    return """
+def build_shaadi_reception_screen(cfg):
+    dinner_time = "9:00 PM" if cfg["side"] == "ritik" else "8:00 PM"
+    return f"""
   <!-- ============================================================
        WEDDING CEREMONY & RECEPTION (WITH INTEGRATED VENUE & MAPS)
        ============================================================ -->
@@ -340,21 +341,15 @@ def build_shaadi_reception_screen():
       <!-- Wedding Timeline Highlights -->
       <div class="wedding-timeline-card">
         <div class="wedding-timeline-row">
-          <span class="wedding-time">8:00 PM</span>
+          <span class="wedding-time">{dinner_time}</span>
           <span class="wedding-dot">&bull;</span>
           <span class="wedding-event-name">Gala Dinner</span>
-        </div>
-        <div class="wedding-timeline-sep"></div>
-        <div class="wedding-timeline-row">
-          <span class="wedding-time">10:30 PM</span>
-          <span class="wedding-dot">&bull;</span>
-          <span class="wedding-event-name">Jai Mala</span>
         </div>
         <div class="wedding-timeline-sep"></div>
         <div class="wedding-timeline-row pheres-row">
           <div class="pheras-text-wrap">
             <span class="wedding-event-name pheras-title">Saath Phere and Doli</span>
-            <span class="wedding-pheras-sub">Under the stars</span>
+            <span class="wedding-pheras-sub">Taaron ki chhao mein</span>
           </div>
         </div>
       </div>
@@ -422,7 +417,6 @@ def build_last_screen(cfg):
     <div class="footer-content">
       <p class="footer-invitation-lead">Warmly Invited By</p>
       <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
-      <p class="footer-tagline">Looking forward to celebrating with you!</p>
 
       <div class="footer-compliments-card">
         <p class="footer-compliments-lead">With best compliments :</p>
@@ -433,6 +427,8 @@ def build_last_screen(cfg):
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
         <p class="baby-raha-author">&mdash; Raha</p>
       </div>
+
+      <p class="footer-tagline">Looking forward to celebrating with you!</p>
 
       <p class="footer-hashtag">{cfg["hashtag"]}</p>
     </div>
@@ -472,7 +468,7 @@ def build_last_screen(cfg):
 
 def build_html_page(cfg, is_root=False):
     festivities_html = build_festivities_screen(cfg) if cfg["events_type"] == "all_events" else ""
-    shaadi_reception_html = build_shaadi_reception_screen()
+    shaadi_reception_html = build_shaadi_reception_screen(cfg)
     countdown_html = build_countdown_screen(cfg)
     last_screen_html = build_last_screen(cfg)
 
@@ -549,7 +545,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027f" />
+  <link rel="stylesheet" href="css/style.css?v=2027g" />
 </head>
 <body class="envelope-active">
 
@@ -719,7 +715,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027f"></script>
+  <script src="js/main.js?v=2027g"></script>
 </body>
 </html>
 """

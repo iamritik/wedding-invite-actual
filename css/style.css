@@ -1030,21 +1030,21 @@ body.modal-open {
 .event-modal-eyebrow,
 .event-modal-tagline {
   font-family: var(--font-sans);
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #721832;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .event-modal-title {
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 6vw, 2.3rem);
+  font-size: clamp(2.1rem, 7vw, 2.6rem);
   color: #520e20;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .event-modal-date-tag,
@@ -1053,29 +1053,29 @@ body.modal-open {
   background: rgba(114, 24, 50, 0.08);
   border: 1px solid rgba(114, 24, 50, 0.25);
   border-radius: 20px;
-  padding: 6px 16px;
+  padding: 8px 18px;
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #520e20;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .event-modal-desc {
   font-family: var(--font-body);
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
   color: #27141a;
   font-weight: 600;
   font-style: italic;
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 }
 
 .event-modal-venue-box {
   background: rgba(114, 24, 50, 0.04);
   border: 1px solid rgba(114, 24, 50, 0.22);
-  border-radius: 16px;
-  padding: 14px 16px;
+  border-radius: 18px;
+  padding: 16px 18px;
   margin-bottom: 14px;
   text-align: left;
 }
@@ -1090,8 +1090,8 @@ body.modal-open {
 
 .venue-pin-bubble,
 .venue-box-icon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: rgba(114, 24, 50, 0.1);
   border: 1px solid rgba(114, 24, 50, 0.25);
@@ -1111,28 +1111,28 @@ body.modal-open {
 .venue-box-label,
 .venue-header-label {
   font-family: var(--font-sans);
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #721832;
   font-weight: 700;
-  margin: 0 0 2px;
+  margin: 0 0 3px;
 }
 
 .venue-box-name,
 .modal-venue-name {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.48rem;
   font-weight: 700;
   color: #520e20;
-  margin: 0 0 2px;
+  margin: 0 0 3px;
   line-height: 1.25;
 }
 
 .venue-box-city,
 .modal-venue-city {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 13.5px;
   color: #721832;
   font-weight: 600;
   margin: 0;
@@ -1144,14 +1144,14 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px 18px !important;
+  padding: 13px 20px !important;
   box-sizing: border-box;
   background: #520e20 !important;
   color: #faf5ee !important;
   text-decoration: none !important;
   border-radius: 24px !important;
   font-family: var(--font-sans);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: center;
@@ -1785,14 +1785,14 @@ body.modal-open {
 
 /* Baby Raha Invitation Line (Ritik's Niece) */
 .baby-raha-card {
-  margin: 12px auto 14px;
-  padding: 8px 18px;
-  background: rgba(254, 252, 247, 0.88);
+  margin: 14px auto 14px;
+  padding: 10px 22px;
+  background: rgba(254, 252, 247, 0.94);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(197, 160, 89, 0.45);
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(60, 35, 15, 0.06);
+  border: 1.5px solid rgba(114, 24, 50, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(82, 14, 32, 0.08);
   display: inline-block;
   max-width: 92%;
   box-sizing: border-box;
@@ -1800,21 +1800,21 @@ body.modal-open {
 
 .baby-raha-quote {
   font-family: var(--font-body);
-  font-size: clamp(1.02rem, 3.8vw, 1.2rem);
+  font-size: clamp(1.22rem, 4.4vw, 1.48rem);
   font-style: italic;
-  font-weight: 500;
-  color: #3e2617;
+  font-weight: 700;
+  color: #381220;
   line-height: 1.35;
-  margin: 0 0 3px;
+  margin: 0 0 4px;
 }
 
 .baby-raha-author {
   font-family: var(--font-sans);
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 13.5px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #8c5d22;
-  font-weight: 600;
+  color: #721832;
+  font-weight: 700;
   margin: 0;
 }
 
