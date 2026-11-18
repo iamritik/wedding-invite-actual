@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027d" />
+  <link rel="stylesheet" href="css/style.css?v=2027e" />
 </head>
 <body class="envelope-active">
 
@@ -624,9 +624,6 @@ def build_html_page(cfg, is_root=False):
         <span class="hero-day-name">{cfg["hero_date_dayname"]}</span>
         <span class="hero-year">{cfg["hero_date_year"]}</span>
       </div>
-
-      <p class="hero-location-tag">To be held at</p>
-      <h3 class="hero-venue-name">Karnal</h3>
     </div>
 
     <!-- Scroll down indicator -->
@@ -722,7 +719,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027d"></script>
+  <script src="js/main.js?v=2027e"></script>
 </body>
 </html>
 """
