@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027q" />
+  <link rel="stylesheet" href="css/style.css?v=2027r" />
 </head>
 <body class="envelope-active">
 
@@ -606,6 +606,10 @@ def build_html_page(cfg, is_root=False):
     </div>
 
     <div id="heroContent" class="hero-content">
+      <div class="hero-ganesh-wrap">
+        <img src="assets/ganesh-ji.png" alt="Shree Ganeshay Namah" class="hero-ganesh-icon" />
+      </div>
+
       <div class="hero-names">
         <span>{cfg["name1"]}</span>
         <span class="hero-weds">{cfg["connector"]}</span>
@@ -719,7 +723,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027q"></script>
+  <script src="js/main.js?v=2027r"></script>
 </body>
 </html>
 """
