@@ -302,7 +302,7 @@ function initScrollNav() {
 // ============================================================
 function initEventModal() {
   const modal = document.getElementById('eventDetailModal');
-  const closeBtn = document.getElementById('closeEventModalBtn');
+  const closeBtn = document.getElementById('closeEventModalBtn') || document.getElementById('modalCloseBtn');
   const tiles = document.querySelectorAll('.event-tile-box');
 
   if (!modal || !tiles.length) return;

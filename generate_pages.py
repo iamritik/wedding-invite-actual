@@ -275,7 +275,6 @@ def build_festivities_screen(cfg):
 
     tiles_html = ""
     for ev in events:
-        dress_pill = f'<span class="tile-dress-pill">{ev["dress_code"]}</span>' if ev["dress_code"] else ''
         tiles_html += f"""
         <button type="button" class="event-tile-box"
           data-event-id="{ev['id']}"
@@ -294,7 +293,6 @@ def build_festivities_screen(cfg):
           </div>
           <h3 class="tile-title">{ev['title']}</h3>
           <span class="tile-badge">{ev['date_badge']}</span>
-          {dress_pill}
           <span class="tile-tap-hint">Details &rarr;</span>
         </button>"""
 
@@ -358,19 +356,6 @@ def build_shaadi_reception_screen():
             <span class="wedding-event-name pheras-title">Saath Phere and Doli</span>
             <span class="wedding-pheras-sub">Under the stars</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Prominent Colour Palette & Dress Code -->
-      <div class="wedding-dress-prominent">
-        <p class="dress-prominent-eyebrow">COLOUR STORY &bull; DRESS CODE</p>
-        <h4 class="dress-prominent-theme">Adorn what you Adore</h4>
-        <div class="palette-swatches-row">
-          <span class="swatch-circle" style="background: #5a1827;" title="Royal Maroon"></span>
-          <span class="swatch-circle" style="background: #b82638;" title="Crimson Red"></span>
-          <span class="swatch-circle" style="background: #d49838;" title="Ochre Gold"></span>
-          <span class="swatch-circle" style="background: #4a5d35;" title="Olive Green"></span>
-          <span class="swatch-circle" style="background: #e8cca0;" title="Warm Champagne"></span>
         </div>
       </div>
 
@@ -730,7 +715,7 @@ def build_html_page(cfg, is_root=False):
       </div>
 
       <div id="modalDressCodeWrap" class="event-modal-dress-prominent" style="display: none;">
-        <p class="modal-dress-eyebrow">COLOUR STORY &bull; DRESS CODE</p>
+        <p class="modal-dress-eyebrow">DRESS CODE</p>
         <h4 id="modalEventDress" class="modal-dress-theme">Dress Code</h4>
         <div id="modalDressSwatches" class="palette-swatches-row"></div>
       </div>
