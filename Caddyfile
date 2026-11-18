@@ -16,6 +16,10 @@
     redir /v4* /version-4/ 302
     redir /v5* /version-5/ 302
 
+    # Rewrite version-specific asset requests to domain root
+    @versionAssets path_regexp va ^/version-[1-9]/(assets|css|js)/(.*)$
+    rewrite @versionAssets /{re.va.1}/{re.va.2}
+
     # Cache headers for static assets
     @assets path /assets/* /css/* /js/*
     header @assets Cache-Control "public, max-age=86400"

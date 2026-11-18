@@ -470,7 +470,7 @@ body.envelope-active {
 }
 
 /* ============================================================
-   COUNTDOWN SECTION (INTEGRATED INTO IMPASTO OIL PAINTING)
+   COUNTDOWN SECTION (FULL BLEED ROYAL FLORAL ARCH)
    ============================================================ */
 .countdown-section {
   position: relative;
@@ -481,68 +481,41 @@ body.envelope-active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 16px;
-  box-sizing: border-box;
   overflow: hidden;
+  box-sizing: border-box;
   background-color: #faf5ee;
 }
 
-/* Background Mandap Painting Container (for Vaibhavi's versions) */
-.countdown-painting-container {
+.countdown-bg-image {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.countdown-painting-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center center;
+  z-index: 1;
 }
 
-.countdown-painting-scrim {
-  position: absolute;
-  inset: 0;
-  background: rgba(250, 246, 238, 0.45);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-/* Royal Floral Arch Countdown Frame */
-.countdown-frame-wrap {
+.countdown-inner-content {
   position: relative;
   z-index: 5;
-  aspect-ratio: 571 / 1024;
-  width: min(88vw, 390px);
-  max-height: 86vh;
-  max-height: 86dvh;
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 16px 48px rgba(50, 15, 25, 0.16);
-  overflow: hidden;
-  background-color: #f7eedf;
-}
-
-.countdown-frame-img {
-  position: absolute;
-  inset: 0;
   width: 100%;
+  max-width: 440px;
   height: 100%;
-  object-fit: fill;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 /* Vertical Stack of Live Units within the Arched Parchment */
 .countdown-stack-units {
   position: absolute;
-  top: 29.5%;
-  bottom: 23.5%;
+  top: 31%;
+  bottom: 23%;
   left: 0;
   right: 0;
   display: flex;
@@ -565,20 +538,21 @@ body.envelope-active {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(2.3rem, 7.8vw, 3.2rem);
+  font-size: clamp(2.5rem, 8.2vw, 3.5rem);
   line-height: 0.95;
-  color: #26381b;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+  color: #27381f;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 .countdown-lbl {
   font-family: var(--font-body);
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+  font-size: clamp(1.1rem, 3.8vw, 1.35rem);
   color: #3b4e28;
   letter-spacing: 0.02em;
   margin-top: 1px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 /* ============================================================
@@ -597,10 +571,10 @@ body.envelope-active {
 .our-story-clouds {
   position: absolute;
   left: 50%;
-  top: 15px;
+  top: 10px;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 500px;
+  width: 140vw;
+  max-width: 800px;
   z-index: 1;
   pointer-events: none;
   user-select: none;
@@ -1748,6 +1722,31 @@ body.modal-open {
   padding: 10px 18px !important;
   box-shadow: none !important;
   box-sizing: border-box;
+}
+
+/* Complimentary Greetings Card (Reet & Sanyam) */
+.footer-compliments-card {
+  margin: 10px auto 8px;
+  text-align: center;
+}
+
+.footer-compliments-lead {
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #721832;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.footer-compliments-names {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 4.4vw, 1.55rem);
+  font-weight: 700;
+  color: #520e20;
+  margin: 0;
+  letter-spacing: 0.01em;
 }
 
 /* Baby Raha Invitation Line (Ritik's Niece) */

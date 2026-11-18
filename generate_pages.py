@@ -373,27 +373,15 @@ def build_shaadi_reception_screen():
 """
 
 def build_countdown_screen(cfg):
-    # For Vaibhavi's versions, the background is the mandap painting from the previous last screen
-    bg_html = ""
-    if cfg["side"] == "vaibhavi":
-        bg_html = """
-    <div class="countdown-painting-container">
-      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="countdown-painting-bg" />
-      <div class="countdown-painting-scrim"></div>
-    </div>"""
-
     return f"""
   <!-- ============================================================
-       COUNTDOWN SECTION (SECOND LAST - JUST BEFORE PARENTS SCREEN)
+       COUNTDOWN SECTION (FULL BLEED ROYAL ARCH BACKGROUND)
        ============================================================ -->
   <section id="countdownSection" class="countdown-section" data-target-date="{cfg["target_date_iso"]}">
-    {bg_html}
+    <img src="assets/countdown-arch-frame.jpg" alt="Countdown until Celebrations Begin" class="countdown-bg-image" />
 
-    <!-- Royal Floral Arch Countdown Frame -->
-    <div class="countdown-frame-wrap">
-      <img src="assets/countdown-arch-frame.jpg" alt="Countdown until Celebrations Begin" class="countdown-frame-img" />
-
-      <!-- Vertical Stack of Live Units -->
+    <div class="countdown-inner-content">
+      <!-- Vertical Stack of Live Units within Arched Parchment -->
       <div class="countdown-stack-units">
         <div class="countdown-unit-block">
           <span id="cdDays" class="countdown-num">0</span>
@@ -418,7 +406,7 @@ def build_countdown_screen(cfg):
 
 def build_last_screen(cfg):
     if cfg["side"] == "ritik":
-        # Ritik's Parents screen with Raha's cute note
+        # Ritik's Parents screen with Raha's cute note and Reet & Sanyam compliments
         return f"""
   <!-- ============================================================
        LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
@@ -435,6 +423,11 @@ def build_last_screen(cfg):
       <p class="footer-invitation-lead">Warmly Invited By</p>
       <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
       <p class="footer-tagline">Looking forward to celebrating with you!</p>
+
+      <div class="footer-compliments-card">
+        <p class="footer-compliments-lead">With best compliments :</p>
+        <p class="footer-compliments-names">Reet &amp; Sanyam</p>
+      </div>
 
       <div class="baby-raha-card">
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
@@ -644,7 +637,7 @@ def build_html_page(cfg, is_root=False):
        OUR STORY SECTION (SLIDE 2 - IMMEDIATE NEXT AFTER HERO)
        ============================================================ -->
   <section id="ourStorySection" class="our-story-section">
-    <div class="our-story-clouds"></div>
+    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
 
     <div class="our-story-inner">
       <h2 class="our-story-title">Our Story</h2>
@@ -736,6 +729,16 @@ def main():
     for cfg in VERSIONS:
         folder_path = os.path.join(root_dir, cfg["dir"])
         os.makedirs(folder_path, exist_ok=True)
+
+        # Ensure symlinks for assets, css, js, favicon.ico exist in each version folder
+        for link_name, target in [("assets", "../assets"), ("css", "../css"), ("js", "../js"), ("favicon.ico", "../favicon.ico")]:
+            link_path = os.path.join(folder_path, link_name)
+            if not os.path.exists(link_path):
+                try:
+                    os.symlink(target, link_path)
+                except OSError:
+                    pass
+
         html_content = build_html_page(cfg, is_root=False)
         with open(os.path.join(folder_path, "index.html"), "w", encoding="utf-8") as f:
             f.write(html_content)
