@@ -271,7 +271,7 @@ body.envelope-active {
 
 .hero-content {
   position: relative;
-  top: 10px;
+  top: -6px;
   z-index: 10;
   width: 100%;
   max-width: 360px;
@@ -1956,7 +1956,7 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start !important;
-  padding-top: clamp(140px, 21.1vh, 180px) !important;
+  padding-top: clamp(125px, 18.8vh, 160px) !important;
   padding-bottom: 20px !important;
 }
 
@@ -1997,7 +1997,7 @@ body.modal-open {
 
 @media (max-height: 720px) {
   .ritik-footer {
-    padding-top: 135px !important;
+    padding-top: 120px !important;
   }
   .ritik-footer-content .footer-invitation-lead {
     font-size: 1.3rem !important;
@@ -2036,7 +2036,7 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: clamp(205px, 28vh, 255px);
+  padding-top: clamp(185px, 25.5vh, 235px);
   padding-bottom: 30px;
 }
 
