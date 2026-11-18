@@ -317,6 +317,7 @@ function initEventModal() {
     const dress = tile.getAttribute('data-event-dress') || '';
     const desc = tile.getAttribute('data-event-desc') || '';
     const eventImg = tile.getAttribute('data-event-img') || '';
+    const eventId = tile.getAttribute('data-event-id') || '';
 
     const modalTitle = document.getElementById('modalEventTitle');
     const modalTagline = document.getElementById('modalEventTagline');
@@ -326,6 +327,7 @@ function initEventModal() {
     const modalMap = document.getElementById('modalEventMapLink');
     const modalDress = document.getElementById('modalEventDress');
     const modalDressWrap = document.getElementById('modalDressCodeWrap');
+    const modalSwatches = document.getElementById('modalDressSwatches');
     const modalDesc = document.getElementById('modalEventDesc');
     const modalImg = document.getElementById('modalEventImg');
 
@@ -341,12 +343,35 @@ function initEventModal() {
       modalImg.alt = title;
     }
 
-    if (modalDress && modalDressWrap) {
+    if (modalDressWrap) {
       if (dress) {
-        modalDress.textContent = 'Dress Code: ' + dress;
-        modalDressWrap.style.display = 'inline-block';
+        if (modalDress) modalDress.textContent = dress;
+        modalDressWrap.style.display = 'block';
+
+        if (modalSwatches) {
+          if (eventId === 'haldi') {
+            modalSwatches.innerHTML = `
+              <span class="swatch-circle" style="background: #801538;" title="Deep Magenta"></span>
+              <span class="swatch-circle" style="background: #c92a63;" title="Rose Pink"></span>
+              <span class="swatch-circle" style="background: #e85d88;" title="Bubblegum"></span>
+              <span class="swatch-circle" style="background: #f498b5;" title="Blush"></span>
+              <span class="swatch-circle" style="background: #fcd1de;" title="Pastel Pink"></span>
+            `;
+          } else if (eventId === 'sangeet') {
+            modalSwatches.innerHTML = `
+              <span class="swatch-circle" style="background: #0c1e54;" title="Midnight Blue"></span>
+              <span class="swatch-circle" style="background: #c59b4e;" title="Gold Glitter"></span>
+              <span class="swatch-circle" style="background: #d8d8d8;" title="Silver Sparkle"></span>
+              <span class="swatch-circle" style="background: #1b3260;" title="Navy Blue"></span>
+              <span class="swatch-circle" style="background: #ebd5a8;" title="Champagne Shimmer"></span>
+            `;
+          } else {
+            modalSwatches.innerHTML = '';
+          }
+        }
       } else {
         modalDressWrap.style.display = 'none';
+        if (modalSwatches) modalSwatches.innerHTML = '';
       }
     }
 

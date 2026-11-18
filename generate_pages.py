@@ -93,7 +93,7 @@ RITIK_EVENTS = [
         "venue": "701 Sector 8",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
-        "dress_code": "Festive Green / Colourful Traditional",
+        "dress_code": "",
         "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
         "icon_img": "assets/ramita-capullos.png",
     },
@@ -106,7 +106,7 @@ RITIK_EVENTS = [
         "venue": "701 Sector 8",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
-        "dress_code": "Traditional Indian Ethnic",
+        "dress_code": "",
         "desc": "Sacred Vedic prayers and yajna to invoke divine blessings of the deities and ancestors for peace, harmony, and prosperity.",
         "icon_img": "assets/hawan-flame.png",
     },
@@ -119,7 +119,7 @@ RITIK_EVENTS = [
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
-        "dress_code": "Indo-Western / Glamorous Festive",
+        "dress_code": "All that Sparkles",
         "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
         "icon_img": "assets/baile-nupcial.png",
     },
@@ -132,7 +132,7 @@ RITIK_EVENTS = [
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
-        "dress_code": "Shades of Yellow & Sunshine Traditional",
+        "dress_code": "Sink into Pink",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
         "icon_img": "assets/flor-almendro.png",
     },
@@ -145,7 +145,7 @@ RITIK_EVENTS = [
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
-        "dress_code": "Traditional Indian Ethnic",
+        "dress_code": "",
         "desc": "The beloved traditional ritual where family fetches sanctified holy water to bathe the groom before the wedding rituals.",
         "icon_img": "assets/fuente-jardin-mediterraneo.png",
     },
@@ -158,7 +158,7 @@ RITIK_EVENTS = [
         "venue": "701 Sector 8",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
-        "dress_code": "Royal Indian Formal / Sherwani & Turbans",
+        "dress_code": "",
         "desc": "The time-honored ceremony where sisters tie the auspicious floral sehra on the groom, followed by the grand Baraat procession.",
         "icon_img": "assets/icono-arco.png",
     },
@@ -174,7 +174,7 @@ VAIBHAVI_EVENTS = [
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
-        "dress_code": "Indo-Western / Glamorous Festive",
+        "dress_code": "All that Sparkles",
         "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
         "icon_img": "assets/baile-nupcial.png",
     },
@@ -187,7 +187,7 @@ VAIBHAVI_EVENTS = [
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
-        "dress_code": "Shades of Yellow & Sunshine Traditional",
+        "dress_code": "Sink into Pink",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
         "icon_img": "assets/flor-almendro.png",
     },
@@ -199,8 +199,10 @@ def build_festivities_screen(cfg):
 
     tiles_html = ""
     for ev in events:
+        dress_pill = f'<span class="tile-dress-pill">{ev["dress_code"]}</span>' if ev["dress_code"] else ''
         tiles_html += f"""
         <button type="button" class="event-tile-box"
+          data-event-id="{ev['id']}"
           data-event-title="{ev['title']}"
           data-event-tagline="{ev['tagline']}"
           data-event-date="{ev['date_full']}"
@@ -216,6 +218,7 @@ def build_festivities_screen(cfg):
           </div>
           <h3 class="tile-title">{ev['title']}</h3>
           <span class="tile-badge">{ev['date_badge']}</span>
+          {dress_pill}
           <span class="tile-tap-hint">Details &rarr;</span>
         </button>"""
 
@@ -282,8 +285,17 @@ def build_shaadi_reception_screen():
         </div>
       </div>
 
-      <div class="wedding-dress-tag">
-        <span>Dress Code: Traditional Indian Formal / Royal Elegance</span>
+      <!-- Prominent Colour Palette & Dress Code -->
+      <div class="wedding-dress-prominent">
+        <p class="dress-prominent-eyebrow">COLOUR STORY &bull; DRESS CODE</p>
+        <h4 class="dress-prominent-theme">Adorn what you Adore</h4>
+        <div class="palette-swatches-row">
+          <span class="swatch-circle" style="background: #5a1827;" title="Royal Maroon"></span>
+          <span class="swatch-circle" style="background: #b82638;" title="Crimson Red"></span>
+          <span class="swatch-circle" style="background: #d49838;" title="Ochre Gold"></span>
+          <span class="swatch-circle" style="background: #4a5d35;" title="Olive Green"></span>
+          <span class="swatch-circle" style="background: #e8cca0;" title="Warm Champagne"></span>
+        </div>
       </div>
 
       <!-- Integrated Venue & Maps Location -->
@@ -309,7 +321,7 @@ def build_html_page(cfg, is_root=False):
         raha_block = """
       <div class="baby-raha-card">
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
-        <p class="baby-raha-author">&mdash; Raha <span class="baby-raha-role">(Niece)</span></p>
+        <p class="baby-raha-author">&mdash; Raha</p>
       </div>"""
 
     switcher_links = ""
@@ -593,8 +605,10 @@ def build_html_page(cfg, is_root=False):
         </a>
       </div>
 
-      <div id="modalDressCodeWrap" class="event-modal-dress">
-        <span id="modalEventDress">Dress Code</span>
+      <div id="modalDressCodeWrap" class="event-modal-dress-prominent" style="display: none;">
+        <p class="modal-dress-eyebrow">COLOUR STORY &bull; DRESS CODE</p>
+        <h4 id="modalEventDress" class="modal-dress-theme">Dress Code</h4>
+        <div id="modalDressSwatches" class="palette-swatches-row"></div>
       </div>
     </div>
   </div>

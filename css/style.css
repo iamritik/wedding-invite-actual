@@ -5,21 +5,21 @@
    ============================================================ */
 
 @import url('https://use.typekit.net/jzm0juw.css');
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Reenie+Beanie&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Reenie+Beanie&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
   --bg-cream: #faf8f2;
   --bg-secondary: #f4efe2;
-  --text-olive: #3d4928;
-  --text-olive-light: rgba(61, 73, 40, 0.75);
-  --text-olive-muted: rgba(61, 73, 40, 0.55);
-  --olive-dark: #2f381f;
-  --gold-accent: #c5a059;
-  --gold-light: #e8d7a5;
-  --border-color: rgba(61, 73, 40, 0.18);
+  --text-olive: #381220;
+  --text-olive-light: rgba(56, 18, 32, 0.78);
+  --text-olive-muted: rgba(56, 18, 32, 0.58);
+  --olive-dark: #26141a;
+  --gold-accent: #9e7228;
+  --gold-light: #e8cca0;
+  --border-color: rgba(114, 24, 50, 0.25);
   
-  --font-display: "Antic Didone", "Playfair Display", "Cormorant Garamond", serif;
-  --font-body: "Antic Didone", "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
   --font-script: "parfumerie-script", "Reenie Beanie", cursive;
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -310,38 +310,39 @@ body.envelope-active {
 
 .hero-names {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2.5rem, 7.6vw, 3.6rem);
-  line-height: 0.95;
-  color: var(--text-olive);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  font-size: clamp(2.7rem, 8.5vw, 3.8rem);
+  line-height: 0.96;
+  color: #381220;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
 
 .hero-weds {
   font-family: var(--font-script);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-style: italic;
   line-height: 1;
-  margin: 4px 0;
-  color: var(--gold-accent);
+  margin: 3px 0;
+  color: #9e7228;
+  font-weight: 600;
 }
 
 .hero-subtitle {
   font-family: var(--font-sans);
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-olive);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  color: #5a1827;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
   line-height: 1.6;
-  max-width: 260px;
+  max-width: 280px;
   margin: 0 auto 12px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .hero-date-box {
@@ -349,9 +350,9 @@ body.envelope-active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 12px 0 12px;
-  color: var(--text-olive);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  margin: 10px 0 10px;
+  color: #381220;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
 .hero-date-sprig {
@@ -375,59 +376,62 @@ body.envelope-active {
 
 .hero-month {
   font-family: var(--font-sans);
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  opacity: 0.9;
+  color: #5a1827;
+  font-weight: 700;
   padding-left: 0.32em;
 }
 
 .hero-day {
   font-family: var(--font-display);
-  font-size: clamp(2.7rem, 8vw, 3.6rem);
+  font-size: clamp(3rem, 9.2vw, 4.1rem);
   line-height: 1;
-  margin: 1px 0;
-  color: var(--text-olive);
+  margin: 2px 0;
+  color: #381220;
+  font-weight: 700;
 }
 
 .hero-day-name {
   font-family: var(--font-sans);
-  font-size: 9.5px;
-  letter-spacing: 0.26em;
+  font-size: 11px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  opacity: 0.85;
-  margin-top: 3px;
-  padding-left: 0.26em;
+  color: #5a1827;
+  font-weight: 700;
+  margin-top: 2px;
+  padding-left: 0.24em;
 }
 
 .hero-year {
   font-family: var(--font-sans);
-  font-size: 11.5px;
+  font-size: 13px;
   letter-spacing: 0.38em;
-  opacity: 0.9;
+  color: #381220;
   margin-top: 3px;
   padding-left: 0.38em;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .hero-location-tag {
   font-family: var(--font-sans);
-  font-size: 9.5px;
-  letter-spacing: 0.26em;
+  font-size: 11px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--text-olive);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
-  opacity: 0.85;
-  margin-top: 14px;
+  color: #5a1827;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  margin-top: 12px;
   margin-bottom: 2px;
 }
 
 .hero-venue-name {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 5vw, 2.1rem);
-  font-weight: 400;
-  color: var(--text-olive);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  font-size: clamp(1.85rem, 5.8vw, 2.4rem);
+  font-weight: 700;
+  color: #381220;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
   letter-spacing: -0.01em;
 }
 
@@ -640,58 +644,62 @@ body.envelope-active {
 
 .our-story-title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 7vw, 3.2rem);
+  font-size: clamp(2.6rem, 8vw, 3.6rem);
   line-height: 1.1;
-  color: var(--text-olive);
-  margin-bottom: 16px;
+  color: #381220;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .our-story-tagline {
   font-family: var(--font-body);
-  font-size: clamp(1.12rem, 4vw, 1.32rem);
+  font-size: clamp(1.22rem, 4.4vw, 1.48rem);
   font-style: italic;
-  color: var(--gold-accent);
-  margin-top: -6px;
+  font-weight: 700;
+  color: #721832;
+  margin-top: -4px;
   margin-bottom: 26px;
-  line-height: 1.45;
+  line-height: 1.4;
   letter-spacing: 0.01em;
 }
 
 @media (min-width: 768px) {
   .our-story-title {
-    font-size: 3.6rem;
+    font-size: 3.8rem;
   }
 }
 
 .our-story-text {
   font-family: var(--font-body);
-  font-size: clamp(0.98rem, 3.5vw, 1.1rem);
-  line-height: 1.75;
-  color: var(--text-olive);
-  margin-bottom: 16px;
+  font-size: clamp(1.12rem, 4vw, 1.25rem);
+  line-height: 1.8;
+  color: #27141a;
+  font-weight: 600;
+  margin-bottom: 18px;
   word-wrap: break-word;
 }
 
 .our-story-highlight {
   font-family: var(--font-display);
-  font-size: clamp(1.04rem, 3.8vw, 1.2rem);
-  font-weight: 600;
-  line-height: 1.55;
-  color: var(--olive-dark);
-  margin: 26px auto 20px;
-  padding: 16px 20px;
-  background: rgba(254, 252, 247, 0.78);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 16px;
-  border: 1px solid rgba(197, 160, 89, 0.35);
-  box-shadow: 0 4px 16px rgba(60, 40, 20, 0.05);
+  font-size: clamp(1.15rem, 4vw, 1.32rem);
+  font-weight: 700;
+  line-height: 1.6;
+  color: #381220;
+  margin: 28px auto 22px;
+  padding: 18px 22px;
+  background: rgba(255, 252, 247, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 18px;
+  border: 1.5px solid rgba(114, 24, 50, 0.35);
+  box-shadow: 0 6px 20px rgba(60, 15, 30, 0.08);
   box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .our-story-text {
-    font-size: 1.2rem;
+    font-size: 1.28rem;
   }
 }
 
@@ -699,7 +707,8 @@ body.envelope-active {
   font-family: var(--font-script);
   font-size: clamp(2.8rem, 9.2vw, 3.8rem);
   line-height: 1.25;
-  color: #a87932;
+  color: #9e7228;
+  font-weight: 600;
   margin-top: 24px;
   display: inline-block;
   text-shadow: 0 1px 2px rgba(255, 255, 250, 0.8);
@@ -926,7 +935,21 @@ body.modal-open {
   border: 1px solid rgba(197, 160, 89, 0.32);
   border-radius: 12px;
   padding: 3px 8px;
+  margin-bottom: 5px;
+}
+
+.tile-dress-pill {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #721832;
+  background: rgba(184, 38, 56, 0.08);
+  border: 1px solid rgba(184, 38, 56, 0.28);
+  border-radius: 12px;
+  padding: 2.5px 8px;
   margin-bottom: 6px;
+  display: inline-block;
 }
 
 .tile-tap-hint {
@@ -1156,6 +1179,34 @@ body.modal-open {
 .btn-modal-maps:hover {
   background: #17241a;
   transform: translateY(-1px);
+}
+
+.event-modal-dress-prominent {
+  background: rgba(255, 252, 248, 0.95);
+  border: 1.5px solid rgba(114, 24, 50, 0.32);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modal-dress-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #721832;
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+
+.modal-dress-theme {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #520e20;
+  margin: 0 0 8px;
 }
 
 .event-modal-dress {
@@ -1421,7 +1472,56 @@ body.modal-open {
   color: #721832;
 }
 
-/* Dress Code */
+/* Prominent Wedding Colour Palette & Dress Code */
+.wedding-dress-prominent {
+  background: rgba(114, 24, 50, 0.06);
+  border: 1.5px solid rgba(114, 24, 50, 0.28);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin: 12px auto 14px;
+  box-sizing: border-box;
+}
+
+.dress-prominent-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #721832;
+  font-weight: 700;
+  margin: 0 0 3px;
+}
+
+.dress-prominent-theme {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #520e20;
+  margin: 0 0 6px;
+}
+
+.palette-swatches-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.swatch-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.swatch-circle:hover {
+  transform: scale(1.15);
+}
+
 .wedding-dress-tag {
   font-family: var(--font-sans);
   font-size: 12px;
