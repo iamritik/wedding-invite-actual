@@ -228,9 +228,9 @@ VAIBHAVI_V5_EVENTS = [
         "tagline": "Auspicious Henna & Folk Melodies",
         "date_badge": "25 Jan · 5:00 PM",
         "date_full": "Monday, 25 January 2027 · 5:00 PM",
-        "venue": "701 Sector 8",
-        "city": "Karnal",
-        "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
+        "venue": "Community Hall, Nivedita Kunj",
+        "city": "Delhi",
+        "map_url": "https://maps.app.goo.gl/mZe21DP5YMNpg2mD6?g_st=ic",
         "dress_code": "",
         "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
         "icon_img": "assets/ramita-capullos.png",
@@ -543,7 +543,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027j" />
+  <link rel="stylesheet" href="css/style.css?v=2027k" />
 </head>
 <body class="envelope-active">
 
@@ -713,7 +713,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027j"></script>
+  <script src="js/main.js?v=2027k"></script>
 </body>
 </html>
 """
