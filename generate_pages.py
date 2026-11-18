@@ -451,11 +451,19 @@ def build_last_screen(cfg):
       <div class="vaibhavi-grandparents-grid">
         <div class="grandparents-col">
           <h4 class="grandparents-heading">Paternal Grandparents</h4>
-          <p class="grandparents-names">(Late) Shri Surendrapal Singh Verma<br>&amp; Smt. Kailashvati</p>
+          <p class="grandparents-names">
+            <span class="grandparent-line">(Late) Shri Surendrapal</span>
+            <span class="grandparent-line">Singh Verma</span>
+            <span class="grandparent-line grandmother-line">&amp; Smt. Kailashvati</span>
+          </p>
         </div>
         <div class="grandparents-col">
           <h4 class="grandparents-heading">Maternal Grandparents</h4>
-          <p class="grandparents-names">Shri Mohar Singh Verma<br>&amp; Smt. Mishra Devi</p>
+          <p class="grandparents-names">
+            <span class="grandparent-line">Shri Mohar</span>
+            <span class="grandparent-line">Singh Verma</span>
+            <span class="grandparent-line grandmother-line">&amp; Smt. Mishra Devi</span>
+          </p>
         </div>
       </div>
 
@@ -543,7 +551,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027l" />
+  <link rel="stylesheet" href="css/style.css?v=2027n" />
 </head>
 <body class="envelope-active">
 
@@ -713,7 +721,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027l"></script>
+  <script src="js/main.js?v=2027n"></script>
 </body>
 </html>
 """
