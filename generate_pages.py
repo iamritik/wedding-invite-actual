@@ -551,7 +551,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027n" />
+  <link rel="stylesheet" href="css/style.css?v=2027o" />
 </head>
 <body class="envelope-active">
 
@@ -721,7 +721,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027n"></script>
+  <script src="js/main.js?v=2027o"></script>
 </body>
 </html>
 """
