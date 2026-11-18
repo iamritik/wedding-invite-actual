@@ -1030,21 +1030,21 @@ body.modal-open {
 .event-modal-eyebrow,
 .event-modal-tagline {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 10.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #721832;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .event-modal-title {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 7vw, 2.6rem);
+  font-size: clamp(1.85rem, 6vw, 2.3rem);
   color: #520e20;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .event-modal-date-tag,
@@ -1053,12 +1053,12 @@ body.modal-open {
   background: rgba(114, 24, 50, 0.08);
   border: 1px solid rgba(114, 24, 50, 0.25);
   border-radius: 20px;
-  padding: 8px 18px;
+  padding: 6px 16px;
   font-family: var(--font-sans);
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 700;
   color: #520e20;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .event-modal-desc {
@@ -1068,14 +1068,14 @@ body.modal-open {
   color: #27141a;
   font-weight: 600;
   font-style: italic;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 }
 
 .event-modal-venue-box {
   background: rgba(114, 24, 50, 0.04);
   border: 1px solid rgba(114, 24, 50, 0.22);
-  border-radius: 18px;
-  padding: 16px 18px;
+  border-radius: 16px;
+  padding: 14px 16px;
   margin-bottom: 14px;
   text-align: left;
 }
@@ -1090,8 +1090,8 @@ body.modal-open {
 
 .venue-pin-bubble,
 .venue-box-icon {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(114, 24, 50, 0.1);
   border: 1px solid rgba(114, 24, 50, 0.25);
@@ -1111,28 +1111,28 @@ body.modal-open {
 .venue-box-label,
 .venue-header-label {
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #721832;
   font-weight: 700;
-  margin: 0 0 3px;
+  margin: 0 0 2px;
 }
 
 .venue-box-name,
 .modal-venue-name {
   font-family: var(--font-display);
-  font-size: 1.48rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #520e20;
-  margin: 0 0 3px;
+  margin: 0 0 2px;
   line-height: 1.25;
 }
 
 .venue-box-city,
 .modal-venue-city {
   font-family: var(--font-sans);
-  font-size: 13.5px;
+  font-size: 12px;
   color: #721832;
   font-weight: 600;
   margin: 0;
@@ -1144,14 +1144,14 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 13px 20px !important;
+  padding: 12px 18px !important;
   box-sizing: border-box;
   background: #520e20 !important;
   color: #faf5ee !important;
   text-decoration: none !important;
   border-radius: 24px !important;
   font-family: var(--font-sans);
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-align: center;
