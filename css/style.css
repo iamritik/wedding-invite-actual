@@ -1909,7 +1909,8 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: clamp(65px, 10vh, 95px);
+  padding-top: clamp(135px, 17.5vh, 165px);
+  padding-bottom: 30px;
 }
 
 .vaibhavi-footer-bg {
@@ -1918,8 +1919,8 @@ body.modal-open {
 
 .vaibhavi-footer-content {
   margin-top: 0 !important;
-  max-width: 440px !important;
-  padding: 10px 14px !important;
+  max-width: 380px !important;
+  padding: 0 16px !important;
 }
 
 .vaibhavi-footer-content .footer-parents-names {

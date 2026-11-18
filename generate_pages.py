@@ -426,7 +426,7 @@ def build_last_screen(cfg):
 
       <div class="footer-compliments-card">
         <p class="footer-compliments-lead">With best compliments :</p>
-        <p class="footer-compliments-names">Reet &amp; Sanyam</p>
+        <p class="footer-compliments-names">Reet &amp; Sanyam Ahuja</p>
       </div>
 
       <div class="baby-raha-card">
@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027c" />
+  <link rel="stylesheet" href="css/style.css?v=2027d" />
 </head>
 <body class="envelope-active">
 
@@ -722,7 +722,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027c"></script>
+  <script src="js/main.js?v=2027d"></script>
 </body>
 </html>
 """
