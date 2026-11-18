@@ -117,7 +117,7 @@ RITIK_EVENTS = [
         "date_badge": "25 Jan · 5:00 PM",
         "date_full": "Monday, 25 January 2027 · 5:00 PM",
         "venue": "701 Sector 8",
-        "city": "Karnal, Haryana",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "",
         "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
@@ -130,7 +130,7 @@ RITIK_EVENTS = [
         "date_badge": "26 Jan · 11:00 AM",
         "date_full": "Tuesday, 26 January 2027 · 11:00 AM (Morning)",
         "venue": "701 Sector 8",
-        "city": "Karnal, Haryana",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "",
         "desc": "Sacred Vedic prayers and yajna to invoke divine blessings of the deities and ancestors for peace, harmony, and prosperity.",
@@ -138,15 +138,15 @@ RITIK_EVENTS = [
     },
     {
         "id": "cocktail",
-        "title": "Cocktail Night",
+        "title": "Cocktail",
         "tagline": "An Evening of Music, Dance & Glamour",
         "date_badge": "26 Jan · 5:30 PM",
         "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Tara Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "All that Sparkles",
-        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
+        "desc": "Ring ceremony and shagun, followed by an enchanting evening of music, dance performances, and dinner till midnight.",
         "icon_img": "assets/baile-nupcial.png",
     },
     {
@@ -155,8 +155,8 @@ RITIK_EVENTS = [
         "tagline": "Joyous Morning Blessings",
         "date_badge": "27 Jan · 10:30 AM",
         "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Celebrations Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Sink into Pink",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
@@ -169,7 +169,7 @@ RITIK_EVENTS = [
         "date_badge": "27 Jan · 2:00 PM",
         "date_full": "Wednesday, 27 January 2027 · 2:00 PM",
         "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "",
         "desc": "The beloved traditional ritual where family fetches sanctified holy water to bathe the groom before the wedding rituals.",
@@ -182,7 +182,7 @@ RITIK_EVENTS = [
         "date_badge": "27 Jan · 5:00 PM",
         "date_full": "Wednesday, 27 January 2027 · 5:00 PM",
         "venue": "701 Sector 8",
-        "city": "Karnal, Haryana",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "",
         "desc": "The time-honored ceremony where sisters tie the auspicious floral sehra on the groom, followed by the grand Baraat procession.",
@@ -194,15 +194,15 @@ RITIK_EVENTS = [
 VAIBHAVI_V4_EVENTS = [
     {
         "id": "cocktail",
-        "title": "Cocktail Night",
+        "title": "Cocktail",
         "tagline": "An Evening of Music, Dance & Glamour",
         "date_badge": "26 Jan · 5:30 PM",
         "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Tara Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "All that Sparkles",
-        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
+        "desc": "Ring ceremony and shagun, followed by an enchanting evening of music, dance performances, and dinner till midnight.",
         "icon_img": "assets/baile-nupcial.png",
     },
     {
@@ -211,8 +211,8 @@ VAIBHAVI_V4_EVENTS = [
         "tagline": "Joyous Morning Blessings",
         "date_badge": "27 Jan · 10:30 AM",
         "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Celebrations Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Sink into Pink",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
@@ -229,7 +229,7 @@ VAIBHAVI_V5_EVENTS = [
         "date_badge": "25 Jan · 5:00 PM",
         "date_full": "Monday, 25 January 2027 · 5:00 PM",
         "venue": "701 Sector 8",
-        "city": "Karnal, Haryana",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
         "dress_code": "",
         "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
@@ -237,15 +237,15 @@ VAIBHAVI_V5_EVENTS = [
     },
     {
         "id": "cocktail",
-        "title": "Cocktail Night",
+        "title": "Cocktail",
         "tagline": "An Evening of Music, Dance & Glamour",
         "date_badge": "26 Jan · 5:30 PM",
         "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Tara Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "All that Sparkles",
-        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
+        "desc": "Ring ceremony and shagun, followed by an enchanting evening of music, dance performances, and dinner till midnight.",
         "icon_img": "assets/baile-nupcial.png",
     },
     {
@@ -254,8 +254,8 @@ VAIBHAVI_V5_EVENTS = [
         "tagline": "Joyous Morning Blessings",
         "date_badge": "27 Jan · 10:30 AM",
         "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
-        "venue": "Hotel Jewels",
-        "city": "Karnal, Haryana",
+        "venue": "Celebrations Hall & Lawn, Hotel Jewels",
+        "city": "Karnal",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "Sink into Pink",
         "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
@@ -363,7 +363,7 @@ def build_shaadi_reception_screen():
       <div class="wedding-venue-section">
         <p class="wedding-venue-eyebrow">WEDDING VENUE</p>
         <h4 class="wedding-venue-title">Manka by Cherish</h4>
-        <p class="wedding-venue-location">Karnal, Haryana</p>
+        <p class="wedding-venue-location">Karnal</p>
         <a href="https://maps.app.goo.gl/ituhycePZ4x9FFBP8" target="_blank" rel="noopener noreferrer" class="btn-wedding-maps">
           <span>View Location on Google Maps &rarr;</span>
         </a>
@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027e" />
+  <link rel="stylesheet" href="css/style.css?v=2027f" />
 </head>
 <body class="envelope-active">
 
@@ -719,7 +719,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027e"></script>
+  <script src="js/main.js?v=2027f"></script>
 </body>
 </html>
 """
