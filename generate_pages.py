@@ -232,7 +232,7 @@ VAIBHAVI_V5_EVENTS = [
         "city": "Delhi",
         "map_url": "https://maps.app.goo.gl/mZe21DP5YMNpg2mD6?g_st=ic",
         "dress_code": "",
-        "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
+        "desc": "An auspicious beginning filled with vibrant henna, music, and laughter to kick off our wedding festivities.",
         "icon_img": "assets/ramita-capullos.png",
     },
     {
