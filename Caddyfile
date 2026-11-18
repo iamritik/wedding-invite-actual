@@ -14,6 +14,7 @@
     redir /v2* /version-2/ 302
     redir /v3* /version-3/ 302
     redir /v4* /version-4/ 302
+    redir /v5* /version-5/ 302
 
     # Cache headers for static assets
     @assets path /assets/* /css/* /js/*

@@ -357,7 +357,7 @@ function initEventModal() {
               <span class="swatch-circle" style="background: #f498b5;" title="Blush"></span>
               <span class="swatch-circle" style="background: #fcd1de;" title="Pastel Pink"></span>
             `;
-          } else if (eventId === 'sangeet') {
+          } else if (eventId === 'cocktail' || eventId === 'sangeet') {
             modalSwatches.innerHTML = `
               <span class="swatch-circle" style="background: #0c1e54;" title="Midnight Blue"></span>
               <span class="swatch-circle" style="background: #c59b4e;" title="Gold Glitter"></span>

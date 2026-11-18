@@ -474,47 +474,57 @@ body.envelope-active {
    ============================================================ */
 .countdown-section {
   position: relative;
-  padding: 80px 20px 60px;
-  text-align: center;
-  overflow: hidden;
-  background-color: var(--bg-cream);
-}
-
-.section-title {
-  font-family: var(--font-display);
-  font-size: 2.3rem;
-  line-height: 1.1;
-  color: var(--text-olive);
-  margin-bottom: 6px;
-}
-
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 3.2rem;
-  }
-}
-
-.section-subtitle {
-  font-family: var(--font-sans);
-  font-size: 10.5px;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--text-olive-light);
-  margin-bottom: 20px;
-}
-
-/* Authentic Impasto Frame Container */
-.countdown-frame-wrap {
-  position: relative;
-  aspect-ratio: 1038 / 1515;
-  width: 88vw;
-  min-width: 300px;
-  max-width: 440px;
-  margin: 10px auto 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #faf5ee;
+}
+
+/* Background Mandap Painting Container (for Vaibhavi's versions) */
+.countdown-painting-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.countdown-painting-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.countdown-painting-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 246, 238, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Royal Floral Arch Countdown Frame */
+.countdown-frame-wrap {
+  position: relative;
+  z-index: 5;
+  aspect-ratio: 571 / 1024;
+  width: min(88vw, 390px);
+  max-height: 86vh;
+  max-height: 86dvh;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(50, 15, 25, 0.16);
+  overflow: hidden;
+  background-color: #f7eedf;
 }
 
 .countdown-frame-img {
@@ -522,75 +532,53 @@ body.envelope-active {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   pointer-events: none;
   user-select: none;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Calligraphic Days inside the frame */
-.countdown-days-wrap {
+/* Vertical Stack of Live Units within the Arched Parchment */
+.countdown-stack-units {
   position: absolute;
+  top: 29.5%;
+  bottom: 23.5%;
   left: 0;
   right: 0;
-  top: 15.5%;
-  z-index: 5;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  z-index: 6;
   text-align: center;
 }
 
-.countdown-days-num {
-  font-family: var(--font-script);
-  font-size: clamp(4.6rem, 16vw, 7.2rem);
-  line-height: 0.9;
-  color: var(--text-olive);
-  font-weight: 400;
+.countdown-unit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
-.countdown-days-label {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  color: var(--text-olive-light);
-  margin-top: -6px;
+.countdown-num {
+  font-family: var(--font-display);
   font-style: italic;
-  letter-spacing: 0.05em;
-}
-
-/* Calligraphic Subunits inside frame */
-.countdown-subunits-wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 40%;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.countdown-subunit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.countdown-subunit-num {
-  font-family: var(--font-script);
-  font-size: clamp(2.3rem, 8vw, 3.4rem);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 7.8vw, 3.2rem);
   line-height: 0.95;
-  color: var(--text-olive);
+  color: #26381b;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
 }
 
-.countdown-subunit-label {
+.countdown-lbl {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-olive-light);
-  margin-top: -4px;
   font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.05rem, 3.6vw, 1.25rem);
+  color: #3b4e28;
+  letter-spacing: 0.02em;
+  margin-top: 1px;
 }
 
 /* ============================================================
@@ -1812,17 +1800,17 @@ body.modal-open {
   font-size: 11px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #8c601e;
+  color: #721832;
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 700;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .footer-parents-names {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 6.5vw, 2.75rem);
-  font-weight: 400;
-  color: #243527;
+  font-size: clamp(2.2rem, 7vw, 3rem);
+  font-weight: 700;
+  color: #381220;
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95);
   line-height: 1.15;
   margin-bottom: 10px;
@@ -1832,21 +1820,23 @@ body.modal-open {
 .footer-names {
   font-family: var(--font-display);
   font-size: clamp(2.3rem, 7.5vw, 3.2rem);
-  color: var(--text-olive);
+  color: #381220;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
   line-height: 0.95;
   margin-bottom: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-weight: 700;
 }
 
 .footer-weds {
   font-family: var(--font-script);
   font-size: 1.45rem;
   font-style: italic;
-  color: var(--gold-accent);
+  color: #9e7228;
   margin: 3px 0;
+  font-weight: 600;
 }
 
 .footer-date {
@@ -1854,29 +1844,113 @@ body.modal-open {
   font-size: 10.5px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #855b1a;
+  color: #5a1827;
   margin-bottom: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .footer-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(1.15rem, 3.8vw, 1.35rem);
-  color: #3b4d37;
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 4.2vw, 1.35rem);
+  color: #5a1827;
   font-style: italic;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 14px;
   line-height: 1.4;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .footer-hashtag {
   font-family: var(--font-sans);
-  font-size: 11.5px;
-  letter-spacing: 0.22em;
-  color: #8c601e;
-  font-weight: 600;
-  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #9e7228;
+  font-weight: 700;
+  margin-top: 14px;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   VAIBHAVI'S LAST SCREEN (PARENTS & GRANDPARENTS WITH FAMILY ART)
+   ============================================================ */
+.vaibhavi-footer {
+  background-color: #faf3ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(65px, 10vh, 95px);
+}
+
+.vaibhavi-footer-bg {
+  object-position: center top !important;
+}
+
+.vaibhavi-footer-content {
+  margin-top: 0 !important;
+  max-width: 440px !important;
+  padding: 10px 14px !important;
+}
+
+.vaibhavi-footer-content .footer-parents-names {
+  font-size: clamp(1.75rem, 5.8vw, 2.35rem) !important;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.vaibhavi-grandparents-lead {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 3.8vw, 1.25rem);
+  font-style: italic;
+  font-weight: 700;
+  color: #5a1827;
+  line-height: 1.35;
+  margin: 6px auto 14px;
+  max-width: 340px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.vaibhavi-grandparents-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+  max-width: 370px;
+  margin: 6px auto 14px;
+  box-sizing: border-box;
+}
+
+.grandparents-col {
+  background: rgba(255, 252, 247, 0.94);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(114, 24, 50, 0.25);
+  border-radius: 12px;
+  padding: 8px 6px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(80, 15, 30, 0.06);
+  text-align: center;
+}
+
+.grandparents-heading {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #721832;
+  font-weight: 700;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.grandparents-names {
+  font-family: var(--font-display);
+  font-size: clamp(0.82rem, 2.7vw, 0.95rem);
+  line-height: 1.35;
+  color: #381220;
+  font-weight: 700;
+  margin: 0;
 }
 
 /* ============================================================

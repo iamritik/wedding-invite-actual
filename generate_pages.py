@@ -3,6 +3,7 @@ import os
 VERSIONS = [
     {
         "id": "1",
+        "side": "ritik",
         "dir": "version-1",
         "title": "Ritik weds Vaibhavi | Wedding Invitation",
         "name1": "Ritik",
@@ -23,13 +24,14 @@ VERSIONS = [
     },
     {
         "id": "2",
+        "side": "vaibhavi",
         "dir": "version-2",
         "title": "Vaibhavi weds Ritik | Wedding Invitation",
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "Vaibhavi and Ritik",
-        "parents_names": "Vivek & Manju Singh",
+        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -43,6 +45,7 @@ VERSIONS = [
     },
     {
         "id": "3",
+        "side": "ritik",
         "dir": "version-3",
         "title": "Ritik weds Vaibhavi | Wedding Celebrations",
         "name1": "Ritik",
@@ -63,13 +66,14 @@ VERSIONS = [
     },
     {
         "id": "4",
+        "side": "vaibhavi",
         "dir": "version-4",
         "title": "Vaibhavi weds Ritik | Wedding Celebrations",
         "name1": "Vaibhavi",
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "Vaibhavi and Ritik",
-        "parents_names": "Vivek & Manju Singh",
+        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
@@ -79,10 +83,32 @@ VERSIONS = [
         "target_date_label": "Until the Celebrations Begin",
         "events_type": "all_events",
         "hashtag": "#VRinLove",
-        "preview_name": "Version 4: Vaibhavi's Side (All Events)"
+        "preview_name": "Version 4: Vaibhavi's Side (Cocktail & Haldi)"
+    },
+    {
+        "id": "5",
+        "side": "vaibhavi",
+        "dir": "version-5",
+        "title": "Vaibhavi weds Ritik | Wedding Celebrations",
+        "name1": "Vaibhavi",
+        "connector": "weds",
+        "name2": "Ritik",
+        "story_sign": "Vaibhavi and Ritik",
+        "parents_names": "Vivek Singh, Manju Singh & Yash Singh",
+        "hero_date_month": "January",
+        "hero_date_day": "25 – 27",
+        "hero_date_dayname": "Monday to Wednesday",
+        "hero_date_year": "2027",
+        "hero_date_header": "25 – 27 January 2027",
+        "target_date_iso": "2027-01-25T17:00:00+05:30",
+        "target_date_label": "Until the Celebrations Begin",
+        "events_type": "all_events",
+        "hashtag": "#VRinLove",
+        "preview_name": "Version 5: Vaibhavi's Side (+ Mehendi)"
     }
 ]
 
+# Ritik's All Events List
 RITIK_EVENTS = [
     {
         "id": "mehendi",
@@ -111,16 +137,16 @@ RITIK_EVENTS = [
         "icon_img": "assets/hawan-flame.png",
     },
     {
-        "id": "sangeet",
-        "title": "Sangeet & Ring Ceremony",
-        "tagline": "An Evening of Music & Dance",
+        "id": "cocktail",
+        "title": "Cocktail Night",
+        "tagline": "An Evening of Music, Dance & Glamour",
         "date_badge": "26 Jan · 5:30 PM",
         "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "All that Sparkles",
-        "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
+        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
         "icon_img": "assets/baile-nupcial.png",
     },
     {
@@ -164,18 +190,62 @@ RITIK_EVENTS = [
     },
 ]
 
-VAIBHAVI_EVENTS = [
+# Vaibhavi's Events for Version 4 (Cocktail & Haldi)
+VAIBHAVI_V4_EVENTS = [
     {
-        "id": "sangeet",
-        "title": "Sangeet & Ring Ceremony",
-        "tagline": "An Evening of Music & Dance",
+        "id": "cocktail",
+        "title": "Cocktail Night",
+        "tagline": "An Evening of Music, Dance & Glamour",
         "date_badge": "26 Jan · 5:30 PM",
         "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
         "venue": "Hotel Jewels",
         "city": "Karnal, Haryana",
         "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
         "dress_code": "All that Sparkles",
-        "desc": "An enchanting evening of music, dance performances, ring exchange, and celebratory dinner under the stars.",
+        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
+        "icon_img": "assets/baile-nupcial.png",
+    },
+    {
+        "id": "haldi",
+        "title": "Haldi Ceremony",
+        "tagline": "Joyous Morning Blessings",
+        "date_badge": "27 Jan · 10:30 AM",
+        "date_full": "Wednesday, 27 January 2027 · 10:30 AM (Morning)",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "Sink into Pink",
+        "desc": "Joyous morning rituals smeared in holy turmeric, vibrant yellow marigolds, and cherished family blessings.",
+        "icon_img": "assets/flor-almendro.png",
+    },
+]
+
+# Vaibhavi's Events for Version 5 (Mehendi + Cocktail + Haldi)
+VAIBHAVI_V5_EVENTS = [
+    {
+        "id": "mehendi",
+        "title": "Mehendi",
+        "tagline": "Auspicious Henna & Folk Melodies",
+        "date_badge": "25 Jan · 5:00 PM",
+        "date_full": "Monday, 25 January 2027 · 5:00 PM",
+        "venue": "701 Sector 8",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/hfNK1a2bUqbJ2QY28",
+        "dress_code": "",
+        "desc": "An auspicious beginning filled with vibrant henna, festive Punjabi boliyan, music, and laughter to kick off our wedding festivities.",
+        "icon_img": "assets/ramita-capullos.png",
+    },
+    {
+        "id": "cocktail",
+        "title": "Cocktail Night",
+        "tagline": "An Evening of Music, Dance & Glamour",
+        "date_badge": "26 Jan · 5:30 PM",
+        "date_full": "Tuesday, 26 January 2027 · 5:30 PM onwards",
+        "venue": "Hotel Jewels",
+        "city": "Karnal, Haryana",
+        "map_url": "https://maps.app.goo.gl/iPMQNdDQFKcHsKs29",
+        "dress_code": "All that Sparkles",
+        "desc": "An enchanting evening of music, dance performances, celebratory toasts, and dinner under the stars.",
         "icon_img": "assets/baile-nupcial.png",
     },
     {
@@ -194,7 +264,13 @@ VAIBHAVI_EVENTS = [
 ]
 
 def build_festivities_screen(cfg):
-    events = RITIK_EVENTS if cfg["id"] == "3" else VAIBHAVI_EVENTS
+    if cfg["id"] == "3":
+        events = RITIK_EVENTS
+    elif cfg["id"] == "5":
+        events = VAIBHAVI_V5_EVENTS
+    else:
+        events = VAIBHAVI_V4_EVENTS
+
     count_class = f"events-count-{len(events)}"
 
     tiles_html = ""
@@ -257,7 +333,7 @@ def build_shaadi_reception_screen():
       </div>
       
       <p class="wedding-eyebrow">The Auspicious Wedding Union</p>
-      <h2 class="wedding-main-title">Wedding</h2>
+      <h2 class="wedding-main-title">Shubh Vivaah</h2>
       
       <div class="wedding-date-tag">
         <span>Wednesday, 27 January 2027</span>
@@ -311,24 +387,129 @@ def build_shaadi_reception_screen():
   </section>
 """
 
-def build_html_page(cfg, is_root=False):
-    festivities_html = build_festivities_screen(cfg) if cfg["events_type"] == "all_events" else ""
-    shaadi_reception_html = build_shaadi_reception_screen()
+def build_countdown_screen(cfg):
+    # For Vaibhavi's versions, the background is the mandap painting from the previous last screen
+    bg_html = ""
+    if cfg["side"] == "vaibhavi":
+        bg_html = """
+    <div class="countdown-painting-container">
+      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="countdown-painting-bg" />
+      <div class="countdown-painting-scrim"></div>
+    </div>"""
 
-    # Raha's sweet baby invite line (Ritik's niece - only on Ritik's versions)
-    raha_block = ""
-    if cfg["id"] in ["1", "3"]:
-        raha_block = """
+    return f"""
+  <!-- ============================================================
+       COUNTDOWN SECTION (SECOND LAST - JUST BEFORE PARENTS SCREEN)
+       ============================================================ -->
+  <section id="countdownSection" class="countdown-section" data-target-date="{cfg["target_date_iso"]}">
+    {bg_html}
+
+    <!-- Royal Floral Arch Countdown Frame -->
+    <div class="countdown-frame-wrap">
+      <img src="assets/countdown-arch-frame.jpg" alt="Countdown until Celebrations Begin" class="countdown-frame-img" />
+
+      <!-- Vertical Stack of Live Units -->
+      <div class="countdown-stack-units">
+        <div class="countdown-unit-block">
+          <span id="cdDays" class="countdown-num">0</span>
+          <span class="countdown-lbl">Days</span>
+        </div>
+        <div class="countdown-unit-block">
+          <span id="cdHours" class="countdown-num">00</span>
+          <span class="countdown-lbl">Hours</span>
+        </div>
+        <div class="countdown-unit-block">
+          <span id="cdMins" class="countdown-num">00</span>
+          <span class="countdown-lbl">Minutes</span>
+        </div>
+        <div class="countdown-unit-block">
+          <span id="cdSecs" class="countdown-num">00</span>
+          <span class="countdown-lbl">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+"""
+
+def build_last_screen(cfg):
+    if cfg["side"] == "ritik":
+        # Ritik's Parents screen with Raha's cute note
+        return f"""
+  <!-- ============================================================
+       LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
+       ============================================================ -->
+  <footer id="footerSection" class="footer-section">
+    <!-- Royal Arch & Mandap Painting Backdrop -->
+    <div class="footer-painting-container">
+      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="footer-painting-bg" />
+      <img src="assets/screen_last_lotus.png" alt="" class="footer-moving-lotus" />
+      <img src="assets/screen_last_flame.png" alt="" class="footer-moving-flame" />
+    </div>
+
+    <div class="footer-content">
+      <p class="footer-invitation-lead">Warmly Invited By</p>
+      <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
+      <p class="footer-tagline">Looking forward to celebrating with you!</p>
+
       <div class="baby-raha-card">
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
         <p class="baby-raha-author">&mdash; Raha</p>
-      </div>"""
+      </div>
+
+      <p class="footer-hashtag">{cfg["hashtag"]}</p>
+    </div>
+  </footer>
+"""
+    else:
+        # Vaibhavi's Parents screen with Grandparents & Family illustration
+        return f"""
+  <!-- ============================================================
+       LAST SCREEN (WARMLY INVITED BY PARENTS & GRANDPARENTS BLESSINGS)
+       ============================================================ -->
+  <footer id="footerSection" class="footer-section vaibhavi-footer">
+    <div class="footer-painting-container">
+      <img src="assets/vaibhavi-parents-bg.jpg" alt="Vaibhavi Family Blessing" class="footer-painting-bg vaibhavi-footer-bg" />
+    </div>
+
+    <div class="footer-content vaibhavi-footer-content">
+      <p class="footer-invitation-lead">Warmly Invited By</p>
+      <h3 class="footer-parents-names">Vivek Singh, Manju Singh &amp; Yash Singh</h3>
+      <p class="vaibhavi-grandparents-lead">With the love and blessings of her grandparents</p>
+
+      <div class="vaibhavi-grandparents-grid">
+        <div class="grandparents-col">
+          <h4 class="grandparents-heading">Paternal Grandparents</h4>
+          <p class="grandparents-names">(Late) Shri Surendrapal Singh Verma<br>&amp; Smt. Kailashvati</p>
+        </div>
+        <div class="grandparents-col">
+          <h4 class="grandparents-heading">Maternal Grandparents</h4>
+          <p class="grandparents-names">Shri Mohar Singh Verma<br>&amp; Smt. Mishra Devi</p>
+        </div>
+      </div>
+
+      <p class="footer-hashtag">{cfg["hashtag"]}</p>
+    </div>
+  </footer>
+"""
+
+def build_html_page(cfg, is_root=False):
+    festivities_html = build_festivities_screen(cfg) if cfg["events_type"] == "all_events" else ""
+    shaadi_reception_html = build_shaadi_reception_screen()
+    countdown_html = build_countdown_screen(cfg)
+    last_screen_html = build_last_screen(cfg)
 
     switcher_links = ""
     for v in VERSIONS:
         active_cls = "active" if v["id"] == cfg["id"] else ""
         link_target = f"../{v['dir']}/" if not is_root else f"version-{v['id']}/"
-        switcher_links += f'<a href="{link_target}" class="preview-switcher-item {active_cls}">{v["preview_name"].split(":")[0]}: {v["name1"][0]}&{v["name2"][0]} ({ "Shaadi" if v["events_type"]=="shaadi_only" else "All" })</a>\n'
+        label_text = f"Version {v['id']}: {v['name1'][0]}&{v['name2'][0]}"
+        if v["id"] == "5":
+            label_text += " (+Mehendi)"
+        elif v["events_type"] == "shaadi_only":
+            label_text += " (Shaadi)"
+        else:
+            label_text += " (All)"
+        switcher_links += f'<a href="{link_target}" class="preview-switcher-item {active_cls}">{label_text}</a>\n'
 
     duckdns_router_script = """
   <script>
@@ -342,11 +523,12 @@ def build_html_page(cfg, is_root=False):
       if (v === '2') { window.location.replace('version-2/'); return; }
       if (v === '3') { window.location.replace('version-3/'); return; }
       if (v === '4') { window.location.replace('version-4/'); return; }
+      if (v === '5') { window.location.replace('version-5/'); return; }
 
       // Hostname-based routing for DuckDNS:
-      if (host.indexOf('ritik') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1)) {
+      if (host.indexOf('ritik') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1 || host.indexOf('cocktail') !== -1)) {
         window.location.replace('version-3/');
-      } else if (host.indexOf('vaibhavi') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1)) {
+      } else if (host.indexOf('vaibhavi') !== -1 && (host.indexOf('all') !== -1 || host.indexOf('sangeet') !== -1 || host.indexOf('cocktail') !== -1)) {
         window.location.replace('version-4/');
       } else if (host.indexOf('vaibhavi') !== -1) {
         window.location.replace('version-2/');
@@ -361,62 +543,57 @@ def build_html_page(cfg, is_root=False):
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>{cfg["title"]}</title>
-  <meta name="description" content="Wedding celebration invitation for {cfg["name1"]} & {cfg["name2"]} - {cfg["hero_date_header"]}" />
 {duckdns_router_script}
-  <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <!-- Favicons (Classic & Touch) -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- OpenGraph Metadata (WhatsApp, iMessage, Facebook) -->
+  <!-- WhatsApp / Social Media Rich Link Previews (OpenGraph) -->
+  <meta property="og:title" content="{cfg["name1"]} &amp; {cfg["name2"]} — Wedding Invitation" />
+  <meta property="og:description" content="We invite you to celebrate our wedding &bull; January 25 &ndash; 27, 2027 &bull; Karnal" />
+  <meta name="description" content="Wedding celebration invitation for {cfg["name1"]} &amp; {cfg["name2"]} - {cfg["hero_date_header"]}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vrinlove.duckdns.org/" />
   <meta property="og:site_name" content="Ritik &amp; Vaibhavi Wedding" />
-  <meta property="og:title" content="{cfg["title"]}" />
-  <meta property="og:description" content="We invite you to celebrate our wedding. {cfg["hero_date_header"]}" />
-  <meta property="og:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
-  <meta property="og:image:secure_url" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta property="og:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
+  <meta property="og:image:secure_url" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="600" />
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt" content="Ritik &amp; Vaibhavi Wedding Invitation" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter / X Card Metadata -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{cfg["title"]}" />
-  <meta name="twitter:description" content="We invite you to celebrate our wedding. {cfg["hero_date_header"]}" />
-  <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta name="twitter:title" content="{cfg["name1"]} &amp; {cfg["name2"]} — Wedding Invitation" />
+  <meta name="twitter:description" content="We invite you to celebrate our wedding &bull; January 25 &ndash; 27, 2027 &bull; Karnal" />
+  <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
-  <!-- Fonts & Stylesheet -->
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="envelope-active">
 
-  <!-- DEV / PREVIEW VERSION SWITCHER -->
-  <div class="preview-switcher-bar">
-    <span style="font-family: var(--font-sans); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; padding-left: 6px; opacity: 0.7;">DuckDNS Preview:</span>
-    {switcher_links}
-  </div>
+  <!-- DuckDNS Multi-Version Switcher Bar -->
+  <aside class="preview-switcher-bar" aria-label="Version preview switcher">
+    <div class="preview-switcher-content">
+      <span class="preview-switcher-label">DuckDNS Preview:</span>
+{switcher_links}    </div>
+  </aside>
 
-  <!-- FLOATING PETALS CONTAINER -->
-  <div id="petalsContainer" class="petals-container" aria-hidden="true"></div>
-
-  <!-- FLOATING AUDIO CONTROLLER -->
-  <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Play music" title="Toggle Music">
-    <svg id="iconSound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-    </svg>
-    <svg id="iconMute" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Audio Controls -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music" title="Play/Pause Music">
+    <svg id="musicIconMuted" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
       <line x1="23" y1="9" x2="17" y2="15"></line>
       <line x1="17" y1="9" x2="23" y2="15"></line>
     </svg>
+    <svg id="musicIconPlaying" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
   </button>
-
   <audio id="weddingAudio" src="assets/mohabbatein-love-theme.mp3" preload="auto" loop></audio>
 
   <!-- ============================================================
@@ -479,128 +656,75 @@ def build_html_page(cfg, is_root=False):
   </section>
 
   <!-- ============================================================
-       3. OUR STORY SECTION (SLIDE 2 - THE VERY NEXT AFTER HERO)
+       OUR STORY SECTION (SLIDE 2 - IMMEDIATE NEXT AFTER HERO)
        ============================================================ -->
   <section id="ourStorySection" class="our-story-section">
-    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
+    <div class="our-story-clouds"></div>
 
     <div class="our-story-inner">
       <h2 class="our-story-title">Our Story</h2>
       <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
 
-      <p class="our-story-text">
-        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
-      </p>
-      <p class="our-story-text">
-        Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
-      </p>
-      <p class="our-story-text">
-        Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
-      </p>
+      <div class="our-story-content">
+        <p class="our-story-text">
+          It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
+        </p>
 
-      <p class="our-story-highlight">
-        Still each other's favourite notification, favourite person and favourite conversation.
-      </p>
+        <p class="our-story-text">
+          Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
+        </p>
 
-      <span class="our-story-signature">{cfg["story_sign"]}</span>
+        <p class="our-story-text">
+          Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
+        </p>
+
+        <div class="our-story-highlight">
+          Still each other's favourite notification, favourite person and favourite conversation.
+        </div>
+
+        <p class="our-story-signature">{cfg["story_sign"]}</p>
+      </div>
     </div>
   </section>
 
 {festivities_html}
 {shaadi_reception_html}
-
-  <!-- ============================================================
-       COUNTDOWN SECTION (SECOND LAST - JUST BEFORE PARENTS SCREEN)
-       ============================================================ -->
-  <section id="countdownSection" class="countdown-section" data-target-date="{cfg["target_date_iso"]}">
-    <h2 class="section-title">Countdown</h2>
-    <p class="section-subtitle">{cfg["target_date_label"]}</p>
-
-    <!-- Authentic Impasto Oil Frame -->
-    <div class="countdown-frame-wrap">
-      <img src="assets/marco-azul-impasto.png" alt="" class="countdown-frame-img" />
-
-      <!-- Large Calligraphic Days -->
-      <div class="countdown-days-wrap">
-        <span id="cdDays" class="countdown-days-num">0</span>
-        <span class="countdown-days-label">Days</span>
-      </div>
-
-      <!-- Calligraphic Hours, Minutes, Seconds -->
-      <div class="countdown-subunits-wrap">
-        <div class="countdown-subunit">
-          <span id="cdHours" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Hours</span>
-        </div>
-        <div class="countdown-subunit">
-          <span id="cdMins" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Minutes</span>
-        </div>
-        <div class="countdown-subunit">
-          <span id="cdSecs" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Seconds</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
-       ============================================================ -->
-  <footer id="footerSection" class="footer-section">
-    <!-- Royal Arch & Mandap Painting Backdrop -->
-    <div class="footer-painting-container">
-      <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="footer-painting-bg" />
-      <!-- Moving lotus garland layer at top -->
-      <img src="assets/screen_last_lotus.png" alt="" class="footer-moving-lotus" />
-      <!-- Flickering sacred flame at bottom -->
-      <img src="assets/screen_last_flame.png" alt="" class="footer-moving-flame" />
-    </div>
-
-    <div class="footer-content">
-      <p class="footer-invitation-lead">Warmly Invited By</p>
-      <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
-      <p class="footer-tagline">Looking forward to celebrating with you!</p>
-{raha_block}
-      <p class="footer-hashtag">{cfg["hashtag"]}</p>
-    </div>
-  </footer>
+{countdown_html}
+{last_screen_html}
 
   <!-- ============================================================
        EVENT DETAILS MODAL
        ============================================================ -->
   <div id="eventDetailModal" class="event-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="event-modal-card">
-      <button type="button" class="event-modal-close" id="closeEventModalBtn" aria-label="Close details">&times;</button>
+      <button type="button" id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
       
       <div class="event-modal-icon-wrap">
-        <img id="modalEventImg" class="modal-img-icon" src="assets/baile-nupcial.png" alt="" />
+        <img id="modalEventImg" src="" alt="" class="modal-event-icon" />
       </div>
 
-      <p id="modalEventTagline" class="event-modal-tagline">Ceremony Details</p>
+      <p class="event-modal-eyebrow">CEREMONY DETAILS</p>
       <h3 id="modalEventTitle" class="event-modal-title">Event Title</h3>
       
-      <div class="event-modal-time-badge">
+      <div class="event-modal-date-tag">
         <span id="modalEventDate">Date &amp; Time</span>
       </div>
 
       <p id="modalEventDesc" class="event-modal-desc">Description</p>
 
       <div class="event-modal-venue-box">
-        <div class="event-modal-venue-header">
-          <div class="venue-pin-bubble">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </div>
-          <div>
-            <p class="venue-header-label">VENUE</p>
-            <h4 id="modalEventVenue" class="modal-venue-name">Venue Name</h4>
-            <p id="modalEventCity" class="modal-venue-city">City</p>
-          </div>
+        <div class="venue-box-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
         </div>
-        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-maps">
+        <div class="venue-box-details">
+          <span class="venue-box-label">VENUE</span>
+          <h4 id="modalEventVenue" class="venue-box-name">Venue Name</h4>
+          <p id="modalEventCity" class="venue-box-city">City</p>
+        </div>
+        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-map">
           <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
@@ -613,25 +737,30 @@ def build_html_page(cfg, is_root=False):
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript Bundle -->
   <script src="js/main.js"></script>
 </body>
 </html>
 """
     return html
 
-# Generate the 4 standalone version files
-for cfg in VERSIONS:
-    path = os.path.join(cfg["dir"], "index.html")
-    content = build_html_page(cfg, is_root=False)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(content)
-    print(f"Generated {path}")
+def main():
+    root_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Generate root index.html
-root_cfg = VERSIONS[0].copy()
-root_cfg["dir"] = "."
-root_html = build_html_page(root_cfg, is_root=True)
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(root_html)
-print("Generated root index.html")
+    # Generate versioned folders
+    for cfg in VERSIONS:
+        folder_path = os.path.join(root_dir, cfg["dir"])
+        os.makedirs(folder_path, exist_ok=True)
+        html_content = build_html_page(cfg, is_root=False)
+        with open(os.path.join(folder_path, "index.html"), "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"Generated {cfg['dir']}/index.html")
+
+    # Generate root index.html (defaulting to Version 1 with client-side DuckDNS routing)
+    root_html = build_html_page(VERSIONS[0], is_root=True)
+    with open(os.path.join(root_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(root_html)
+    print("Generated root index.html")
+
+if __name__ == "__main__":
+    main()

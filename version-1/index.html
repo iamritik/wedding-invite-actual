@@ -2,66 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ritik weds Vaibhavi | Wedding Invitation</title>
-  <meta name="description" content="Wedding celebration invitation for Ritik & Vaibhavi - 27 January 2027" />
 
-  <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+  <!-- Favicons (Classic & Touch) -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- OpenGraph Metadata (WhatsApp, iMessage, Facebook) -->
+  <!-- WhatsApp / Social Media Rich Link Previews (OpenGraph) -->
+  <meta property="og:title" content="Ritik &amp; Vaibhavi — Wedding Invitation" />
+  <meta property="og:description" content="We invite you to celebrate our wedding &bull; January 25 &ndash; 27, 2027 &bull; Karnal" />
+  <meta name="description" content="Wedding celebration invitation for Ritik &amp; Vaibhavi - 27 January 2027" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vrinlove.duckdns.org/" />
   <meta property="og:site_name" content="Ritik &amp; Vaibhavi Wedding" />
-  <meta property="og:title" content="Ritik weds Vaibhavi | Wedding Invitation" />
-  <meta property="og:description" content="We invite you to celebrate our wedding. 27 January 2027" />
-  <meta property="og:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
-  <meta property="og:image:secure_url" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta property="og:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
+  <meta property="og:image:secure_url" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="600" />
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt" content="Ritik &amp; Vaibhavi Wedding Invitation" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter / X Card Metadata -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ritik weds Vaibhavi | Wedding Invitation" />
-  <meta name="twitter:description" content="We invite you to celebrate our wedding. 27 January 2027" />
-  <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-thumbnail.jpg" />
+  <meta name="twitter:title" content="Ritik &amp; Vaibhavi — Wedding Invitation" />
+  <meta name="twitter:description" content="We invite you to celebrate our wedding &bull; January 25 &ndash; 27, 2027 &bull; Karnal" />
+  <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
-  <!-- Fonts & Stylesheet -->
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="envelope-active">
 
-  <!-- DEV / PREVIEW VERSION SWITCHER -->
-  <div class="preview-switcher-bar">
-    <span style="font-family: var(--font-sans); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; padding-left: 6px; opacity: 0.7;">DuckDNS Preview:</span>
-    <a href="../version-1/" class="preview-switcher-item active">Version 1: R&V (Shaadi)</a>
+  <!-- DuckDNS Multi-Version Switcher Bar -->
+  <aside class="preview-switcher-bar" aria-label="Version preview switcher">
+    <div class="preview-switcher-content">
+      <span class="preview-switcher-label">DuckDNS Preview:</span>
+<a href="../version-1/" class="preview-switcher-item active">Version 1: R&V (Shaadi)</a>
 <a href="../version-2/" class="preview-switcher-item ">Version 2: V&R (Shaadi)</a>
 <a href="../version-3/" class="preview-switcher-item ">Version 3: R&V (All)</a>
 <a href="../version-4/" class="preview-switcher-item ">Version 4: V&R (All)</a>
+<a href="../version-5/" class="preview-switcher-item ">Version 5: V&R (+Mehendi)</a>
+    </div>
+  </aside>
 
-  </div>
-
-  <!-- FLOATING PETALS CONTAINER -->
-  <div id="petalsContainer" class="petals-container" aria-hidden="true"></div>
-
-  <!-- FLOATING AUDIO CONTROLLER -->
-  <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Play music" title="Toggle Music">
-    <svg id="iconSound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-    </svg>
-    <svg id="iconMute" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Audio Controls -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle background music" title="Play/Pause Music">
+    <svg id="musicIconMuted" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
       <line x1="23" y1="9" x2="17" y2="15"></line>
       <line x1="17" y1="9" x2="23" y2="15"></line>
     </svg>
+    <svg id="musicIconPlaying" class="music-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
   </button>
-
   <audio id="weddingAudio" src="assets/mohabbatein-love-theme.mp3" preload="auto" loop></audio>
 
   <!-- ============================================================
@@ -124,30 +120,34 @@
   </section>
 
   <!-- ============================================================
-       3. OUR STORY SECTION (SLIDE 2 - THE VERY NEXT AFTER HERO)
+       OUR STORY SECTION (SLIDE 2 - IMMEDIATE NEXT AFTER HERO)
        ============================================================ -->
   <section id="ourStorySection" class="our-story-section">
-    <img src="assets/nubes-impasto.png" alt="" class="our-story-clouds" />
+    <div class="our-story-clouds"></div>
 
     <div class="our-story-inner">
       <h2 class="our-story-title">Our Story</h2>
       <p class="our-story-tagline">Who knew a right swipe could get this right?</p>
 
-      <p class="our-story-text">
-        It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
-      </p>
-      <p class="our-story-text">
-        Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
-      </p>
-      <p class="our-story-text">
-        Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
-      </p>
+      <div class="our-story-content">
+        <p class="our-story-text">
+          It all started with a swipe. Ritik swiped right, and on 2nd November 2025, Vaibhavi matched. What followed was a month of conversations, even as Vaibhavi travelled for a friend's wedding and Ritik was back home in Karnal. Though both lived in Bangalore, they wouldn't meet just yet.
+        </p>
 
-      <p class="our-story-highlight">
-        Still each other's favourite notification, favourite person and favourite conversation.
-      </p>
+        <p class="our-story-text">
+          Finally, on 30th November, they went on their first date. What was supposed to be dinner turned into conversations that lasted until 5 AM.
+        </p>
 
-      <span class="our-story-signature">Ritik and Vaibhavi</span>
+        <p class="our-story-text">
+          Since then, they've become each other's favourite gossip partners, intellectual sparring partners and biggest cheerleaders. Whether it's endless banter, celebrating each other's achievements or pushing one another to be better, they've found someone with whom they can be unapologetically themselves.
+        </p>
+
+        <div class="our-story-highlight">
+          Still each other's favourite notification, favourite person and favourite conversation.
+        </div>
+
+        <p class="our-story-signature">Ritik and Vaibhavi</p>
+      </div>
     </div>
   </section>
 
@@ -165,7 +165,7 @@
       </div>
       
       <p class="wedding-eyebrow">The Auspicious Wedding Union</p>
-      <h2 class="wedding-main-title">Wedding</h2>
+      <h2 class="wedding-main-title">Shubh Vivaah</h2>
       
       <div class="wedding-date-tag">
         <span>Wednesday, 27 January 2027</span>
@@ -223,36 +223,34 @@
        COUNTDOWN SECTION (SECOND LAST - JUST BEFORE PARENTS SCREEN)
        ============================================================ -->
   <section id="countdownSection" class="countdown-section" data-target-date="2027-01-27T18:00:00+05:30">
-    <h2 class="section-title">Countdown</h2>
-    <p class="section-subtitle">Until 27 January 2027</p>
+    
 
-    <!-- Authentic Impasto Oil Frame -->
+    <!-- Royal Floral Arch Countdown Frame -->
     <div class="countdown-frame-wrap">
-      <img src="assets/marco-azul-impasto.png" alt="" class="countdown-frame-img" />
+      <img src="assets/countdown-arch-frame.jpg" alt="Countdown until Celebrations Begin" class="countdown-frame-img" />
 
-      <!-- Large Calligraphic Days -->
-      <div class="countdown-days-wrap">
-        <span id="cdDays" class="countdown-days-num">0</span>
-        <span class="countdown-days-label">Days</span>
-      </div>
-
-      <!-- Calligraphic Hours, Minutes, Seconds -->
-      <div class="countdown-subunits-wrap">
-        <div class="countdown-subunit">
-          <span id="cdHours" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Hours</span>
+      <!-- Vertical Stack of Live Units -->
+      <div class="countdown-stack-units">
+        <div class="countdown-unit-block">
+          <span id="cdDays" class="countdown-num">0</span>
+          <span class="countdown-lbl">Days</span>
         </div>
-        <div class="countdown-subunit">
-          <span id="cdMins" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Minutes</span>
+        <div class="countdown-unit-block">
+          <span id="cdHours" class="countdown-num">00</span>
+          <span class="countdown-lbl">Hours</span>
         </div>
-        <div class="countdown-subunit">
-          <span id="cdSecs" class="countdown-subunit-num">00</span>
-          <span class="countdown-subunit-label">Seconds</span>
+        <div class="countdown-unit-block">
+          <span id="cdMins" class="countdown-num">00</span>
+          <span class="countdown-lbl">Minutes</span>
+        </div>
+        <div class="countdown-unit-block">
+          <span id="cdSecs" class="countdown-num">00</span>
+          <span class="countdown-lbl">Seconds</span>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- ============================================================
        LAST SCREEN (WARMLY INVITED BY PARENTS & SACRED PHERAS ARCH)
@@ -261,9 +259,7 @@
     <!-- Royal Arch & Mandap Painting Backdrop -->
     <div class="footer-painting-container">
       <img src="assets/screen_last.jpg" alt="Wedding Mandap Arch" class="footer-painting-bg" />
-      <!-- Moving lotus garland layer at top -->
       <img src="assets/screen_last_lotus.png" alt="" class="footer-moving-lotus" />
-      <!-- Flickering sacred flame at bottom -->
       <img src="assets/screen_last_flame.png" alt="" class="footer-moving-flame" />
     </div>
 
@@ -276,45 +272,45 @@
         <p class="baby-raha-quote">&ldquo;Mele maamu ki shaadi mei jalul jalul aana&rdquo;</p>
         <p class="baby-raha-author">&mdash; Raha</p>
       </div>
+
       <p class="footer-hashtag">#VRinLove</p>
     </div>
   </footer>
+
 
   <!-- ============================================================
        EVENT DETAILS MODAL
        ============================================================ -->
   <div id="eventDetailModal" class="event-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="event-modal-card">
-      <button type="button" class="event-modal-close" id="closeEventModalBtn" aria-label="Close details">&times;</button>
+      <button type="button" id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
       
       <div class="event-modal-icon-wrap">
-        <img id="modalEventImg" class="modal-img-icon" src="assets/baile-nupcial.png" alt="" />
+        <img id="modalEventImg" src="" alt="" class="modal-event-icon" />
       </div>
 
-      <p id="modalEventTagline" class="event-modal-tagline">Ceremony Details</p>
+      <p class="event-modal-eyebrow">CEREMONY DETAILS</p>
       <h3 id="modalEventTitle" class="event-modal-title">Event Title</h3>
       
-      <div class="event-modal-time-badge">
+      <div class="event-modal-date-tag">
         <span id="modalEventDate">Date &amp; Time</span>
       </div>
 
       <p id="modalEventDesc" class="event-modal-desc">Description</p>
 
       <div class="event-modal-venue-box">
-        <div class="event-modal-venue-header">
-          <div class="venue-pin-bubble">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </div>
-          <div>
-            <p class="venue-header-label">VENUE</p>
-            <h4 id="modalEventVenue" class="modal-venue-name">Venue Name</h4>
-            <p id="modalEventCity" class="modal-venue-city">City</p>
-          </div>
+        <div class="venue-box-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
         </div>
-        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-maps">
+        <div class="venue-box-details">
+          <span class="venue-box-label">VENUE</span>
+          <h4 id="modalEventVenue" class="venue-box-name">Venue Name</h4>
+          <p id="modalEventCity" class="venue-box-city">City</p>
+        </div>
+        <a id="modalEventMapLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-map">
           <span>View Location on Google Maps &rarr;</span>
         </a>
       </div>
@@ -327,7 +323,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript Bundle -->
   <script src="js/main.js"></script>
 </body>
 </html>
