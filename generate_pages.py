@@ -459,8 +459,8 @@ def build_last_screen(cfg):
           <h4 class="grandparents-heading">Maternal Grandparents</h4>
           <p class="grandparents-names">
             <span class="grandparent-line">Smt. Mishra Devi</span>
-            <span class="grandparent-line grandfather-line">Shri Mohar</span>
-            <span class="grandparent-line">Singh Verma</span>
+            <span class="grandparent-line grandfather-line">Shri Mohar Singh</span>
+            <span class="grandparent-line">Verma</span>
           </p>
         </div>
       </div>
@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027w" />
+  <link rel="stylesheet" href="css/style.css?v=2027x" />
 </head>
 <body class="envelope-active">
 
@@ -723,7 +723,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027w"></script>
+  <script src="js/main.js?v=2027x"></script>
 </body>
 </html>
 """
