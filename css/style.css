@@ -2127,7 +2127,8 @@ body.modal-open {
   white-space: nowrap;
 }
 
-.grandparent-line.grandmother-line {
+.grandparent-line.grandmother-line,
+.grandparent-line.grandfather-line {
   margin-top: 6px;
 }
 

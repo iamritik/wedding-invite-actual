@@ -31,7 +31,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "-Vaibhavi &amp; Ritik",
-        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
+        "parents_names": "Manju Singh, Vivek Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "27",
         "hero_date_dayname": "Wednesday",
@@ -73,7 +73,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "-Vaibhavi &amp; Ritik",
-        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
+        "parents_names": "Manju Singh, Vivek Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "26 – 27",
         "hero_date_dayname": "Tuesday & Wednesday",
@@ -94,7 +94,7 @@ VERSIONS = [
         "connector": "weds",
         "name2": "Ritik",
         "story_sign": "-Vaibhavi &amp; Ritik",
-        "parents_names": "Vivek Singh, Manju Singh &amp; Yash Singh",
+        "parents_names": "Manju Singh, Vivek Singh &amp; Yash Singh",
         "hero_date_month": "January",
         "hero_date_day": "25 – 27",
         "hero_date_dayname": "Monday to Wednesday",
@@ -443,24 +443,24 @@ def build_last_screen(cfg):
 
     <div class="footer-content vaibhavi-footer-content">
       <p class="footer-invitation-lead">Warmly Invited By</p>
-      <h3 class="footer-parents-names">Vivek Singh, Manju Singh &amp; Yash Singh</h3>
+      <h3 class="footer-parents-names">{cfg["parents_names"]}</h3>
       <p class="vaibhavi-grandparents-lead">With the love and blessings of her grandparents</p>
 
       <div class="vaibhavi-grandparents-grid">
         <div class="grandparents-col">
           <h4 class="grandparents-heading">Paternal Grandparents</h4>
           <p class="grandparents-names">
-            <span class="grandparent-line">(Late) Shri Surendrapal</span>
-            <span class="grandparent-line">Singh Verma</span>
-            <span class="grandparent-line grandmother-line">&amp; Smt. Kailashvati</span>
+            <span class="grandparent-line">Smt. Kailashvati</span>
+            <span class="grandparent-line grandfather-line">(Late) Shri Surendrapal</span>
+            <span class="grandparent-line">Singh</span>
           </p>
         </div>
         <div class="grandparents-col">
           <h4 class="grandparents-heading">Maternal Grandparents</h4>
           <p class="grandparents-names">
-            <span class="grandparent-line">Shri Mohar</span>
+            <span class="grandparent-line">Smt. Mishra Devi</span>
+            <span class="grandparent-line grandfather-line">Shri Mohar</span>
             <span class="grandparent-line">Singh Verma</span>
-            <span class="grandparent-line grandmother-line">&amp; Smt. Mishra Devi</span>
           </p>
         </div>
       </div>
@@ -549,7 +549,7 @@ def build_html_page(cfg, is_root=False):
   <meta name="twitter:image" content="https://vrinlove.duckdns.org/assets/og-whatsapp-thumb.jpg" />
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2027v" />
+  <link rel="stylesheet" href="css/style.css?v=2027w" />
 </head>
 <body class="envelope-active">
 
@@ -723,7 +723,7 @@ def build_html_page(cfg, is_root=False):
   </div>
 
   <!-- JavaScript Bundle -->
-  <script src="js/main.js?v=2027v"></script>
+  <script src="js/main.js?v=2027w"></script>
 </body>
 </html>
 """
